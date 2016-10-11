@@ -1,0 +1,14 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/* Pour ajouter une font
+@font-face {
+  font-family: "SourceSansPro-Regular.ttf";
+  src: url('../fonts/SourceSansPro-Regular.ttf');
+}*/
+
+body{
+background: url(../imgs/bg1.jpg) center fixed;
+}
