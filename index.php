@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<title>Traveling</title>
 	<link rel="stylesheet" href="css/normalize_v5.css">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<!-- Navbar -->
@@ -22,7 +22,7 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li id="anchor1"><a href="#services">Search by film</a></li>
+					<li id="anchor1"><a href="#mainContent">Search by film</a></li>
 					<li id="anchor2"><a href="#projets">Projets</a></li>
 					<li id="anchor3"><a href="#contact">Contact</a></li>
 				</ul>
@@ -31,16 +31,29 @@
 	</nav>
 	<!-- FIN Navbar -->
 
-    <header id="home">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <img src="imgs/logoTraveling.png" alt="logoTraveling" width="100%">
-                </div>
-            </div>
-        </div>        
-    </header>
-	...
+	<header id="home">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<img src="imgs/logoWhite.png" alt="logoTraveling" width="100%">
+				</div>
+			</div>
+		</div>        
+	</header>
+	
+	<section id="mainContent">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div id="searchByFilms" class="searchBy">Search by films</div>
+				</div>
+				<div class="col-md-6">
+					<div id="searchBySeries" class="searchBy">Search by series</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 </body>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

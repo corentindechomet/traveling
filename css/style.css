@@ -9,33 +9,70 @@
   src: url('../fonts/SourceSansPro-Regular.ttf');
   }*/
 
-.navbar-default {
-  background-color: transparent;
-  border: none;
-}
+  /* Navbar */
+  .navbar-default {
+  	background-color: transparent;
+  	border: none;
+  }
 
-.navbar a{
-  color: #988454 !important;
-}
+  .navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand{
+  	color: white;
+  }
 
-.navbar a:hover {
-  color: #AC9661 !important;
-}
+  header#home{
+  	width: 100%;
+  	height: 100vh;
+  	background: url(../imgs/bg1.jpg) center fixed;
+  	background-size: cover;
+  	font-variant: small-caps;
+  	font-size: 24px;
+  	color: #f4f4f4;
+  }
 
-.activeLink{
-  background-color: #202020 ;
-}
+  header img{
+  	margin-top: 170px;
+  }
 
-header#home{
-	width: 100%;
-	height: 100vh;
-	background: url(../imgs/bg.jpg) center fixed;
-	background-size: cover;
-	font-variant: small-caps;
-	font-size: 24px;
-	color: #f4f4f4;
-}
-.redBlock{
-	height: 150px;
-	background-color: red;
-}
+  section#mainContent{
+  	margin: 50px 0 50px 0;
+  }
+
+  .searchBy{
+  	height: 350px;
+  	color: white;
+  	text-transform: uppercase;
+  	padding: 100px;
+  	text-align: center;
+  	font-size: 50px;
+  	cursor: pointer;
+  }
+
+  #searchByFilms{
+  	background: url(../imgs/searchByFilms.jpg) center no-repeat;
+  	background-size: cover;
+  	background-size: 150%;
+  	transition: all 1s ease;
+  	-moz-transition: all 1s ease;
+  	-ms-transition: all 1s ease;
+  	-webkit-transition: all 1s ease;
+  	-o-transition: all 1s ease;
+  }
+
+  #searchByFilms:hover{
+  	background-size: 160%;
+  }
+
+  #searchBySeries{
+  	background: url(../imgs/searchBySeries.jpg) center;
+  	background-size: cover;
+  	background-size: 150%;
+  	transition: all 1s ease;
+  	-moz-transition: all 1s ease;
+  	-ms-transition: all 1s ease;
+  	-webkit-transition: all 1s ease;
+  	-o-transition: all 1s ease;
+  }
+
+   #searchBySeries:hover{
+  	background-size: 160%;
+  }
