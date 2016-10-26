@@ -2,77 +2,170 @@
 	margin: 0;
 	padding: 0;
 }
+.topPart { 
+  height: 0%;
+  width: 100%;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  background-color: #795548; 
+  overflow-y: hidden; 
+  transition: 0.5s; 
+}
 
-/* Pour ajouter une font
-@font-face {
-  font-family: "SourceSansPro-Regular.ttf";
-  src: url('../fonts/SourceSansPro-Regular.ttf');
-  }*/
+.bottomPart { 
+  color: white;
+  height: 0%;
+  width: 100%;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  bottom: 0;
+  background-color: #795548; 
+  overflow-y: hidden; 
+  transition: 0.5s; 
+}
 
-  /* Navbar */
-  .navbar-default {
-  	background-color: transparent;
-  	border: none;
+.bottomPart-content {
+  position: relative;
+  top: 25%; 
+  width: 100%;
+  text-align: center; 
+  margin-top: 30px; 
+}
+
+.topPart-content {
+  position: relative;
+  top: 25%; 
+  width: 100%;
+  text-align: center; 
+  margin-top: 30px; 
+}
+
+.topPart a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; 
+  transition: 0.3s; 
+}
+
+.topPart .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .topPart a {font-size: 20px}
+  .topPart .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
+}
 
-  .navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand{
-  	color: white;
-  }
+.navbar-default {
+ background-color: transparent;
+ border: none;
+}
 
-  header#home{
-  	width: 100%;
-  	height: 100vh;
-  	background: url(../imgs/bg1.jpg) center fixed;
-  	background-size: cover;
-  	font-variant: small-caps;
-  	font-size: 24px;
-  	color: #f4f4f4;
-  }
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand{
+ color: white;
+}
 
-  header img{
-  	margin-top: 170px;
-  }
+header#home{
+ width: 100%;
+ height: 100vh;
+ background: url(../imgs/bg1.jpg) center fixed;
+ background-size: cover;
+ font-variant: small-caps;
+ font-size: 24px;
+ color: #f4f4f4;
+}
 
-  section#mainContent{
-  	margin: 50px 0 50px 0;
-  }
+header img{
+ margin-top: 170px;
+}
 
-  .searchBy{
-  	height: 350px;
-  	color: white;
-  	text-transform: uppercase;
-  	padding: 100px;
-  	text-align: center;
-  	font-size: 50px;
-  	cursor: pointer;
-  }
+section#mainContent{
+ margin: 50px 0 50px 0;
+}
 
-  #searchByFilms{
-  	background: url(../imgs/searchByFilms.jpg) center no-repeat;
-  	background-size: cover;
-  	background-size: 150%;
-  	transition: all 1s ease;
-  	-moz-transition: all 1s ease;
-  	-ms-transition: all 1s ease;
-  	-webkit-transition: all 1s ease;
-  	-o-transition: all 1s ease;
-  }
+.searchBy{
+ height: 350px;
+ color: white;
+ text-transform: uppercase;
+ padding: 100px;
+ text-align: center;
+ font-size: 50px;
+ cursor: pointer;
+}
 
-  #searchByFilms:hover{
-  	background-size: 160%;
-  }
+#searchByFilms{
+ background: url(../imgs/searchByFilms.jpg) center no-repeat;
+ background-size: cover;
+ background-size: 150%;
+ transition: all 1s ease;
+ -moz-transition: all 1s ease;
+ -ms-transition: all 1s ease;
+ -webkit-transition: all 1s ease;
+ -o-transition: all 1s ease;
+}
 
-  #searchBySeries{
-  	background: url(../imgs/searchBySeries.jpg) center;
-  	background-size: cover;
-  	background-size: 150%;
-  	transition: all 1s ease;
-  	-moz-transition: all 1s ease;
-  	-ms-transition: all 1s ease;
-  	-webkit-transition: all 1s ease;
-  	-o-transition: all 1s ease;
-  }
+#searchByFilms:hover{
+ background-size: 170%;
+}
 
-   #searchBySeries:hover{
-  	background-size: 160%;
-  }
+#searchBySeries{
+ background: url(../imgs/searchBySeries.jpg) center;
+ background-size: cover;
+ background-size: 150%;
+ transition: all 1s ease;
+ -moz-transition: all 1s ease;
+ -ms-transition: all 1s ease;
+ -webkit-transition: all 1s ease;
+ -o-transition: all 1s ease;
+}
+
+#searchBySeries:hover{
+ background-size: 170%;
+}
+
+#main{
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.card{
+  text-align: center;
+  color: white;
+  height: 400px;
+  cursor: pointer;
+}
+
+.card .title{
+  width: 100%;
+  text-transform: uppercase;
+  position: absolute;
+  top: 39%;
+  left: 0;
+  text-align: center;
+  opacity: 1;
+  font-size: 24px;
+  transition: opacity 300ms, font-size 300ms;
+}
+
+.card:hover .title{
+  width: 100%;
+  position: absolute;
+  top: 39%;
+  left: 0;
+  text-align: center;
+  opacity: 0.4;
+  font-size: 23px;
+  transition: 0.1;
+}

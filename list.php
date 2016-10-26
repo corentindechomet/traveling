@@ -8,6 +8,21 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<div id="myNavTop" class="topPart">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+		<div class="topPart-content">
+
+		</div>
+	</div>
+	<div id="myNavBottom" class="bottomPart">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="bottomPart-content"></div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- Navbar -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
@@ -22,7 +37,7 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li id="anchor1"><a href="#mainContent">Search by film</a></li>
+					<li id="anchor1"><a href="#main">Search by film</a></li>
 					<li id="anchor2"><a href="#projets">Projets</a></li>
 					<li id="anchor3"><a href="#contact">Contact</a></li>
 				</ul>
@@ -41,20 +56,32 @@
 		</div>        
 	</header>
 	
-	<section id="mainContent">
+	<section id="main">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-xs-12">
-					<div id="searchByFilms" class="searchBy">Search by films</div>
-				</div>
-				<div class="col-md-6 col-xs-12">
-					<div id="searchBySeries" class="searchBy">Search by series</div>
+				<?php
+				include('connection.php');
+				$requeteP = 'SELECT * FROM oeuvres';
+				$resultatP = $connection->query($requeteP);
+				$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
+				for($i=0;$i<count($tabP);$i++){ ?>
+					<div class="col-md-4 video">
+						<div class="card" target-url="<?php echo $tabP[$i]->id; ?>">
+						<video class="thevideo" loop preload="yes">
+					      <source src="imgs/arizona.mp4" type="video/mp4">
+					    </video>
+							<div class="title"><?php echo $tabP[$i]->titreOeuvre; ?></div>
+						</div>
+					</div>								
+					<?php }
+					?>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-</body>
-<script src="js/jquery-3.1.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-</html>
+	</body>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/smoothState.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+	</html>
