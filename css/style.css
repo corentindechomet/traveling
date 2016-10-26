@@ -7,12 +7,12 @@
 /* General */
 @font-face {
   font-family: "Canter";
-  src: url('/fonts/CanterBold.otf');
+  src: url('fonts/CanterBold.otf');
 }
 
 @font-face {
   font-family: "Poppins";
-  src: url('/fonts/PoppinsRegular.ttf');
+  src: url('fonts/PoppinsRegular.ttf');
 }
 
 
@@ -21,7 +21,14 @@ body{
 }
 
 h2{
+  margin: 0;
   font-size: 75px;
+  text-transform: uppercase;
+}
+
+h3{
+  margin: 0;
+  font-size: 60px;
   text-transform: uppercase;
 }
 
@@ -142,11 +149,11 @@ section#mainContent{
   height: 250px;
 }
 
-.lastFilmAdded{
+.card.lastFilmAdded{
   cursor: pointer;
 }
 
-.searchBy{
+.card.searchBy{
  color: white;
  text-transform: uppercase;
  padding: 100px 0 100px 0;
@@ -154,13 +161,18 @@ section#mainContent{
  font-size: 20px;
 }
 
-.searchBy input{
-  border: 2px solid white;
+.card.searchBy input{
+  border: 1px solid white;
   padding: 5px 10px 5px 10px;
   font-size: 20px;
   background: none;
-  width: 175px;
+  width: 220px;
   text-align: center;
+  transition: 0.3s; 
+}
+
+.card.searchBy input:focus{
+  background-color: rgba(255,255,255,0.1);
 }
 
 #searchByFilms{
@@ -171,4 +183,69 @@ section#mainContent{
 #searchByLocation{
  background: url(../imgs/searchBySeries.jpg) center;
  background-size: cover;
+}
+
+.searchIcon {
+  position: relative;
+  z-index: 1;
+  left: -35px;
+  top: 0px;
+  cursor:pointer;
+  width: 0;
+  color: rgba(255,255,255,0.9);
+}
+
+.card.urban, .card.nature, .card.escape{
+  padding: 35px;
+  cursor: pointer;
+}
+
+.card.urban{
+  background: url(../imgs/urban.jpg) center;
+  background-size: cover;
+}
+.card.nature{
+  background: url(../imgs/nature.jpg) center;
+  background-size: cover;
+}
+.card.escape{
+  background: url(../imgs/escape.jpg) center;
+  background-size: cover;
+}
+
+h3.transparent{
+  text-align: center;
+  background-color: rgba(255,255,255,0.7);
+}
+
+span.urbanText{ 
+  font-size: 75px;
+  background: url(../imgs/urban.jpg) center;
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+span.natureText{ 
+  font-size: 75px;
+  background: url(../imgs/nature.jpg) center;
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+span.escapeText{ 
+  font-size: 75px;
+  background: url(../imgs/escape.jpg) center;
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.randomFilm{
+  height: 400px;
+  padding-top: 150px;
+  cursor: pointer;
+  background: url(../imgs/random.jpg) center;
+  background-size: cover;
 }
