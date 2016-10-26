@@ -1,10 +1,79 @@
-header#home{height: 390px;}
+header#home{
+	height: 390px;
+}
 
-header img {margin-top:50px;}
+header h1 {
+	font-family: "Canter Light", Sans-Serif;
+	font-size: 250px;
+
+	text-align: center;
+}
+
 
 .search-header{
-	width:100%;
-	margin:5px 0;
-	background-color:rgba(0,0,0,0);
-	border:#fff 3px solid;
+	width: 100%;
+	padding: 5px 40px;
+
+	background-color: rgba(0,0,0,0);
+	border: #fff 2px solid;
+
+	font-size: 18px;
 }
+
+.fa-search{
+	position: absolute;
+	top: 7px;
+	left:25px;
+}
+
+.card .title{
+  width: 100%;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%);
+  left: 0;
+  text-align: center;
+  opacity: 1;
+  font-family: "Canter Bold", Sans-Serif;
+  font-size: 72px;
+  transition: opacity 300ms;
+}
+.card:hover .title{
+  opacity: 0.7;
+  transition: opacity 300ms;
+}
+
+.card .lieu{
+  width: 100%;
+  text-transform: uppercase;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  text-align: center;
+  opacity: 1;
+  font-size: 24px;
+  transition: opacity 300ms;
+}
+.card:hover .lieu{
+  opacity: 0.7;
+  transition: opacity 300ms;
+}
+
+.card .genre{
+  width: 100%;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  text-align: center;
+  opacity: 1;
+  font-size: 24px;
+  transition: opacity 300ms;
+}
+.card:hover .genre{
+  opacity: 0.7;
+  transition: opacity 300ms;
+}
+
+

@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Canter Light";
+    src: url('fonts/Canter Light.otf');
+}
+
+@font-face {
+    font-family: "Canter Bold";
+    src: url('fonts/Canter Bold.otf');
+}
+
 *{
 	margin: 0;
 	padding: 0;
@@ -146,6 +156,7 @@ section#mainContent{
   height: 400px;
   cursor: pointer;
 }
+
 
 .card .title{
   width: 100%;

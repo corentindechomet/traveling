@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Traveling</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/normalize_v5.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -47,14 +48,21 @@
 	</nav>
 	<!-- FIN Navbar -->
 
-	<header id="home">
+<header id="home">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<img src="imgs/logoWhite.png" alt="logoTraveling" width="100%">
+					<h1>oeuvres</h1>
 				</div>
 			</div>
-		</div>        
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<form method="post">
+						<i class='fa fa-search' aria-hidden='true'></i><input class="search-header" name="search" title="Rechercher une oeuvre" type="text" placeholder="Rechercher une oeuvre"></input>
+					</form>
+				</div>
+			</div>
+		</div>
 	</header>
 	
 	<section id="main">
@@ -62,16 +70,19 @@
 			<div class="row">
 				<?php
 				include('connection.php');
-				$requeteP = 'SELECT * FROM filmserie';
+				$search = $_POST['search']
+				$requeteP = 'SELECT * FROM oeuvres';
 				$resultatP = $connection->query($requeteP);
 				$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
 				for($i=0;$i<count($tabP);$i++){ ?>
 					<div class="col-md-4 video">
 						<div class="card" target-url="<?php echo $tabP[$i]->id; ?>">
 						<video class="thevideo" loop preload="yes">
-					      <source src="imgs/arizona.mp4" type="video/mp4">
+					      <source src="<?php echo $tabP[$i]->urlvideo; ?>" type="video/mp4">
 					    </video>
+					    	<div class="lieu"><?php echo $tabP[$i]->lieu; ?></div>
 							<div class="title"><?php echo $tabP[$i]->titreOeuvre; ?></div>
+							<div class="genre"><?php echo $tabP[$i]->genre; ?></div>
 						</div>
 					</div>								
 					<?php }
