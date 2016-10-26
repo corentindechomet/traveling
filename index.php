@@ -44,19 +44,54 @@
 	<section id="mainContent">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12"></div>
+				<div class="col-md-12">
+					<?php
+						include('connection.php');
+						$requeteP = 'SELECT * FROM oeuvres LIMIT 1';
+						$resultatP = $connection->query($requeteP);
+						$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
+					?>
+					<div class="lastFilmAdded card" style="background: url('<?php echo $tabP[0]->urlimg; ?>')">
+						<h2><span>LAST FILM ADDED</span></br><?php echo $tabP[0]->titreOeuvre; ?><h2>			
+					</div>
+				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-xs-12">
-					<div id="searchByFilms" class="searchBy">Search by films</div>
+					<div id="searchByFilms" class="searchBy card">
+						<input type="search" placeholder="Search by series or movies" name="the_search">
+					</div>
 				</div>
 				<div class="col-md-6 col-xs-12">
-					<div id="searchBySeries" class="searchBy">Search by series</div>
+					<div id="searchByLocation" class="searchBy card">Search by series</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="lastFilmAdded card">
+						<h2>DESIRED FOR URBAN</h2>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="lastFilmAdded card">
+						<h2>DESIRED FOR NATURE</h2>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="lastFilmAdded card">
+						<h2>DESIRED FOR ESCAPE</h2>
+					</div>
+				</div>
+			</div>		
+			<div class="row">
+				<div class="col-md-12">
+					<div class="lastFilmAdded card">
+						<h2>RANDOM FILM OR SHOW</h2>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-
 </body>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
