@@ -1,7 +1,35 @@
 *{
 	margin: 0;
 	padding: 0;
+  outline: none;
 }
+
+/* General */
+@font-face {
+  font-family: "Canter";
+  src: url('/fonts/CanterBold.otf');
+}
+
+body{
+  font-family: "Canter";
+}
+
+h2{
+  font-size: 75px;
+  text-transform: uppercase;
+}
+
+/* Navbar */
+.navbar-default {
+ background-color: transparent;
+ border: none;
+}
+
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand{
+ color: white;
+}
+
+/* Overlay */
 .topPart { 
   height: 0%;
   width: 100%;
@@ -68,15 +96,7 @@
   }
 }
 
-.navbar-default {
- background-color: transparent;
- border: none;
-}
-
-.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand{
- color: white;
-}
-
+/* Header */
 header#home{
  width: 100%;
  height: 100vh;
@@ -91,48 +111,9 @@ header img{
  margin-top: 170px;
 }
 
+/* Main */
 section#mainContent{
  margin: 50px 0 50px 0;
-}
-
-.searchBy{
- height: 350px;
- color: white;
- text-transform: uppercase;
- padding: 100px;
- text-align: center;
- font-size: 50px;
- cursor: pointer;
-}
-
-#searchByFilms{
- background: url(../imgs/searchByFilms.jpg) center no-repeat;
- background-size: cover;
- background-size: 150%;
- transition: all 1s ease;
- -moz-transition: all 1s ease;
- -ms-transition: all 1s ease;
- -webkit-transition: all 1s ease;
- -o-transition: all 1s ease;
-}
-
-#searchByFilms:hover{
- background-size: 170%;
-}
-
-#searchBySeries{
- background: url(../imgs/searchBySeries.jpg) center;
- background-size: cover;
- background-size: 150%;
- transition: all 1s ease;
- -moz-transition: all 1s ease;
- -ms-transition: all 1s ease;
- -webkit-transition: all 1s ease;
- -o-transition: all 1s ease;
-}
-
-#searchBySeries:hover{
- background-size: 170%;
 }
 
 #main{
@@ -140,32 +121,43 @@ section#mainContent{
   margin-bottom: 100px;
 }
 
+/* Cards */
 .card{
+  margin-bottom: 30px;
+  background-color: black;
   text-align: center;
   color: white;
-  height: 400px;
+  height: 250px;
+}
+
+.lastFilmAdded{
+  padding: 50px;
   cursor: pointer;
 }
 
-.card .title{
-  width: 100%;
-  text-transform: uppercase;
-  position: absolute;
-  top: 39%;
-  left: 0;
-  text-align: center;
-  opacity: 1;
-  font-size: 24px;
-  transition: opacity 300ms, font-size 300ms;
+.searchBy{
+ color: white;
+ text-transform: uppercase;
+ padding: 100px 0 100px 0;
+ text-align: center;
+ font-size: 20px;
 }
 
-.card:hover .title{
-  width: 100%;
-  position: absolute;
-  top: 39%;
-  left: 0;
+.searchBy input{
+  border: 2px solid white;
+  padding: 5px 10px 5px 10px;
+  font-size: 20px;
+  background: none;
+  width: 175px;
   text-align: center;
-  opacity: 0.4;
-  font-size: 23px;
-  transition: 0.1;
+}
+
+#searchByFilms{
+ background: url(../imgs/searchByFilms.jpg) center no-repeat;
+ background-size: cover;
+}
+
+#searchByLocation{
+ background: url(../imgs/searchBySeries.jpg) center;
+ background-size: cover;
 }
