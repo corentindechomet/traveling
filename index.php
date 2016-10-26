@@ -45,17 +45,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="lastFilmAdded card">
-						<?php
-							include('connection.php');
-							$requeteP = 'SELECT * FROM oeuvres LIMIT 1';
-							$resultatP = $connection->query($requeteP);
-							$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
-						?>
-						
-						<h2><?php echo $tabP[0]->titreOeuvre; ?><h2>	
-						
-						<?php 	?>
+					<?php
+						include('connection.php');
+						$requeteP = 'SELECT * FROM oeuvres LIMIT 1';
+						$resultatP = $connection->query($requeteP);
+						$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
+					?>
+					<div class="lastFilmAdded card" style="background: url('<?php echo $tabP[0]->urlimg; ?>')">
+						<h2><span>LAST FILM ADDED</span></br><?php echo $tabP[0]->titreOeuvre; ?><h2>			
 					</div>
 				</div>
 			</div>

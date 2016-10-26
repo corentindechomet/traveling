@@ -10,6 +10,12 @@
   src: url('/fonts/CanterBold.otf');
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url('/fonts/PoppinsRegular.ttf');
+}
+
+
 body{
   font-family: "Canter";
 }
@@ -17,6 +23,12 @@ body{
 h2{
   font-size: 75px;
   text-transform: uppercase;
+}
+
+h2 span{
+  font-size: 15px;
+  font-family: "Poppins";
+  text-align: justify;
 }
 
 /* Navbar */
@@ -131,7 +143,6 @@ section#mainContent{
 }
 
 .lastFilmAdded{
-  padding: 50px;
   cursor: pointer;
 }
 
