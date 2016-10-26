@@ -1,11 +1,10 @@
 <?php
 include('connection.php');
 $id=$_GET['id'];
-$requeteP = 'SELECT * FROM oeuvres WHERE id ='.$id;
+$requeteP = 'SELECT * FROM oeuvres WHERE idOeuvre ='.$id;
 
 $resultatP = $connection->query($requeteP);
 $tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
 
-echo $tabP[0]->descriptionOeuvre;
-
+echo $tabP[0]->description;
 ?>
