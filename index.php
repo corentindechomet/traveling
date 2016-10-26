@@ -44,6 +44,9 @@
 	<section id="mainContent">
 		<div class="container">
 			<div class="row">
+				<div class="col-md-12"></div>
+			</div>
+			<div class="row">
 				<div class="col-md-6 col-xs-12">
 					<div id="searchByFilms" class="searchBy">Search by films</div>
 				</div>
