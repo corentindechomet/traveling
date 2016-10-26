@@ -62,7 +62,7 @@
 			<div class="row">
 				<?php
 				include('connection.php');
-				$requeteP = 'SELECT * FROM oeuvres';
+				$requeteP = 'SELECT * FROM filmserie';
 				$resultatP = $connection->query($requeteP);
 				$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
 				for($i=0;$i<count($tabP);$i++){ ?>
