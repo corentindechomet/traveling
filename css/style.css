@@ -1,13 +1,3 @@
-@font-face {
-    font-family: "Canter Light";
-    src: url('fonts/Canter Light.otf');
-}
-
-@font-face {
-    font-family: "Canter Bold";
-    src: url('fonts/Canter Bold.otf');
-}
-
 *{
 	margin: 0;
 	padding: 0;
@@ -24,7 +14,6 @@
   font-family: "Poppins";
   src: url('fonts/PoppinsRegular.ttf');
 }
-
 
 body{
   font-family: "Canter";
@@ -197,7 +186,6 @@ section#mainContent{
 
 .searchIcon {
   position: relative;
-  z-index: 1;
   left: -35px;
   top: 0px;
   cursor:pointer;
@@ -229,8 +217,9 @@ section#mainContent{
   position: absolute;
   top: 39%;
   left: 0;
+}
 
-h3 .transparent{
+.transparent{
   text-align: center;
   background-color: rgba(255,255,255,0.7);
 }
