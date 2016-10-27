@@ -57,7 +57,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
-					<form method="post">
+					<form method="get">
 						<i class='fa fa-search' aria-hidden='true'></i><input class="search-header" name="search" title="Rechercher une oeuvre" type="text" placeholder="Rechercher une oeuvre"></input>
 					</form>
 				</div>
@@ -70,19 +70,40 @@
 			<div class="row">
 				<?php
 				include('connection.php');
-				$search = $_POST['search']
-				$requeteP = 'SELECT * FROM oeuvres';
+				if(isset($_GET['search']))
+					$requeteP = "SELECT * FROM oeuvres WHERE titreOeuvre LIKE '%".$_GET['search']."%' ";
+				else
+					$requeteP = 'SELECT * FROM oeuvres';
 				$resultatP = $connection->query($requeteP);
 				$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
+
+				if(isset($_GET['search'])){
+					echo "<h2>".count($tabP)." résulat(s) pour votre recherche : ".$_GET['search']."</h2>";
+					echo "<hr />";
+				}
+
 				for($i=0;$i<count($tabP);$i++){ ?>
 					<div class="col-md-4 video">
-						<div class="card" target-url="<?php echo $tabP[$i]->id; ?>">
+						<div class="card overlay" target-url="<?php echo $tabP[$i]->idOeuvre?>">
 						<video class="thevideo" loop preload="yes">
 					      <source src="<?php echo $tabP[$i]->urlvideo; ?>" type="video/mp4">
 					    </video>
-					    	<div class="lieu"><?php echo $tabP[$i]->lieu; ?></div>
-							<div class="title"><?php echo $tabP[$i]->titreOeuvre; ?></div>
-							<div class="genre"><?php echo $tabP[$i]->genre; ?></div>
+					    	<div class="card-text subtitle lieu"><?php echo $tabP[$i]->lieu; ?></div>
+							<div class="card-text title"><?php echo $tabP[$i]->titreOeuvre; ?></div>
+							<div class="card-text subtitle type"><?php 
+																$type = $tabP[$i]->type;
+																if($type == 0)
+																	echo 'film'; 
+																else if($type == 1)
+																	echo 'série';
+
+																else if($type == 2)
+																	echo 'documentaire';
+																else
+																	echo 'erreur type';
+																?>
+							</div>
+							<div class="card-text subtitle genre"><?php echo $tabP[$i]->genre; ?></div>
 						</div>
 					</div>								
 					<?php }

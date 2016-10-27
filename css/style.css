@@ -212,7 +212,6 @@ section#mainContent{
   background-size: cover;
 }
 
-
 .card .title{
   width: 100%;
   text-transform: uppercase;
@@ -236,6 +235,7 @@ section#mainContent{
   font-size: 23px;
   transition: 0.1;
 }
+
 span.urbanText{ 
   font-size: 75px;
   background: url(../imgs/urban.jpg) center;
