@@ -223,22 +223,18 @@ section#mainContent{
   background-size: cover;
 }
 
-<<<<<<< HEAD
-
 .card .title{
   width: 100%;
   text-transform: uppercase;
   position: absolute;
   top: 39%;
   left: 0;
-=======
-h3.transparent{
->>>>>>> 1bb95598736b109bd3e5874399432d12b8219466
+
+h3 .transparent{
   text-align: center;
   background-color: rgba(255,255,255,0.7);
 }
 
-<<<<<<< HEAD
 .card:hover .title{
   width: 100%;
   position: absolute;
@@ -249,7 +245,7 @@ h3.transparent{
   font-size: 23px;
   transition: 0.1;
 }
-=======
+
 span.urbanText{ 
   font-size: 75px;
   background: url(../imgs/urban.jpg) center;
@@ -281,4 +277,4 @@ span.escapeText{
   background: url(../imgs/random.jpg) center;
   background-size: cover;
 }
->>>>>>> 1bb95598736b109bd3e5874399432d12b8219466
+
