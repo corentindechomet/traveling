@@ -89,7 +89,7 @@
 					      <source src="<?php echo $tabP[$i]->urlvideo; ?>" type="video/mp4">
 					    </video>
 					    	<div class="card-text subtitle lieu"><?php echo $tabP[$i]->lieu; ?></div>
-							<div class="card-text title"><?php echo $tabP[$i]->titreOeuvre; ?></div>
+							<div class="card-text list-title"><?php echo $tabP[$i]->titreOeuvre; ?></div>
 							<div class="card-text subtitle type"><?php 
 																$type = $tabP[$i]->type;
 																if($type == 0)
