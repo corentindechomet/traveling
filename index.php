@@ -38,8 +38,8 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li id="anchor1"><a href="#mainContent">Search by film</a></li>
-					<li id="anchor2"><a href="#projets">Projets</a></li>
+					<li id="anchor1"><a href="#mainContent">Oeuvres</a></li>
+					<li id="anchor2"><a href="#projets">Lieux</a></li>
 					<li id="anchor3"><a href="#contact">Contact</a></li>
 				</ul>
 			</div>
@@ -51,7 +51,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<img src="imgs/logoWhite.png" alt="logoTraveling" width="100%">
+					<div class="example-three">
+						<img src="imgs/logoWhite.png" alt="logoTraveling" width="100%">
+					</div>
 				</div>
 			</div>
 		</div>        
@@ -67,7 +69,7 @@
 						$resultatP = $connection->query($requeteP);
 						$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
 					?>
-					<div class="card overlay lastFilmAdded" style="background: url('<?php echo $tabP[0]->urlimg; ?>') top;">
+					<div class="card overlay lastFilmAdded" target-url="<?php echo $tabP[0]->idOeuvre; ?>" style="background: url('<?php echo $tabP[0]->urlimg; ?>') top;">
 						<h2><span>LAST FILM ADDED</span></br><?php echo $tabP[0]->titreOeuvre; ?><h2>			
 					</div>
 				</div>

@@ -45,6 +45,7 @@ h2 span{
 
 .navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand{
  color: white;
+ font-size: 20px;
 }
 
 /* Overlay */
@@ -117,7 +118,7 @@ h2 span{
 /* Header */
 header#home{
  width: 100%;
- height: 100vh;
+ height: 90vh;
  background: url(../imgs/bg1.jpg) center fixed;
  background-size: cover;
  font-variant: small-caps;
