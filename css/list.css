@@ -1,13 +1,12 @@
 /**********************************************/
 /*                 HEADER                     /
 /**********************************************/
-
 header#home{
 	height: 390px;
 }
 
 header h1 {
-	font-family: "Canter", Sans-Serif;
+  font-family: "Canter", Sans-Serif;
 	font-size: 250px;
 
 	text-align: center;
@@ -38,27 +37,34 @@ h2{font-size:24px;}
 /**********************************************/
 /*                  CARD                       /
 /**********************************************/
-.card{ 
-  width: 100%;
-  height: 390px;
-
-  background-color:	rgba(0,0,0,0);
-
-  text-transform: uppercase;
-
-  cursor: pointer;
+.card{
+	width: 100%;
+	height: 390px;
+	background-color:	rgba(0,0,0,0);
+	text-transform: uppercase;
+	cursor: pointer;
 }
 
 .card .card-text{
 	position: absolute;
-	width: 390px;
-
+	width: 100%;
 	opacity: 1;
-  transition: opacity 300ms;
+
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
 }
+
 .card:hover .card-text{
   opacity: 0.7;
-  transition: opacity 300ms;
+
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
 }
 
 .card .list-title{
@@ -82,6 +88,3 @@ h2{font-size:24px;}
 .card .lieu{top: 20px;}
 .card .type{bottom: 80px;}
 .card .genre{bottom: 50px;}
-
-
-

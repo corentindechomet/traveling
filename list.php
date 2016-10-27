@@ -39,8 +39,8 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li id="anchor1"><a href="#main">Search by film</a></li>
-					<li id="anchor2"><a href="#projets">Projets</a></li>
+					<li id="anchor1"><a href="#mainContent">Oeuvres</a></li>
+					<li id="anchor2"><a href="#projets">Lieux</a></li>
 					<li id="anchor3"><a href="#contact">Contact</a></li>
 				</ul>
 			</div>
