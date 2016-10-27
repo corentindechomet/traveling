@@ -1,14 +1,12 @@
-@font-face {
-  font-family: "CanterLight";
-  src: url('fonts/CanterLight.otf');
-}
-
+/**********************************************/
+/*                 HEADER                     /
+/**********************************************/
 header#home{
 	height: 390px;
 }
 
 header h1 {
-	font-family: "CanterLight", Sans-Serif;
+  font-family: "Canter", Sans-Serif;
 	font-size: 250px;
 
 	text-align: center;
@@ -48,10 +46,9 @@ h2{font-size:24px;}
 	overflow: hidden;
 }
 
-.card .title{
-	width: 100%;
-	text-transform: uppercase;
+.card .card-text{
 	position: absolute;
+<<<<<<< HEAD
 	top: 39%;
 	left: 0;
 	font-size: 50px;
@@ -62,52 +59,46 @@ h2{font-size:24px;}
 }
 
 .card:hover .title{
+=======
+>>>>>>> 4860d4bfc98b163f126d42feee22d9e6294bc188
 	width: 100%;
-	position: absolute;
-	top: 39%;
-	left: 0;
-	text-align: center;
-	opacity: 0.4;
-	font-size: 40px;
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
-	-ms-transition: all 0.3s ease;
-}
-
-.card .card-text{
-	position: absolute;
 	opacity: 1;
-	transition: opacity 300ms;
+
+	transition: all 0.3s ease;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	-ms-transition: all 0.3s ease;
 }
-/*
+
 .card:hover .card-text{
-	opacity: 0.7;
-	transition: opacity 300ms;
-	}*/
+  opacity: 0.7;
 
-/*.card .title{
-	top: 45%; 
-	transform: translateY(-50%);
-	font-family: "Canter Bold", Sans-Serif;
-	font-size: 72px;
-	line-height: 72px;
-	}*/
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+}
 
-	.card .subtitle{
-		left: 50%; 
-		transform: translateX(-50%);
-		font-family: "Poppins", Sans-Serif;
-		font-size: 24px;
-	}
+.card .list-title{
+  top: 40%; 
+  left: 50%; 
+  transform: translateX(-50%) translateY(-50%);
 
-	.card .lieu{top: 20px;}
-	.card .type{bottom: 80px;}
-	.card .genre{bottom: 50px;}
+  font-family: "Canter", Sans-Serif;
+  font-size: 72px;
+  line-height: 72px;
+}
 
+.card .subtitle{
+	left: 50%; 
+  transform: translateX(-50%);
 
+  font-family: "Poppins", Sans-Serif;
+  font-size: 24px;
+}
 
+.card .lieu{top: 20px;}
+.card .type{bottom: 80px;}
+.card .genre{bottom: 50px;}
