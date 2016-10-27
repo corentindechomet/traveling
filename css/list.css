@@ -1,9 +1,14 @@
+@font-face {
+  font-family: "CanterLight";
+  src: url('fonts/CanterLight.otf');
+}
+
 header#home{
 	height: 390px;
 }
 
 header h1 {
-	font-family: "Canter Light", Sans-Serif;
+	font-family: "CanterLight", Sans-Serif;
 	font-size: 250px;
 
 	text-align: center;
