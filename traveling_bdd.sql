@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 27 Octobre 2016 à 16:54
--- Version du serveur :  10.1.16-MariaDB
--- Version de PHP :  5.6.24
+-- Généré le :  Sam 29 Octobre 2016 à 00:13
+-- Version du serveur :  10.1.13-MariaDB
+-- Version de PHP :  5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -81,10 +81,22 @@ INSERT INTO `oeuvres` (`idOeuvre`, `titreOeuvre`, `type`, `genre`, `realisateur`
 
 CREATE TABLE `scene` (
   `nomScene` varchar(255) NOT NULL,
+  `Lat` varchar(255) NOT NULL,
+  `Lng` varchar(255) NOT NULL,
   `description` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `idFilm` int(11) NOT NULL,
+  `urlImgScene` varchar(255) NOT NULL,
+  `idOeuvre` int(11) NOT NULL,
   `idLieu` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `scene`
+--
+
+INSERT INTO `scene` (`nomScene`, `Lat`, `Lng`, `description`, `urlImgScene`, `idOeuvre`, `idLieu`) VALUES
+('Car Wash', '35.1082845', '-106.5377531', 'Le fameux Car Wash, ou Walter White travaille au tout début de la série.', 'http://traveling.corentindechomet.fr/imgs/carwash.png', 1, 0),
+('La maison de Walter et Skyler White', '35.1261057', '-106.5387445', 'La maison de Walter et Skyler White ne paie pas de mine : toutes les maisons de ce quartier résidentiel se ressemblent. La maison est habitée, mieux vaut ne pas trainer. On peut voir la maison au 3828 Piermont Dr NE.', 'http://traveling.corentindechomet.fr/imgs/walthouse.jpg', 1, 0),
+('Los Pollos Hermanos', '35.0146338', '-106.6885397', 'Los Pollos Hermanos existent… c’est une chaîne de fast food, depuis 15 ans, qui fait du tex mex, mais qui s’appelle en fait Twisters. Rendez-vous au 4257 Isleta Blv SW pour voir l’original !', 'http://traveling.corentindechomet.fr/imgs/LosPollosHermanos.jpg', 1, 0);
 
 --
 -- Index pour les tables exportées
