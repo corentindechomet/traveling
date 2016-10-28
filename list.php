@@ -14,7 +14,6 @@
 		<div id="myNavTop" class="topPart">
 			<div class="container-fluid">
 				<div class="row topPartContent">
-
 				</div>
 			</div>
 		</div>

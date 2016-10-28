@@ -99,22 +99,6 @@ h2 span{
   transition: 0.3s; 
 }
 
-.topPart .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
-
-@media screen and (max-height: 450px) {
-  .topPart a {font-size: 20px}
-  .topPart .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
-
 /* Header */
 header#home{
  width: 100%;
