@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "CanterLight";
-  src: url('fonts/CanterLight.otf');
+	font-family: "CanterLight";
+	src: url('fonts/CanterLight.otf');
 }
 
 header#home{
@@ -78,16 +78,42 @@ h2{font-size:24px;}
 }
 
 .card .subtitle{
-		left: 50%; 
-		transform: translateX(-50%);
+	left: 50%; 
+	transform: translateX(-50%);
 
-		font-family: "Poppins", Sans-Serif;
-		font-size: 24px;
-	}
+	font-family: "Poppins", Sans-Serif;
+	font-size: 24px;
+}
 
 .card .lieu{top: 20px;}
 .card .type{bottom: 80px;}
 .card .genre{bottom: 50px;}
 
+/* Overlay */
+/* Top part */
+.imageOeuvre{
+	height: 50vh;
+	color: white;
+	text-align: center;
+	padding: 100px 0 0 0;
+	background-position: top;
+}
 
+.noPadding{
+	padding:0;
+}
 
+.imageOeuvre h1{
+	margin: 0;
+	font-size: 75px;
+}
+
+/* Bottom part */
+/* MAP */
+#map{
+	height: 50vh;
+}
+
+.mapReceiver{
+	padding: 0;
+}

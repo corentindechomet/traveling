@@ -10,17 +10,20 @@
 	<link rel="stylesheet" href="css/list.css">
 </head>
 <body>
-	<div id="myNavTop" class="topPart">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-		<div class="topPart-content">
+	<div class="overlay">
+		<div id="myNavTop" class="topPart">
+			<div class="container-fluid">
+				<div class="row topPartContent">
 
+				</div>
+			</div>
 		</div>
-	</div>
-	<div id="myNavBottom" class="bottomPart">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="bottomPart-content"></div>
+		<div id="myNavBottom" class="bottomPart">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 mapReceiver">
+						<div id="map"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -48,7 +51,7 @@
 	</nav>
 	<!-- FIN Navbar -->
 
-<header id="home">
+	<header id="home">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
@@ -85,36 +88,38 @@
 				for($i=0;$i<count($tabP);$i++){ ?>
 					<div class="col-md-4 video">
 						<div class="card overlay" target-url="<?php echo $tabP[$i]->idOeuvre?>">
-						<video class="thevideo" loop preload="yes">
-					      <source src="<?php echo $tabP[$i]->urlvideo; ?>" type="video/mp4">
-					    </video>
-					    	<div class="card-text subtitle lieu"><?php echo $tabP[$i]->lieu; ?></div>
-							<div class="card-text list-title"><?php echo $tabP[$i]->titreOeuvre; ?></div>
-							<div class="card-text subtitle type"><?php 
-																$type = $tabP[$i]->type;
-																if($type == 0)
-																	echo 'film'; 
-																else if($type == 1)
-																	echo 'série';
+							<video class="thevideo" loop preload="yes">
+								<source src="<?php echo $tabP[$i]->urlvideo; ?>" type="video/mp4">
+								</video>
+								<div class="card-text subtitle lieu"><?php echo $tabP[$i]->lieu; ?></div>
+								<div class="card-text list-title"><?php echo $tabP[$i]->titreOeuvre; ?></div>
+								<div class="card-text subtitle type"><?php 
+									$type = $tabP[$i]->type;
+									if($type == 0)
+										echo 'film'; 
+									else if($type == 1)
+										echo 'série';
 
-																else if($type == 2)
-																	echo 'documentaire';
-																else
-																	echo 'erreur type';
-																?>
+									else if($type == 2)
+										echo 'documentaire';
+									else
+										echo 'erreur type';
+									?>
+								</div>
+								<div class="card-text subtitle genre"><?php echo $tabP[$i]->genre; ?></div>
 							</div>
-							<div class="card-text subtitle genre"><?php echo $tabP[$i]->genre; ?></div>
-						</div>
-					</div>								
-					<?php }
-					?>
+						</div>								
+						<?php }?>
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</body>
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/smoothState.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyludd9u3BMWppTxeU0NUzvxUdRGI42I0"></script>
+		<script src="js/script.js"></script>
+		<script>	
 
-	</body>
-	<script src="js/jquery-3.1.1.min.js"></script>
-	<script src="js/smoothState.js" type="text/javascript"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/script.js"></script>
-	</html>
+		</script>
+		</html>
