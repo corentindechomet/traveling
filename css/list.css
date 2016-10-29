@@ -121,6 +121,10 @@ a.closebtn{
 	font-size: 75px;
 }
 
+.contentContainer {
+    padding: 30px;
+}
+
 .imgScene{
 	width: 100%;
 	object-fit: cover;
