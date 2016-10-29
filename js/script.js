@@ -104,8 +104,8 @@ function openOverlay(){
 
 function closeOverlay(){
 	$("body").css("overflow-y", "visible");
-	$(".navbar").css("display", "none");
 	document.getElementById("myNavTop").style.height = "0%";
 	document.getElementById("myNavBottom").style.height = "0%";
+	$(".navbar").css("display", "inline-block");
 }
 
