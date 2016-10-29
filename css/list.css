@@ -114,6 +114,7 @@ a.closebtn{
 .filmImg{
 	padding-left:0;
 	padding-right:0;
+	cursor: pointer;
 }
 
 .imageOeuvre h1{
