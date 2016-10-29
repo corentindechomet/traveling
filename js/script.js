@@ -7,20 +7,25 @@ $(document).ready(function(){
 		var sceneCpt = 0;
 		var sceneMax = 0;
 		$(".navbar").css("display", "none");
+		$("body").css("overflow-y", "hidden");
 		$.ajax({  
 			type: "GET",
 			url: "travelingAPI.php?call=oeuvre&id="+id,             
 			dataType: "json",                
 			success: function(response){       
 				var sceneMax = response.length;
-				$(".topPartContent").html("<div class='col-md-6 filmImg'><a href='javascript:void(0)' class='closebtn' onclick='closeOverlay()''>X</a><div class='imageOeuvre'><h1>"+response[0].titreOeuvre+"</h1></div></div><div class='col-md-6 descriptionPart'><div class='row'><div class='dynamicContent'><div class='col-md-2'><i class='fa fa-arrow-left changeScene' aria-hidden='true' target-type='previous' target-url='"+response[sceneCpt].idOeuvre+"'></i></div><div class='col-md-8'><h3 class='nomScene'>"+response[0].nomScene+"</h3></div><div class='col-md-2'><i class='fa fa-arrow-right changeScene' aria-hidden='true' target-type='next' target-url='"+response[sceneCpt].idOeuvre+"'></i></div></div><div class='row'><div class='col-md-8 col-md-offset-2'><img class='imgScene' src='"+response[0].urlImgScene+"' alt=''/></div></div><div class='row'><div class='col-md-8 col-md-offset-2'><p>"+response[0].description+"</p></div></div></div>"); 
+				$("body").css("overflow-y", "hidden");
+				$(".topPartContent").html("<div class='col-md-6 filmImg hidden-sm hidden-xs'><a href='javascript:void(0)' class='closebtn' onclick='closeOverlay()''>X</a><div class='imageOeuvre'><h1>"+response[0].titreOeuvre+"</h1></div></div><div class='col-md-6 sceneTitle'><div class='dynamicContent'><div class='row'><div class='col-md-2'><i class='fa fa-arrow-left changeScene' aria-hidden='true' target-type='previous' target-url='"+response[sceneCpt].idOeuvre+"'></i></div><div class='col-md-8'><h3 class='nomScene'>"+response[0].nomScene+"</h3></div><div class='col-md-2'><i class='fa fa-arrow-right changeScene' aria-hidden='true' target-type='next' target-url='"+response[sceneCpt].idOeuvre+"'></i></div></div><div id='carousel-vertical' class='carousel vertical slide'><div class='carousel-inner' role='listbox'><div class='item active'><div class='row'><div class='col-md-8 col-md-offset-2'><img class='descriptionBloc imgScene' src='"+response[0].urlImgScene+"' alt=''/></div></div></div><div class='item'><div class='row'><div class='col-md-8 col-md-offset-2'><div class='descriptionBloc text'><p>"+response[0].description+"</p></div></div></div></div></div></div></div>"); 
 				$('.imageOeuvre').css("background-image", "url('" + response[0].urlimg + "')");
 				init(response[0].Lat, response[0].Lng, sceneMax);
+				$(".dynamicContent").css("background-image", "url('"+ response[0].urlImgScene  +"')");
 			}
 		});
 		openOverlay();
 	});
-
+	$(document).on("click", ".scroll", function (e) {
+		$(".navbar").css("display", "none");
+	});
 	//google.maps.event.addDomListener(window, 'load', init);
 	function init(Lat, Lng, sceneMax){
 		var myLatLng = {lat:  parseFloat(Lat), lng:  parseFloat(Lng)};
@@ -57,7 +62,10 @@ $(document).ready(function(){
 
 					google.maps.event.addDomListener(window, 'load', init);
 
-				$(".dynamicContent").html("<div class='col-md-12'><div class='row'><div class='col-md-2'><i class='fa fa-arrow-left changeScene' aria-hidden='true' target-type='previous' target-url='"+response[sceneCpt].idOeuvre+"'></i></div><div class='col-md-8'><h3 class='nomScene'>"+response[sceneCpt].nomScene+"</h3></div><div class='col-md-2'><i class='fa fa-arrow-right changeScene' aria-hidden='true' target-type='next' target-url='"+response[sceneCpt].idOeuvre+"'></i></div></div><div class='row'><div class='col-md-8 col-md-offset-2'><img class='imgScene' src='"+response[sceneCpt].urlImgScene+"' alt=''/></div></div><div class='row'><div class='col-md-8 col-md-offset-2'><p>"+response[sceneCpt].description+"</p></div></div>"); 				}
+					$(".dynamicContent").html("<div class='row'><div class='col-md-2'><i class='fa fa-arrow-left changeScene' aria-hidden='true' target-type='previous' target-url='"+response[sceneCpt].idOeuvre+"'></i></div><div class='col-md-8'><h3 class='nomScene'>"+response[sceneCpt].nomScene+"</h3></div><div class='col-md-2'><i class='fa fa-arrow-right changeScene' aria-hidden='true' target-type='next' target-url='"+response[sceneCpt].idOeuvre+"'></i></div></div><div id='carousel-vertical' class='carousel vertical slide'><div class='carousel-inner' role='listbox'><div class='item active'><div class='row'><div class='col-md-8 col-md-offset-2'><img class='descriptionBloc imgScene' src='"+response[sceneCpt].urlImgScene+"' alt=''/></div></div></div><div class='item'><div class='row'><div class='col-md-8 col-md-offset-2'><div class='descriptionBloc text'><p>"+response[sceneCpt].description+"</p></div></div></div></div></div></div>");
+
+					$(".dynamicContent").css("background-image", "url('"+ response[sceneCpt].urlImgScene  +"')");
+				}
 			});
 		});
 	}
