@@ -33,8 +33,19 @@
 				<div class="col-md-8 col-md-offset-2">
 					<div class="logo">
 						<object>
-							<embed src="logo.svg" type=""/>
+							<embed src="imgs/logo.svg" type=""/>
 						</object>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2 col-md-offset-5">
+					<div class="svgWrapper">
+						<a href="#mainContent">
+							<svg enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<path class="arrow" d="m48.419994,2.522112l-23.320662,20.989826l-23.320661,-20.989826l0.659196,-0.732111l22.661465,20.394678l22.661467,-20.394678l0.659195,0.732111z" stroke-width="2" stroke="#f9f9f9" fill="none" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray: 126, 128; stroke-dashoffset: 0;"></path>
+							</svg>
+						</a>
 					</div>
 				</div>
 			</div>
