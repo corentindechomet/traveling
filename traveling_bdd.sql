@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 29 Octobre 2016 à 00:13
--- Version du serveur :  10.1.13-MariaDB
--- Version de PHP :  5.6.23
+-- Généré le :  Mer 02 Novembre 2016 à 21:45
+-- Version du serveur :  10.1.16-MariaDB
+-- Version de PHP :  5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -33,9 +33,27 @@ CREATE TABLE `lieu` (
   `ville` varchar(50) NOT NULL,
   `categorie` varchar(50) NOT NULL,
   `description` text NOT NULL,
-  `latitude` int(11) NOT NULL,
-  `longitude` int(11) NOT NULL
+  `latitude` varchar(15) NOT NULL,
+  `longitude` varchar(15) NOT NULL,
+  `urlvideo` varchar(255) NOT NULL,
+  `pays` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `lieu`
+--
+
+INSERT INTO `lieu` (`idLieu`, `nomLieu`, `adresse`, `ville`, `categorie`, `description`, `latitude`, `longitude`, `urlvideo`, `pays`, `type`) VALUES
+(1, 'paris', '', 'paris', 'ville', '', '48.8534100', '2.3488000', 'imgs/paris.mp4', 'france', 'ville'),
+(2, 'londres', '', 'londres', 'ville', '', '51.5085300', '-0.1257400', 'imgs/londres.mp4', 'Angleterre', 'ville'),
+(3, 'los angeles', '', 'los angeles', 'ville', '', '34.0522300', '-118.2436800', 'imgs/losangeles.mp4', 'usa', 'ville'),
+(4, 'new york', '', 'new york', 'ville', '', '40.7142700', '-74.0059700', 'imgs/newyork.mp4', 'usa', 'ville'),
+(5, 'tokyo', '', 'tokyo', 'ville', '', '35.6895000', '139.6917100', 'imgs/tokyo.mp4', 'japon', 'ville'),
+(6, 'californie', '', '', 'nature', '', '0', '0', 'imgs/californie.mp4', 'usa', 'nature'),
+(7, 'texas', '', '', 'nature', '', '0', '0', 'imgs/texas.mp4', 'usa', 'nature'),
+(8, 'alpes', '', '', 'nature', '', '0', '0', 'imgs/alpes.mp4', 'Europe', 'nature'),
+(9, 'west coast', '', '', 'nature', '', '0', '0', 'imgs/westcoast.mp4', 'usa', 'nature');
 
 -- --------------------------------------------------------
 
@@ -129,7 +147,7 @@ ALTER TABLE `scene`
 -- AUTO_INCREMENT pour la table `lieu`
 --
 ALTER TABLE `lieu`
-  MODIFY `idLieu` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idLieu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT pour la table `oeuvres`
 --

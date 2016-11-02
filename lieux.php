@@ -29,20 +29,40 @@
 			</div>
 		</div>
 	</div>
-	
-	<?php include 'menu.php' ?>
+	<!-- Navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#home">TRAVELING</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="anchor1"><a href="#mainContent">Oeuvres</a></li>
+					<li id="anchor2"><a href="#projets">Lieux</a></li>
+					<li id="anchor3"><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- FIN Navbar -->
 
 	<header id="home">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<h1>oeuvres</h1>
+					<h1>lieux</h1>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 					<form method="get">
-						<i class='fa fa-search' aria-hidden='true'></i><input class="search-header" name="search" title="Rechercher une oeuvre" type="text" placeholder="Rechercher une oeuvre"></input>
+						<i class='fa fa-search' aria-hidden='true'></i><input class="search-header" name="search" title="Rechercher une oeuvre" type="text" placeholder="Rechercher un lieu"></input>
 					</form>
 				</div>
 			</div>
@@ -55,9 +75,9 @@
 				<?php
 				include('connection.php');
 				if(isset($_GET['search']))
-					$requeteP = "SELECT * FROM oeuvres WHERE titreOeuvre LIKE '%".$_GET['search']."%' ";
+					$requeteP = "SELECT * FROM lieu WHERE nomLieu LIKE '%".$_GET['search']."%' ";
 				else
-					$requeteP = 'SELECT * FROM oeuvres';
+					$requeteP = 'SELECT * FROM lieu';
 				$resultatP = $connection->query($requeteP);
 				$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
 
@@ -68,32 +88,19 @@
 
 				for($i=0;$i<count($tabP);$i++){ ?>
 					<div class="col-md-4 video">
-						<div class="card overlay" target-url="<?php echo $tabP[$i]->idOeuvre?>">
+						<div class="card overlay" target-url="<?php echo $tabP[$i]->idLieu ?>">
 							<video class="thevideo" loop preload="yes">
-								<source src="<?php echo $tabP[$i]->urlvideo; ?>" type="video/mp4">
+								<source src="<?php echo $tabP[$i]->urlvideo ?>" type="video/mp4">
 								</video>
-								<div class="card-text subtitle lieu"><?php echo $tabP[$i]->lieu; ?></div>
-								<div class="card-text list-title"><?php echo $tabP[$i]->titreOeuvre; ?></div>
-								<div class="card-text subtitle type"><?php 
-									$type = $tabP[$i]->type;
-									if($type == 0)
-										echo 'film'; 
-									else if($type == 1)
-										echo 'série';
-
-									else if($type == 2)
-										echo 'documentaire';
-									else
-										echo 'erreur type';
-									?>
-								</div>
-								<div class="card-text subtitle genre"><?php echo $tabP[$i]->genre; ?></div>
-							</div>
-						</div>								
+								<div class="card-text subtitle pays"><?php echo $tabP[$i]->pays ?></div>
+								<div class="card-text list-title"><?php echo $tabP[$i]->nomLieu ?></div>
+								<div class="card-text subtitle genre"><?php echo $tabP[$i]->type ?></div>
+						</div>
+					</div>								
 						<?php }?>
-					</div>
-				</div>
-			</section>
+			</div>
+		</div>
+	</section>
 		</body>
 		<script src="js/jquery-3.1.1.min.js"></script>
 		<script src="js/smoothState.js"></script>

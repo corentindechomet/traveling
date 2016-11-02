@@ -84,7 +84,7 @@ h2{font-size:24px;}
 	font-size: 24px;
 }
 
-.card .lieu{top: 20px;}
+.card .pays, .card .lieu{top: 20px;}
 .card .type{bottom: 80px;}
 .card .genre{bottom: 50px;}
 
