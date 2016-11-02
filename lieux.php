@@ -29,28 +29,8 @@
 			</div>
 		</div>
 	</div>
-	<!-- Navbar -->
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#home">TRAVELING</a>
-			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li id="anchor1"><a href="#mainContent">Oeuvres</a></li>
-					<li id="anchor2"><a href="#projets">Lieux</a></li>
-					<li id="anchor3"><a href="#contact">Contact</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<!-- FIN Navbar -->
+
+	<?php include 'menu.php' ?>
 
 	<header id="home">
 		<div class="container">
