@@ -1,7 +1,7 @@
 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	viewBox="0 0 1816 640" style="enable-background:new 0 0 1816 640;" xml:space="preserve">
 	<style>
-			.st0{
+			.letter{
 			  fill:none;
 			  opacity: 1;
 			  stroke:#FFFFFF;
@@ -9,34 +9,34 @@
 			  stroke-miterlimit:10;
 			  stroke-dasharray:2500;
 			  stroke-dashoffset:0;
-			  -webkit-animation: dash1 3s ease forwards, fill 3s ease forwards, opacity 2s ease forwards;
-			  -moz-animation: dash1 3s ease forwards, fill 3s ease forwards, opacity 2s ease forwards;
-			  -o-animation: dash1 3s ease forwards, fill 3s ease forwards, opacity 2s ease forwards;
-			  animation: dash1 3s ease forwards, fill 3s ease forwards, opacity 2s ease forwards;
+			  -webkit-animation: dash1 4s ease forwards, fill 4s ease forwards;
+			  -moz-animation: dash1 4s ease forwards, fill 4s ease forwards;
+			  -o-animation: dash1 4s ease forwards, fill 4s ease forwards;
+			  animation: dash1 4s ease forwards, fill 4s ease forwards;
 			}
-			.st1{
+			.line1{
 			  fill:none;
 			  stroke:#FFFFFF;
 			  stroke-width:4;
 			  stroke-miterlimit:10;
 			  stroke-dasharray:2000;
 			  stroke-dashoffset:0;
-			  -webkit-animation: dash1 2s ease forwards, opacity 1.2s ease forwards;
-			  -moz-animation: dash1 2s ease forwards, opacity 1.2s ease forwards;
-			  -o-animation: dash1 2s ease forwards, opacity 1.2s ease forwards;
-			  animation: dash1 2s ease forwards, opacity 1.2s ease forwards;
+			  -webkit-animation: dash1 3s ease forwards, opacity 1.8s ease forwards;
+			  -moz-animation: dash1 3s ease forwards, opacity 1.8s ease forwards;
+			  -o-animation: dash1 3s ease forwards, opacity 1.8s ease forwards;
+			  animation: dash1 3s ease forwards, opacity 1.8s ease forwards;
 			}
-			.st2{
+			.line2{
 			  fill:none;
 			  stroke:#FFFFFF;
 			  stroke-width:4;
 			  stroke-miterlimit:10;
 			  stroke-dasharray:2000;
 			  stroke-dashoffset:4000;
-			  -webkit-animation: dash2 1.3s ease forwards, opacity 1.2s ease forwards;
-			  -moz-animation: dash2 1.3s ease forwards, opacity 1.2s ease forwards;
-			  -o-animation: dash2 1.3s ease forwards, opacity 1.2s ease forwards;
-			  animation: dash2 1.3s ease forwards, opacity 1.2s ease forwards;
+			  -webkit-animation: dash2 2s ease forwards, opacity 1.8s ease forwards;
+			  -moz-animation: dash2 2s ease forwards, opacity 1.8s ease forwards;
+			  -o-animation: dash2 2s ease forwards, opacity 1.8s ease forwards;
+			  animation: dash2 2s ease forwards, opacity 1.8s ease forwards;
 			}
 			@-webkit-keyframes dash1{
 			  from{
@@ -62,31 +62,24 @@
 			    fill:#FFF;
 			  }
 			}
-			@-webkit-keyframes opacity{
-			  from{
-			    opacity:0;
-			  }
-			  to{
-			    opacity:1;
-			  }
-			}
+
 	</style>
 	<g>
-		<path class="st0" d="M152,136.4H97v371.3H82.2V136.4h-55v-13.8H152V136.4z"/>
-		<path class="st0" d="M369.3,507.7h-15.4v-63.8c0-24.2-16-40.2-42.4-40.2h-63.3v104h-15.4v-385h64.4c32.5,0,69.9,19.8,69.9,74.3
+		<path class="letter" d="M152,136.4H97v371.3H82.2V136.4h-55v-13.8H152V136.4z"/>
+		<path class="letter" d="M369.3,507.7h-15.4v-63.8c0-24.2-16-40.2-42.4-40.2h-63.3v104h-15.4v-385h64.4c32.5,0,69.9,19.8,69.9,74.3
 			v132.6c0,24.2-11.6,47.9-36.9,63.3c24.8,6.1,39.1,27,39.1,51.2V507.7z M248.3,389.4h49c23.7,0,55-21.5,55-60V196.9
 			c0-36.9-22-60-55-60h-49V389.4z"/>
-			<path class="st0" d="M558.5,401.5h-78.7l-16,106.2h-15.4l59.4-385h21.5l61.1,385H575L558.5,401.5z M556.3,386.7l-37.4-241.5
+			<path class="letter" d="M558.5,401.5h-78.7l-16,106.2h-15.4l59.4-385h21.5l61.1,385H575L558.5,401.5z M556.3,386.7l-37.4-241.5
 				L482,386.7H556.3z"/>
-				<path class="st0" d="M788.9,122.1h15.4l-60.5,385.6h-22.5l-58.9-385.6h15.4l55,360.8L788.9,122.1z"/>
-				<path class="st0" d="M907.2,136.4v251.4H993v13.8h-85.8v91.9h108.4v14.3H891.8v-385h123.8v13.8H907.2z"/>
-				<path class="st0" d="M1203.1,493.4v14.3h-102.9v-385h15.4v370.7H1203.1z"/>
-				<path class="st0" d="M1288.8,507.7v-385h15.4v385H1288.8z"/>
-				<path class="st0" d="M1551.2,122.7v385h-14.8l-116.1-338.3v338.3h-15.4v-385h15.4l116.1,342.1V122.7H1551.2z"/>
-				<path class="st0" d="M1785.5,385.6v49.5c0,38-25.3,75.9-68.8,75.9c-41.8,0-70.4-33.5-70.4-76.4v-236c0-42.9,25.9-77.6,69.3-77.6
+				<path class="letter" d="M788.9,122.1h15.4l-60.5,385.6h-22.5l-58.9-385.6h15.4l55,360.8L788.9,122.1z"/>
+				<path class="letter" d="M907.2,136.4v251.4H993v13.8h-85.8v91.9h108.4v14.3H891.8v-385h123.8v13.8H907.2z"/>
+				<path class="letter" d="M1203.1,493.4v14.3h-102.9v-385h15.4v370.7H1203.1z"/>
+				<path class="letter" d="M1288.8,507.7v-385h15.4v385H1288.8z"/>
+				<path class="letter" d="M1551.2,122.7v385h-14.8l-116.1-338.3v338.3h-15.4v-385h15.4l116.1,342.1V122.7H1551.2z"/>
+				<path class="letter" d="M1785.5,385.6v49.5c0,38-25.3,75.9-68.8,75.9c-41.8,0-70.4-33.5-70.4-76.4v-236c0-42.9,25.9-77.6,69.3-77.6
 					c40.7,0,70.4,31.9,70.4,77v30.8h-14.3V198c0-34.6-20.3-62.7-55.5-62.7c-33,0-54.5,25.9-54.5,63.3c0,12.1,0,24.8,0,236
 					c0,31.3,19.3,61.6,55,61.6c33,0,53.9-28,53.9-61.1v-35.7h-57.8v-13.8H1785.5z"/>
 	</g>
-	<line class="st1" x1="27.2" y1="38" x2="1785.5" y2="38"/>
-	<line class="st2" x1="27.2" y1="594" x2="1785.5" y2="594"/>
+	<line class="line1" x1="27.2" y1="38" x2="1785.5" y2="38"/>
+	<line class="line2" x1="27.2" y1="594" x2="1785.5" y2="594"/>
 </svg>

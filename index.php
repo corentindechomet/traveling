@@ -24,7 +24,11 @@
 			</div>
 		</div>
 	</div>
-	
+	<video id="video" autoplay loop>
+		<source src="imgs/filmAccueil.mp4" type="video/mp4"/>
+	</video>
+	</div>
+
 	<?php include 'menu.php' ?>
 
 	<header id="home">

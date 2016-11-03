@@ -103,8 +103,10 @@ h2 span{
 header#home{
  width: 100%;
  height: 100vh;
- background: url(../imgs/bg1.jpg) center fixed;
- background-size: cover;
+ position: absolute;
+ top:0;
+ /*background: url(../imgs/bg1.jpg) center fixed;
+ background-size: cover;*/
  font-variant: small-caps;
  font-size: 24px;
  color: #f4f4f4;
@@ -114,9 +116,14 @@ header .logo{
  margin-top: 125px;
 }
 
+#video{
+ width: 100%;
+ height: auto;
+}
+
 .svgWrapper{
   text-align: center;
-  margin-top: 200px;
+  margin-top: 100px;
   position: relative;
   top: 0px;
   -webkit-transition: top 0.2s ease;
@@ -128,15 +135,18 @@ header .logo{
 
 .svgWrapper:hover{
   top: -20px;
+  stroke: #000;
   animation: all 2s ease;
 }
 
 .arrow{
-  opacity: 1;
-  -webkit-animation: dash1 2s ease forwards, opacity 1.2s ease forwards;
-  -moz-animation: dash1 2s ease forwards, opacity 1.2s ease forwards;
-  -o-animation: dash1 2s ease forwards, opacity 1.2s ease forwards;
-  animation: dash1 2s ease forwards, opacity 1.2s ease forwards;
+  opacity: 0;
+  -webkit-animation: dash1 1.5s ease forwards, opacity 1.2s ease forwards;
+  -moz-animation: dash1 1.5s ease forwards, opacity 1.2s ease forwards;
+  -o-animation: dash1 1.5s ease forwards, opacity 1.2s ease forwards;
+  animation: dash1 1.5s ease forwards, opacity 1.2s ease forwards;
+  -webkit-animation-delay: 4s; /* Safari 4.0 - 8.0 */
+  animation-delay: 2s;
 }
 @-webkit-keyframes dash1{
   from{

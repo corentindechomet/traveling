@@ -14,7 +14,7 @@ switch ($call) {
 
 	break;
 
-	case 'markers':
+	case 'lieu':
 
 	default:
 		# code...
