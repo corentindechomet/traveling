@@ -55,7 +55,7 @@
 				<?php
 				include('connection.php');
 				if(isset($_GET['search']))
-					$requeteP = "SELECT * FROM lieu WHERE nomLieu LIKE '%".$_GET['search']."%' ";
+					$requeteP = "SELECT * FROM lieu WHERE nomLieu LIKE '%".$_GET['search']."%' OR pays LIKE '%".$_GET['search']."%' ";
 				else
 					$requeteP = 'SELECT * FROM lieu';
 				$resultatP = $connection->query($requeteP);
