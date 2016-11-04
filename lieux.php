@@ -32,7 +32,7 @@
 
 	<?php include 'menu.php' ?>
 
-	<header id="home">
+	<header class="header">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
