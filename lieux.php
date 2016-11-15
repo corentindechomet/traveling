@@ -68,7 +68,7 @@
 
 				for($i=0;$i<count($tabP);$i++){ ?>
 					<div class="col-md-4 video">
-						<div class="card overlay" target-url="<?php echo $tabP[$i]->idLieu ?>">
+						<div class="card overlay lieu" target-url="<?php echo $tabP[$i]->idLieu?>">
 							<video class="thevideo" loop preload="yes">
 								<source src="<?php echo $tabP[$i]->urlvideo ?>" type="video/mp4">
 								</video>

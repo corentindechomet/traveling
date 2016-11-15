@@ -16,6 +16,16 @@ switch ($call) {
 
 	case 'lieu':
 
+	$id=$_GET['id'];
+	$requeteP = 'SELECT * FROM lieu, scene WHERE lieu.idLieu ='.$id.' AND scene.idLieu ='.$id ;
+
+	$resultatP = $connection->query($requeteP);
+	$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
+
+	echo json_encode($tabP);
+
+	break;
+
 	default:
 		# code...
 	break;
