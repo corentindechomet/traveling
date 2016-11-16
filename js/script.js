@@ -2,7 +2,7 @@ $(document).ready(function(){
 	var sceneCpt = 0;
 	var sceneMax = 0;
 
-	$(document).on("click", ".card.overlay", function (e) {
+	$(document).on("click", ".card.overlay.oeuvre", function (e) {
 		var id = $(this).attr("target-url");
 		var sceneCpt = 0;
 		var sceneMax = 0;
@@ -23,6 +23,34 @@ $(document).ready(function(){
 					})
 					.mouseleave(function() {
 						$(".imageOeuvre h1").html(response[0].titreOeuvre);
+					});
+				}, 2500);
+			}
+		});
+		openOverlay();
+	});
+
+	$(document).on("click", ".card.overlay.lieu", function (e) {
+		var id = $(this).attr("target-url");
+		var sceneCpt = 0;
+		var sceneMax = 0;
+		$.ajax({  
+			type: "GET",
+			url: "travelingAPI.php?call=lieu&id="+id,             
+			dataType: "json",                
+			success: function(response){
+				var sceneMax = response.length;
+				$(".topPartContent").html("<div class='col-md-6 filmImg hidden-sm hidden-xs' onclick='closeOverlay()'><a href='javascript:void(0)' class='closebtn' onclick='closeOverlay()''>X</a><div class='imageOeuvre'><h1>"+response[0].nomLieu+"</h1></div></div><div class='col-md-6 sceneTitle'><div class='dynamicContent'><div class='contentContainer'><div class='row'><div class='col-md-2'><i class='fa fa-arrow-left changeScene' aria-hidden='true' target-type='previous' target-url='"+response[sceneCpt].idLieu+"'></i></div><div class='col-md-8'><h3 class='nomScene'>"+response[0].nomScene+"</h3></div><div class='col-md-2'><i class='fa fa-arrow-right changeScene' aria-hidden='true' target-type='next' target-url='"+response[sceneCpt].idLieu+"'></i></div></div><div id='carousel-vertical' class='carousel vertical slide'><div class='carousel-inner' role='listbox'><div class='item active'><div class='row'><div class='col-md-8 col-md-offset-2'><img class='descriptionBloc imgScene' src='"+response[0].urlImgScene+"' alt=''/></div></div></div><div class='item'><div class='row'><div class='col-md-8 col-md-offset-2'><div class='descriptionBloc text'><p>"+response[0].description+"</p></div></div></div></div></div></div></div></div>"); 
+				$('.imageOeuvre').css("background-image", "url('" + response[0].urlImgLieu + "')");
+				init(response[0].Lat, response[0].Lng, sceneMax);
+				$(".dynamicContent").css("background-image", "url('"+ response[0].urlImgScene  +"')");
+				setTimeout(function() {
+					$( "#myNavTop .filmImg" )
+					.mouseenter(function() {
+						$(".imageOeuvre h1").html("Click to go back");
+					})
+					.mouseleave(function() {
+						$(".imageOeuvre h1").html(response[0].nomLieu);
 					});
 				}, 2500);
 			}
