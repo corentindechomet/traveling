@@ -129,6 +129,11 @@ a.closebtn{
 	padding: 30px;
 }
 
+.dynamicContent{
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .imgScene{
 	width: 100%;
 	object-fit: cover;

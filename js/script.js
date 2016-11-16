@@ -110,7 +110,6 @@ $(document).ready(function(){
 			});
 		});
 	}
-
 	var figure = $(".video").hover( hoverVideo, hideVideo );
 });
 
