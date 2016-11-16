@@ -17,6 +17,7 @@
 
 body{
   font-family: "Canter";
+  line-height: 0;
 }
 
 h2{
@@ -105,8 +106,6 @@ header#home{
  height: 100vh;
  position: absolute;
  top:0;
- /*background: url(../imgs/bg1.jpg) center fixed;
- background-size: cover;*/
  font-variant: small-caps;
  font-size: 24px;
  color: #f4f4f4;
@@ -118,12 +117,12 @@ header .logo{
 
 #video{
  width: 100%;
-  height: 100vh;
-    object-fit: cover;
+ height: 100vh;
+ object-fit: cover;
 }
 .svgWrapper{
   text-align: center;
-  margin-top: 100px;
+  margin-top: 175px;
   position: relative;
   top: 0px;
   -webkit-transition: top 0.2s ease;
@@ -176,12 +175,14 @@ header .logo{
 
 /* Main */
 section#mainContent{
- margin: 50px 0 50px 0;
+ padding-top: 50px;
+ background-color: rgb(245,245,245);
+ line-height: 1.5;
 }
 
 #main{
-  margin-top: 50px;
-  margin-bottom: 100px;
+  padding: 50px 0 50px 0;
+  background-color: rgb(250,250,250); 
 }
 
 /* Cards */
@@ -293,3 +294,138 @@ span.escapeText{
   background-size: cover;
 }
 
+/* Overlay */
+/* Top part */
+a.closebtn{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 30px;
+  color: white;
+  font-family: "Poppins";
+}
+
+.topPartContent{
+ line-height: 1;
+ overflow-x: hidden;
+}
+
+.imageOeuvre{
+  height: 50vh;
+  color: white;
+  text-align: center;
+  padding: 100px 0 0 0;
+  background-position: top;
+}
+
+.filmImg{
+  padding-left:0;
+  padding-right:0;
+  cursor: pointer;
+}
+
+.imageOeuvre h1{
+  margin: 0;
+  font-size: 75px;
+}
+
+.contentContainer {
+  padding: 30px;
+}
+
+.imgScene{
+  width: 100%;
+  object-fit: cover;
+  margin-top: 30px;
+}
+
+.changeScene{
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.sceneTitle{
+  padding-right: 0;
+  padding-left: 0;
+  color: white;
+  text-align: center;
+}
+
+.sceneTitle .nomScene{
+  text-align: center;
+  padding: 15px;
+  border: 1px solid white;
+  font-size: 25px;
+}
+
+.descriptionBloc{
+  height: 25vh;
+  margin-bottom: 100px;
+}
+
+.descriptionBloc.text{
+  padding: 25px 0 25px 0;
+}
+
+.fa.carousel-control{
+  position: absolute;
+  top: 160px;
+  right: 35px;
+}
+
+.fa.down.carousel-control{
+  top: 200px;
+}
+
+.carousel.vertical .carousel-inner > .item {
+  -webkit-transition: 0.6s ease-in-out top;
+  transition: 0.6s ease-in-out top;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel.vertical .carousel-inner > .item {
+    -webkit-transition: 0.6s ease-in-out;
+    transition: 0.6s ease-in-out;
+  }
+  .carousel.vertical .carousel-inner > .item.next, .carousel.vertical .carousel-inner > .item.active.right {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    top: 0;
+  }
+  .carousel.vertical .carousel-inner > .item.prev, .carousel.vertical .carousel-inner > .item.active.left {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    top: 0;
+  }
+  .carousel.vertical .carousel-inner > .item.next.left, .carousel.vertical .carousel-inner > .item.prev.right, .carousel.vertical .carousel-inner > .item.active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    top: 0;
+  }
+}
+
+/* Bottom part */
+/* MAP */
+#map{
+  height: 50vh;
+}
+
+.mapReceiver{
+  padding: 0;
+}
+
+
+/* Footer */
+#footer{
+  margin-top: 0;
+  padding: 20px;
+  height: 75px;
+  width: 100%;
+  background-color: #795548;
+  line-height: 1.5;
+  color: rgb(235,235,235);
+  font-size: 20px;
+}
+
+#footer p{
+  text-align: right;
+}

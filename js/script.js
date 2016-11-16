@@ -53,6 +53,7 @@ $(document).ready(function(){
 		});
 
 		$(document).on("click", ".changeScene", function (e) {
+
 			var type = $(this).attr("target-type");
 			if(type == 'previous')
 				sceneCpt -= 1;
