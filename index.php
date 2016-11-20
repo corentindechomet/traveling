@@ -72,34 +72,42 @@
 				$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
 				?>
 				<div class="card overlay lastFilmAdded" target-url="<?php echo $tabP[0]->idOeuvre; ?>" style="background: url('<?php echo $tabP[0]->urlimg; ?>') top;">
-					<h2><span>LAST FILM ADDED</span></br><?php echo $tabP[0]->titreOeuvre; ?><h2>			
+					<h2><span>DERNIER FILM</span></br><?php echo $tabP[0]->titreOeuvre; ?><h2>			
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-xs-12">
 					<div id="searchByFilms" class="card searchBy">
-						<input type="search" placeholder="Search by series or movies" name="the_search">
-						<i class="searchIcon fa fa-search" aria-hidden="true"></i>
+						<form  action="oeuvres.php" method="get">
+							<input type="search" placeholder="Rechercher une série ou un film" name="search">
+							<i class="searchIcon fa fa-search" aria-hidden="true"></i>
+						</form>
 					</div>
 				</div>
 				<div class="col-md-6 col-xs-12">
 					<div id="searchByLocation" class="card searchBy">
-						<input type="search" placeholder="Search by location" name="the_search">
-						<i class="searchIcon fa fa-search" aria-hidden="true"></i>
+						<form  action="lieux.php" method="get">
+							<input type="search" placeholder="Rechercher un lieu" name="search">
+							<i class="searchIcon fa fa-search" aria-hidden="true"></i>
+						</form>
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row desire">
 				<div class="col-md-4">
+					<a href="urban.php">
 					<div class="card urban">
-						<h3>DESIRE FOR <h3 class="transparent"><span class="urbanText">URBAN</span></h3></h3>
+						<h3>EXPLOREZ <h3 class="transparent"><span class="urbanText">LA VILLE</span></h3></h3>
 					</div>
+					</a>
 				</div>
 				<div class="col-md-4">
+					<a href="nature.php">
 					<div class="card nature">
-						<h3>DESIRE FOR <h3 class="transparent"><span class="natureText">NATURE</span></h3></h3>
+						<h3>EXPLOREZ <h3 class="transparent"><span class="natureText">LA NATURE</span></h3></h3>
 					</div>
+					</a>
 				</div>
 				<div class="col-md-4">
 					<div class="card escape">
