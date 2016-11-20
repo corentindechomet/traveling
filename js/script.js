@@ -2,17 +2,24 @@ $(document).ready(function(){
 	var sceneCpt = 0;
 	var sceneMax = 0;
 
+	// Requête AJAX films
 	$(document).on("click", ".card.overlay.oeuvre", function (e) {
-		var id = $(this).attr("target-url");
+		if($(this).attr("target-type") == "random"){
+			var url = "travelingAPI.php?call=randomOeuvre";
+		}
+		else{
+			var id = $(this).attr("target-url");
+			var url = "travelingAPI.php?call=oeuvre&id="+id;
+		}
 		var sceneCpt = 0;
 		var sceneMax = 0;
 		$.ajax({  
 			type: "GET",
-			url: "travelingAPI.php?call=oeuvre&id="+id,             
+			url: url,             
 			dataType: "json",                
 			success: function(response){
 				var sceneMax = response.length;
-				$(".topPartContent").html("<div class='col-md-6 filmImg hidden-sm hidden-xs' onclick='closeOverlay()'><a href='javascript:void(0)' class='closebtn' onclick='closeOverlay()''>X</a><div class='imageOeuvre'><h1>"+response[0].titreOeuvre+"</h1></div></div><div class='col-md-6 sceneTitle'><div class='dynamicContent'><div class='contentContainer'><div class='row'><div class='col-md-2'><i class='fa fa-arrow-left changeScene' aria-hidden='true' target-type='previous' target-url='"+response[sceneCpt].idOeuvre+"'></i></div><div class='col-md-8'><h3 class='nomScene'>"+response[0].nomScene+"</h3></div><div class='col-md-2'><i class='fa fa-arrow-right changeScene' aria-hidden='true' target-type='next' target-url='"+response[sceneCpt].idOeuvre+"'></i></div></div><div id='carousel-vertical' class='carousel vertical slide'><div class='carousel-inner' role='listbox'><div class='item active'><div class='row'><div class='col-md-8 col-md-offset-2'><img class='descriptionBloc imgScene' src='"+response[0].urlImgScene+"' alt=''/></div></div></div><div class='item'><div class='row'><div class='col-md-8 col-md-offset-2'><div class='descriptionBloc text'><p>"+response[0].description+"</p></div></div></div></div></div></div></div></div>"); 
+				$(".topPartContent").html("<div class='col-md-6 col-sm-6 col-xs-6 filmImg' onclick='closeOverlay()'><a href='javascript:void(0)' class='closebtn' onclick='closeOverlay()''>X</a><div class='imageOeuvre'><h1>"+response[0].titreOeuvre+"</h1></div></div><div class='col-md-6 col-sm-6 col-xs-6 sceneDescription'><div class='dynamicContent'><div class='contentContainer'><div class='row'><div class='col-md-2'><i class='fa fa-arrow-left changeScene' aria-hidden='true' target-type='previous' target-url='"+response[sceneCpt].idOeuvre+"'></i></div><div class='col-md-8'><h3 class='nomScene'>"+response[0].nomScene+"</h3></div><div class='col-md-2'><i class='fa fa-arrow-right changeScene' aria-hidden='true' target-type='next' target-url='"+response[sceneCpt].idOeuvre+"'></i></div></div><div id='carousel-vertical' class='carousel vertical slide'><div class='carousel-inner' role='listbox'><div class='item active'><div class='row'><div class='col-md-8 col-md-offset-2'>blablabla</div></div></div><div class='item'><div class='row'><div class='col-md-8 col-md-offset-2'><div class='descriptionBloc text'><p>"+response[0].description+"</p></div></div></div></div></div></div></div></div></div>"); 
 				$('.imageOeuvre').css("background-image", "url('" + response[0].urlimg + "')");
 				init(response[0].Lat, response[0].Lng, sceneMax);
 				$(".dynamicContent").css("background-image", "url('"+ response[0].urlImgScene  +"')");
@@ -40,7 +47,7 @@ $(document).ready(function(){
 			dataType: "json",                
 			success: function(response){
 				var sceneMax = response.length;
-				$(".topPartContent").html("<div class='col-md-6 filmImg hidden-sm hidden-xs' onclick='closeOverlay()'><a href='javascript:void(0)' class='closebtn' onclick='closeOverlay()''>X</a><div class='imageOeuvre'><h1>"+response[0].nomLieu+"</h1></div></div><div class='col-md-6 sceneTitle'><div class='dynamicContent'><div class='contentContainer'><div class='row'><div class='col-md-2'><i class='fa fa-arrow-left changeScene' aria-hidden='true' target-type='previous' target-url='"+response[sceneCpt].idLieu+"'></i></div><div class='col-md-8'><h3 class='nomScene'>"+response[0].nomScene+"</h3></div><div class='col-md-2'><i class='fa fa-arrow-right changeScene' aria-hidden='true' target-type='next' target-url='"+response[sceneCpt].idLieu+"'></i></div></div><div id='carousel-vertical' class='carousel vertical slide'><div class='carousel-inner' role='listbox'><div class='item active'><div class='row'><div class='col-md-8 col-md-offset-2'><img class='descriptionBloc imgScene' src='"+response[0].urlImgScene+"' alt=''/></div></div></div><div class='item'><div class='row'><div class='col-md-8 col-md-offset-2'><div class='descriptionBloc text'><p>"+response[0].description+"</p></div></div></div></div></div></div></div></div>"); 
+				$(".topPartContent").html("<div class='col-md-6 col-sm-6 col-xs-6 filmImg' onclick='closeOverlay()'><a href='javascript:void(0)' class='closebtn' onclick='closeOverlay()''>X</a><div class='imageOeuvre'><h1>"+response[0].nomLieu+"</h1></div></div><div class='col-md-6 col-sm-6 col-xs-6 sceneDescription'><div class='dynamicContent'><div class='contentContainer'><div class='row'><div class='col-md-2'><i class='fa fa-arrow-left changeScene' aria-hidden='true' target-type='previous' target-url='"+response[sceneCpt].idLieu+"'></i></div><div class='col-md-8'><h3 class='nomScene'>"+response[0].nomScene+"</h3></div><div class='col-md-2'><i class='fa fa-arrow-right changeScene' aria-hidden='true' target-type='next' target-url='"+response[sceneCpt].idLieu+"'></i></div></div><div id='carousel-vertical' class='carousel vertical slide'><div class='carousel-inner' role='listbox'><div class='item active'><div class='row'><div class='col-md-8 col-md-offset-2'><img class='descriptionBloc imgScene' src='"+response[0].urlImgScene+"' alt=''/></div></div></div><div class='item'><div class='row'><div class='col-md-8 col-md-offset-2'><div class='descriptionBloc text'><p>"+response[0].description+"</p></div></div></div></div></div></div></div></div>"); 
 				$('.imageOeuvre').css("background-image", "url('" + response[0].urlImgLieu + "')");
 				init(response[0].Lat, response[0].Lng, sceneMax);
 				$(".dynamicContent").css("background-image", "url('"+ response[0].urlImgScene  +"')");

@@ -17,7 +17,7 @@
 
 body{
   font-family: "Canter";
-  line-height: 0;
+  /* line-height: 0; */
 }
 
 h2{
@@ -112,7 +112,7 @@ header#home{
 }
 
 header .logo{
- margin-top: 125px;
+  margin-top: 25vh;
 }
 
 #video{
@@ -239,7 +239,9 @@ section#mainContent{
   color: rgba(255,255,255,0.9);
 }
 
-.desire a{text-decoration: none;}
+.desire a{
+  text-decoration: none;
+}
 
 .card.urban, .card.nature, .card.escape{
   padding: 35px;
@@ -346,14 +348,14 @@ a.closebtn{
   cursor: pointer;
 }
 
-.sceneTitle{
+.sceneDescription{
   padding-right: 0;
   padding-left: 0;
   color: white;
   text-align: center;
 }
 
-.sceneTitle .nomScene{
+.sceneDescription .nomScene{
   text-align: center;
   padding: 15px;
   border: 1px solid white;

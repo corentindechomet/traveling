@@ -145,14 +145,14 @@ a.closebtn{
 	cursor: pointer;
 }
 
-.sceneTitle{
+.sceneDescription{
 	padding-right: 0;
 	padding-left: 0;
 	color: white;
 	text-align: center;
 }
 
-.sceneTitle .nomScene{
+.sceneDescription .nomScene{
 	text-align: center;
 	padding: 15px;
 	border: 1px solid white;

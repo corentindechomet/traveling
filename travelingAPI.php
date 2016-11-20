@@ -26,6 +26,15 @@ switch ($call) {
 
 	break;
 
+	case 'randomOeuvre':
+
+	$requeteP = 'SELECT * FROM oeuvres ORDER BY RAND()' ;
+
+	$resultatP = $connection->query($requeteP);
+	$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
+
+	echo json_encode($tabP);
+
 	default:
 		# code...
 	break;
