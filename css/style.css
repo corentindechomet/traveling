@@ -322,10 +322,24 @@ a.closebtn{
   background-position: top;
 }
 
+.dynamicContent{
+  height: 50vh;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .filmImg{
   padding-left:0;
   padding-right:0;
   cursor: pointer;
+}
+
+.sceneImg{
+  padding: 0;
 }
 
 .imageOeuvre h1{
@@ -353,6 +367,7 @@ a.closebtn{
   padding-left: 0;
   color: white;
   text-align: center;
+  overflow-y: hidden;
 }
 
 .sceneDescription .nomScene{
@@ -369,6 +384,7 @@ a.closebtn{
 
 .descriptionBloc.text{
   padding: 25px 0 25px 0;
+  font-family: "Poppins";
 }
 
 .fa.carousel-control{

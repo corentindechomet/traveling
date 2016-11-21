@@ -11,20 +11,20 @@
 </head>
 <body>
 	<?php include 'overlay.php' ?>
-
+	
 	<?php include 'menu.php' ?>
 
 	<header class="header">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<h1>lieux</h1>
+					<h1>oeuvres</h1>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4">
 					<form method="get">
-						<i class='fa fa-search' aria-hidden='true'></i><input class="search-header" name="search" title="Rechercher une oeuvre" type="text" placeholder="Rechercher un lieu"></input>
+						<i class='fa fa-search' aria-hidden='true'></i><input class="search-header" name="search" title="Rechercher une oeuvre" type="text" placeholder="Rechercher une oeuvre"></input>
 					</form>
 				</div>
 			</div>
@@ -37,9 +37,9 @@
 				<?php
 				include('connection.php');
 				if(isset($_GET['search']))
-					$requeteP = "SELECT * FROM lieu WHERE nomLieu LIKE '%".$_GET['search']."%' OR pays LIKE '%".$_GET['search']."%' ";
+					$requeteP = "SELECT * FROM oeuvres WHERE titreOeuvre LIKE '%".$_GET['search']."%' ";
 				else
-					$requeteP = 'SELECT * FROM lieu';
+					$requeteP = 'SELECT * FROM oeuvres';
 				$resultatP = $connection->query($requeteP);
 				$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
 
@@ -50,19 +50,32 @@
 
 				for($i=0;$i<count($tabP);$i++){ ?>
 					<div class="col-md-4 video">
-						<div class="card overlay lieu" target-url="<?php echo $tabP[$i]->idLieu?>">
+						<div class="card overlay oeuvre" target-url="<?php echo $tabP[$i]->idOeuvre?>">
 							<video class="thevideo" loop preload="yes">
-								<source src="<?php echo $tabP[$i]->urlvideo ?>" type="video/mp4">
+								<source src="<?php echo $tabP[$i]->urlvideo; ?>" type="video/mp4">
 								</video>
-								<div class="card-text subtitle pays"><?php echo $tabP[$i]->pays ?></div>
-								<div class="card-text list-title"><?php echo $tabP[$i]->nomLieu ?></div>
-								<div class="card-text subtitle genre"><?php echo $tabP[$i]->type ?></div>
-						</div>
-					</div>								
+								<div class="card-text subtitle lieu"><?php echo $tabP[$i]->lieu; ?></div>
+								<div class="card-text list-title"><?php echo $tabP[$i]->titreOeuvre; ?></div>
+								<div class="card-text subtitle type"><?php 
+									$type = $tabP[$i]->type;
+									if($type == 0)
+										echo 'film'; 
+									else if($type == 1)
+										echo 'série';
+
+									else if($type == 2)
+										echo 'documentaire';
+									else
+										echo 'erreur type';
+									?>
+								</div>
+								<div class="card-text subtitle genre"><?php echo $tabP[$i]->genre; ?></div>
+							</div>
+						</div>								
 						<?php }?>
-			</div>
-		</div>
-	</section>
+					</div>
+				</div>
+			</section>
 		</body>
 		<script src="js/jquery-3.1.1.min.js"></script>
 		<script src="js/smoothState.js"></script>
