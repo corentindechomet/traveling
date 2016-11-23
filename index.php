@@ -94,14 +94,14 @@
 					</div>
 					<div class="col-md-4">
 						<div class="card escape">
-							<h3>DESIRE FOR <h3 class="transparent"><span class="escapeText">ESCAPE</span></h3></h3>
+							<h3>EXPLOREZ<h3 class="transparent"><span class="escapeText">EN AMOUREUX</span></h3></h3>
 						</div>
 					</div>
 				</div>		
 				<div class="row">
 					<div class="col-md-12">
 						<div class="card overlay oeuvre randomFilm" target-type="random" target-url="<?php echo $tabP[0]->idOeuvre; ?>">
-							<h2>RANDOM FILM OR SHOW</h2>
+							<h2>UN FILM AU HASARD</h2>
 						</div>
 					</div>
 				</div>
