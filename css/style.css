@@ -188,10 +188,36 @@ section#mainContent{
 /* Cards */
 .card{
   margin-bottom: 30px;
-  background-color: black;
+  background-color: rgba(0,0,0,1);
   text-align: center;
   color: white;
   height: 250px;
+  box-shadow: 0;
+
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  transition: 0.2s ease-out;
+}
+
+.card.shadow:hover{
+  box-shadow: 10px 10px #050505;
+  transition: 0.2s ease-out;
+}
+
+.card.overlay.oeuvre.lastFilmAdded:hover, .oeuvre.randomFilm:hover, #mainContent .card:hover{
+  filter: alpha(opacity=85);
+  opacity: 0.85;
+  cursor: pointer;
+  /**/
+}
+
+#mainContent .card.searchBy:hover{
+  filter: alpha(opacity=100);
+  opacity: 1;
+  cursor: pointer;
 }
 
 .card.lastFilmAdded{

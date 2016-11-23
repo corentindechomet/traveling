@@ -2,6 +2,13 @@ $(document).ready(function(){
 	var sceneCpt = 0;
 	var sceneMax = 0;
 
+	$('#searchByFilms').click(function() {
+		$("input[name='searchFilm']").focus();
+	});
+	$('#searchByLocation').click(function() {
+		$("input[name='searchLocation']").focus();
+	});
+
 	// Requête AJAX films
 	$(document).on("click", ".card.overlay.oeuvre", function (e) {
 		if($(this).attr("target-type") == "random"){

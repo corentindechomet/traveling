@@ -45,21 +45,21 @@
 			<div class="row">
 				<?php
 				include('connection.php');
-				if(isset($_GET['search']))
-					$requeteP = "SELECT * FROM oeuvres WHERE titreOeuvre LIKE '%".$_GET['search']."%' ";
+				if(isset($_GET['searchFilm']))
+					$requeteP = "SELECT * FROM oeuvres WHERE titreOeuvre LIKE '%".$_GET['searchFilm']."%' ";
 				else
 					$requeteP = 'SELECT * FROM oeuvres';
 				$resultatP = $connection->query($requeteP);
 				$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
 
-				if(isset($_GET['search'])){
-					echo "<h2>".count($tabP)." résulat(s) pour votre recherche : ".$_GET['search']."</h2>";
+				if(isset($_GET['searchFilm'])){
+					echo "<h2>".count($tabP)." résulat(s) pour votre recherche : ".$_GET['searchFilm']."</h2>";
 					echo "<hr />";
 				}
 
 				for($i=0;$i<count($tabP);$i++){ ?>
 					<div class="col-md-4 video">
-						<div class="card overlay oeuvre" target-url="<?php echo $tabP[$i]->idOeuvre?>">
+						<div class="card shadow overlay oeuvre" target-url="<?php echo $tabP[$i]->idOeuvre?>">
 							<video class="thevideo" loop preload="yes">
 								<source src="<?php echo $tabP[$i]->urlvideo; ?>" type="video/mp4">
 								</video>

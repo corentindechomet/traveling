@@ -63,7 +63,7 @@
 					<div class="col-md-6 col-xs-12">
 						<div id="searchByFilms" class="card searchBy">
 							<form  action="oeuvres.php" method="get">
-								<input type="search" placeholder="Rechercher une série ou un film" name="search">
+								<input type="search" placeholder="Rechercher une série ou un film" name="searchFilm">
 								<i class="searchIcon fa fa-search" aria-hidden="true"></i>
 							</form>
 						</div>
@@ -71,7 +71,7 @@
 					<div class="col-md-6 col-xs-12">
 						<div id="searchByLocation" class="card searchBy">
 							<form  action="lieux.php" method="get">
-								<input type="search" placeholder="Rechercher un lieu" name="search">
+								<input type="search" placeholder="Rechercher un lieu" name="searchLocation">
 								<i class="searchIcon fa fa-search" aria-hidden="true"></i>
 							</form>
 						</div>
