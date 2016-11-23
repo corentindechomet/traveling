@@ -36,21 +36,21 @@
 			<div class="row">
 				<?php
 				include('connection.php');
-				if(isset($_GET['search']))
-					$requeteP = "SELECT * FROM lieu WHERE nomLieu LIKE '%".$_GET['search']."%' OR pays LIKE '%".$_GET['search']."%' ";
+				if(isset($_GET['searchLocation']))
+					$requeteP = "SELECT * FROM lieu WHERE nomLieu LIKE '%".$_GET['searchLocation']."%' OR pays LIKE '%".$_GET['searchLocation']."%' ";
 				else
 					$requeteP = 'SELECT * FROM lieu';
 				$resultatP = $connection->query($requeteP);
 				$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
 
-				if(isset($_GET['search'])){
-					echo "<h2>".count($tabP)." résulat(s) pour votre recherche : ".$_GET['search']."</h2>";
+				if(isset($_GET['searchLocation'])){
+					echo "<h2>".count($tabP)." résulat(s) pour votre recherche : ".$_GET['searchLocation']."</h2>";
 					echo "<hr />";
 				}
 
 				for($i=0;$i<count($tabP);$i++){ ?>
 					<div class="col-md-4 video">
-						<div class="card overlay lieu" target-url="<?php echo $tabP[$i]->idLieu?>">
+						<div class="card shadow overlay lieu" target-url="<?php echo $tabP[$i]->idLieu?>">
 							<video class="thevideo" loop preload="yes">
 								<source src="<?php echo $tabP[$i]->urlvideo ?>" type="video/mp4">
 								</video>
