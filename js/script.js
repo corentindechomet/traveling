@@ -9,6 +9,45 @@ $(document).ready(function(){
 		$("input[name='searchLocation']").focus();
 	});
 
+	/* Effets scrollmagic */
+
+	/* menu background */
+	var controller = new ScrollMagic.Controller();
+
+	var scene = new ScrollMagic.Scene({
+		triggerElement: "#mainContent"
+	})
+	.setTween("nav", 0.2, {backgroundColor: "#282828"})
+	.addTo(controller);
+
+	/* Smooth scrolling */
+	var controller = new ScrollMagic.Controller({
+		globalSceneOptions: {
+			duration: $('section').height(),
+			triggerHook: .025,
+			reverse: true
+		}
+	});
+
+// On retire la taille de la barre de navigation pour scroller à la limite de la section
+var navHeight = $('nav').height();
+controller.scrollTo(function (newpos) {
+	TweenMax.to(window, 0.5, {scrollTo: {y: newpos-navHeight}});
+});
+
+$(document).on("click", "a.arrow", function (e) {
+	var id = $(this).attr("href");
+	if ($(id).length > 0) {
+		e.preventDefault();
+
+		controller.scrollTo("#mainContent");
+
+		if (window.history && window.history.pushState) {
+			history.pushState("", document.title, id);
+		}
+	}
+});
+
 	// Requête AJAX films
 	$(document).on("click", ".card.overlay.oeuvre", function (e) {
 		if($(this).attr("target-type") == "random"){
