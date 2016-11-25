@@ -10,6 +10,10 @@
 	<link rel="stylesheet" href="css/list.css">
 </head>
 <body>
+	<div id="preloaderContainer">
+		<img src="imgs/loader.gif"/>
+	</div>
+
 	<?php include 'overlay.php' ?>
 
 	<?php include 'menu.php' ?>

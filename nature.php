@@ -10,6 +10,10 @@
 	<link rel="stylesheet" href="css/list.css">
 </head>
 <body>
+	<div id="preloaderContainer">
+		<img src="imgs/loader.gif"/>
+	</div>
+
 	<div class="overlay">
 		<div id="myNavTop" class="topPart">
 			<div class="container-fluid">

@@ -2,9 +2,22 @@ $(document).ready(function(){
 	var sceneCpt = 0;
 	var sceneMax = 0;
 
+	$(window).ready(function(){
+		$('#preloaderContainer').fadeOut("1000");
+	});
+
+	$('.navbar-right').click(function(){
+		$('#preloaderContainer').show();
+	});
+
+	$('.navbar-header').click(function(){
+		$('#preloaderContainer').show();
+	});
+
 	$('#searchByFilms').click(function() {
 		$("input[name='searchFilm']").focus();
 	});
+
 	$('#searchByLocation').click(function() {
 		$("input[name='searchLocation']").focus();
 	});
@@ -149,4 +162,3 @@ function closeOverlay(){
 	document.getElementById("myNavBottom").style.height = "0%";
 	$(".navbar").css("display", "inline-block");
 }
-

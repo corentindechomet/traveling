@@ -11,6 +11,9 @@
 
 </head>
 <body>
+	<div id="preloaderContainer">
+		<img src="imgs/loader.gif"/>
+	</div>
 	<?php include 'overlay.php' ?>
 
 	<video id="video" autoplay loop>

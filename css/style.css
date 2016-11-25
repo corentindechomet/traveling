@@ -497,3 +497,22 @@ a.closebtn{
 #footer p{
   text-align: right;
 }
+
+/*Loader*/
+
+#preloaderContainer{
+  position : fixed;
+  z-index: 9999;
+  background-color : #303030;
+  top : 0px;
+  left : 0px;
+  height : 100%;
+  width : 100%;
+}
+
+#preloaderContainer img{
+  position : absolute;
+  top:50%;
+  left:50%;
+  transform: translateX(-50%) translateY(-50%);
+}
