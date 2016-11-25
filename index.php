@@ -36,7 +36,7 @@
 			<div class="row">
 				<div class="col-md-2 col-md-offset-5">
 					<div class="svgWrapper">
-						<a href="#mainContent">
+						<a class="arrow" href="#mainContent">
 							<svg enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 								<path class="arrow" d="m48.419994,2.522112l-23.320662,20.989826l-23.320661,-20.989826l0.659196,-0.732111l22.661465,20.394678l22.661467,-20.394678l0.659195,0.732111z" stroke-width="2" stroke="#f9f9f9" fill="none" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray: 126, 128; stroke-dashoffset: 0;"></path>
 							</svg>
@@ -128,6 +128,11 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyludd9u3BMWppTxeU0NUzvxUdRGI42I0"></script>
 	<script src="js/script.js"></script>
+	<script src="js/ScrollMagic.js"></script>
+	<script src="js/plugins/TweenMax.min.js"></script>
+	<script src="js/plugins/animation.gsap.js"></script>
+	<script src="js/plugins/ScrollToPlugin.min.js"></script>
+
 
 	</html>
 
