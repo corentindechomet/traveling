@@ -48,46 +48,28 @@
 	<section id="main">
 		<div class="container">
 			<div class="row contact-form">
-			<h2>Des questions ? Des idées de film ou série à présenter ? Contactez-nous !</h2>
-			<form>
-				<div class="col-md-offset-3 col-md-6">
-					<input placeholder="Nom" name="nom" value="" type="text">
-				</div>
-				<div class="col-md-offset-3 col-md-6">
-					<input placeholder="Email" name="prenom" value="" type="text">
-				</div>
-				<div class="col-md-offset-3 col-md-6">
-					<input placeholder="Sujet" name="sujet" value="" type="text">
-				</div>
-				<div class="col-md-offset-3 col-md-6">
-					<textarea placeholder="Message" name="message"></textarea>
-				</div>
-				<div class="col-md-offset-3 col-md-6">
-					<input placeholder="Sujet" name="search" value="Envoyer" type="submit">
-				</div>
-			</form>
+				<h2>Des questions ? Des idées de film ou série à présenter ? Contactez-nous !</h2>
+				<form>
+					<div class="col-md-offset-3 col-md-6">
+						<input placeholder="Nom" name="nom" value="" type="text">
+					</div>
+					<div class="col-md-offset-3 col-md-6">
+						<input placeholder="Email" name="prenom" value="" type="text">
+					</div>
+					<div class="col-md-offset-3 col-md-6">
+						<input placeholder="Sujet" name="sujet" value="" type="text">
+					</div>
+					<div class="col-md-offset-3 col-md-6">
+						<textarea placeholder="Message" name="message"></textarea>
+					</div>
+					<div class="col-md-offset-3 col-md-2">
+						<input placeholder="Sujet" name="form" value="Envoyer" type="submit">
+					</div>
+				</form>
 			</div>
 		</div>
 	</section>
-	<section id="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<img src="imgs/logoWhite.png" alt="" style="width:100px">
-				</div>
-				<div class="col-md-4 col-md-offset-4">
-					<p>MADE BY STUDENTS WITH CREATIVE IDEAS</p>
-				</div>
-			</div>
-		</div>
-	</section>
-		</body>
-		<script src="js/jquery-3.1.1.min.js"></script>
-		<script src="js/smoothState.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyludd9u3BMWppTxeU0NUzvxUdRGI42I0"></script>
-		<script src="js/script.js"></script>
-		<script>	
-
-		</script>
-		</html>
+	<?php include 'footer.php' ?>
+</body>
+<?php include 'allScripts.php' ?>
+</html>

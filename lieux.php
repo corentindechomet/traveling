@@ -53,27 +53,22 @@
 				}
 
 				for($i=0;$i<count($tabP);$i++){ ?>
-					<div class="col-md-4 video">
-						<div class="card shadow overlay lieu" target-url="<?php echo $tabP[$i]->idLieu?>">
-							<video class="thevideo" loop preload="yes">
-								<source src="<?php echo $tabP[$i]->urlvideo ?>" type="video/mp4">
-								</video>
-								<div class="card-text subtitle pays"><?php echo $tabP[$i]->pays ?></div>
-								<div class="card-text list-title"><?php echo $tabP[$i]->nomLieu ?></div>
-								<div class="card-text subtitle genre"><?php echo $tabP[$i]->type ?></div>
+				<div class="col-md-4 video">
+					<div class="card shadow overlay lieu" target-url="<?php echo $tabP[$i]->idLieu?>">
+						<video class="thevideo" loop preload="yes">
+							<source src="<?php echo $tabP[$i]->urlvideo ?>" type="video/mp4">
+							</video>
+							<div class="card-text subtitle pays"><?php echo $tabP[$i]->pays ?></div>
+							<div class="card-text list-title"><?php echo $tabP[$i]->nomLieu ?></div>
+							<div class="card-text subtitle genre"><?php echo $tabP[$i]->type ?></div>
 						</div>
 					</div>								
-						<?php }?>
+					<?php }?>
+				</div>
 			</div>
-		</div>
-	</section>
-		</body>
-		<script src="js/jquery-3.1.1.min.js"></script>
-		<script src="js/smoothState.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyludd9u3BMWppTxeU0NUzvxUdRGI42I0"></script>
-		<script src="js/script.js"></script>
-		<script>	
+		</section>
+		<?php include 'footer.php' ?>
+	</body>
+	<?php include 'allScripts.php' ?>
 
-		</script>
-		</html>
+	</html>

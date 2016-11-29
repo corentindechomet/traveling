@@ -174,7 +174,7 @@ header .logo{
 }
 
 /* Main */
-section#mainContent{
+section#main{
  padding-top: 50px;
  background-color: rgb(245,245,245);
  line-height: 1.5;
@@ -208,14 +208,14 @@ section#mainContent{
   transition: 0.2s ease-out;
 }
 
-.card.overlay.oeuvre.lastFilmAdded:hover, .oeuvre.randomFilm:hover, #mainContent .card:hover{
+.card.overlay.oeuvre.lastFilmAdded:hover, .oeuvre.randomFilm:hover, #main .card:hover{
   filter: alpha(opacity=85);
   opacity: 0.85;
   cursor: pointer;
   /**/
 }
 
-#mainContent .card.searchBy:hover{
+#main .card.searchBy:hover{
   filter: alpha(opacity=100);
   opacity: 1;
   cursor: pointer;
@@ -489,7 +489,7 @@ a.closebtn{
   padding: 20px;
   height: 75px;
   width: 100%;
-  background-color: #795548;
+  background-color: #282828;
   line-height: 1.5;
   color: rgb(235,235,235);
   font-size: 20px;
@@ -504,7 +504,7 @@ a.closebtn{
 #preloaderContainer{
   position : fixed;
   z-index: 9999;
-  background-color : #303030;
+  background-color : #282828;
   top : 0px;
   left : 0px;
   height : 100%;
@@ -516,4 +516,31 @@ a.closebtn{
   top:50%;
   left:50%;
   transform: translateX(-50%) translateY(-50%);
+}
+
+/* Contact */
+input[name="form"]{
+  background-color: transparent;
+  color: #282828;
+  border: 1px solid #282828;
+  line-height: 1.5;
+  height: 50px;
+  -webkit-transition: background-color 500ms ease;
+  -moz-transition: background-color 500ms ease;
+  -o-transition: background-color 500ms ease;
+  -ms-transition: background-color 500ms ease;
+  transition: background-color 500ms ease;
+}
+
+input[name="form"]:hover{
+  background-color: #282828;
+  color: white;
+  border: 1px solid #282828;
+  line-height: 1.5;
+  height: 50px;
+  -webkit-transition: background-color 500ms ease;
+  -moz-transition: background-color 500ms ease;
+  -o-transition: background-color 500ms ease;
+  -ms-transition: background-color 500ms ease;
+  transition: background-color 500ms ease;
 }

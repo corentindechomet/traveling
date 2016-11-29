@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var sceneMax = 0;
 
 	$(window).ready(function(){
-		$('#preloaderContainer').fadeOut("1000");
+		$('#preloaderContainer').delay(500).fadeOut("1000");
 	});
 
 	$('.navbar-right').click(function(){
@@ -28,10 +28,20 @@ $(document).ready(function(){
 	var controller = new ScrollMagic.Controller();
 
 	var scene = new ScrollMagic.Scene({
-		triggerElement: "#mainContent"
+		offset: 400
 	})
-	.setTween("nav", 0.2, {backgroundColor: "#282828"})
+	.setTween("nav", 0.2, {backgroundColor: "#282828", fontSize: "50px"})
 	.addTo(controller);
+
+	/* font size */
+	var controller2 = new ScrollMagic.Controller();
+
+	var scene = new ScrollMagic.Scene({
+		offset: 400
+	})
+	.setTween(".navbar-brand, .navbar-default .navbar-nav>li>a", 0.2, {fontSize: "25px"})
+	.addTo(controller2);
+
 
 	/* Smooth scrolling */
 	var controller = new ScrollMagic.Controller({
@@ -42,24 +52,24 @@ $(document).ready(function(){
 		}
 	});
 
-// On retire la taille de la barre de navigation pour scroller à la limite de la section
-var navHeight = $('nav').height();
-controller.scrollTo(function (newpos) {
-	TweenMax.to(window, 0.5, {scrollTo: {y: newpos-navHeight}});
-});
+	// On retire la taille de la barre de navigation pour scroller à la limite de la section
+	var navHeight = $('nav').height();
+	controller.scrollTo(function (newpos) {
+		TweenMax.to(window, 0.5, {scrollTo: {y: newpos-navHeight}});
+	});
 
-$(document).on("click", "a.arrow", function (e) {
-	var id = $(this).attr("href");
-	if ($(id).length > 0) {
-		e.preventDefault();
+	$(document).on("click", "a.arrow", function (e) {
+		var id = $(this).attr("href");
+		if ($(id).length > 0) {
+			e.preventDefault();
 
-		controller.scrollTo("#mainContent");
+			controller.scrollTo("#main");
 
-		if (window.history && window.history.pushState) {
-			history.pushState("", document.title, id);
+			if (window.history && window.history.pushState) {
+				history.pushState("", document.title, id);
+			}
 		}
-	}
-});
+	});
 
 	// Requête AJAX films
 	$(document).on("click", ".card.overlay.oeuvre", function (e) {
