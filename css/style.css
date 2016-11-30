@@ -132,6 +132,12 @@ header .logo{
   transition: top 0.2s ease;
 }
 
+@media(max-height: 700px){
+  .svgWrapper{
+     margin-top: 100px;
+  }
+}
+
 .svgWrapper:hover{
   top: -20px;
   stroke: #000;

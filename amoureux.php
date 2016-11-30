@@ -13,7 +13,7 @@
 	<div id="preloaderContainer">
 		<img src="imgs/loader.gif"/>
 	</div>
-	
+
 	<div class="overlay">
 		<div id="myNavTop" class="topPart">
 			<div class="container-fluid">
@@ -39,14 +39,14 @@
 	<header class="header">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<h1>villes</h1>
+				<div class="col-md-10 col-md-offset-1">
+					<h1>en amoureux</h1>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 					<form method="get">
-						<i class='fa fa-search' aria-hidden='true'></i><input class="search-header" name="search" title="Rechercher une oeuvre" type="text" placeholder="Rechercher une ville"></input>
+						<i class='fa fa-search' aria-hidden='true'></i><input class="search-header" name="search" title="Rechercher une oeuvre" type="text" placeholder="Rechercher un lieu"></input>
 					</form>
 				</div>
 			</div>
@@ -59,9 +59,9 @@
 				<?php
 				include('connection.php');
 				if(isset($_GET['search']))
-					$requeteP = "SELECT * FROM lieu WHERE categorie LIKE 'ville' AND nomLieu LIKE '%".$_GET['search']."%' ";
+					$requeteP = "SELECT * FROM lieu WHERE categorie LIKE 'amoureux' AND nomLieu LIKE '%".$_GET['search']."%' ";
 				else
-					$requeteP = 'SELECT * FROM lieu WHERE categorie LIKE "ville"';
+					$requeteP = 'SELECT * FROM lieu WHERE categorie LIKE "amoureux"';
 				$resultatP = $connection->query($requeteP);
 				$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
 

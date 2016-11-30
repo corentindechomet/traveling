@@ -100,21 +100,23 @@
 					<div class="col-md-4">
 						<a href="urban.php">
 							<div class="card urban">
-								<h3>EXPLOREZ <h3 class="transparent"><span class="urbanText">LA VILLE</span></h3></h3>
+								<h3>EXPLOREZ <h3 class="transparent"><span class="outlineText urbanText">LA VILLE</span></h3></h3>
 							</div>
 						</a>
 					</div>
 					<div class="col-md-4">
 						<a href="nature.php">
 							<div class="card nature">
-								<h3>EXPLOREZ <h3 class="transparent"><span class="natureText">LA NATURE</span></h3></h3>
+								<h3>EXPLOREZ <h3 class="transparent"><span class="outlineText natureText">LA NATURE</span></h3></h3>
 							</div>
 						</a>
 					</div>
 					<div class="col-md-4">
-						<div class="card escape">
-							<h3>EXPLOREZ<h3 class="transparent"><span class="escapeText">EN AMOUREUX</span></h3></h3>
-						</div>
+						<a href="amoureux.php">
+							<div class="card escape">
+								<h3>EXPLOREZ<h3 class="transparent"><span class="outlineText escapeText">EN AMOUREUX</span></h3></h3>
+							</div>
+						</a>
 					</div>
 				</div>		
 				<div class="row">

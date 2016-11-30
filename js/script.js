@@ -20,6 +20,13 @@ $(document).ready(function(){
 		$("input[name='searchLocation']").focus();
 	});
 
+
+	var transparentwidth = $('.transparent').width();
+	if(transparentwidth < 240)
+		$('.outlineText').css("font-size", "58px");
+	else
+		$('.outlineText').css("font-size", "75px");
+
 	/* Effets scrollmagic */
 
 	/* menu background */
