@@ -229,23 +229,61 @@ section#main{
  font-family: "Poppins", Sans-Serif;
  color: white;
  text-transform: uppercase;
- padding: 100px 0 100px 0;
+ /*padding: 100px 0 100px 0;*/
  text-align: center;
  font-size: 12px;
+ margin: 0;
 }
 
 .card.searchBy input{
-  border: 2px solid white;
-  padding: 5px 10px 0px 25px;
-  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  border: 1px solid white;
+  padding: 5px 10px 0px 35px;
+  font-size: 14px;
   background: none;
   width: 280px;
-  /*text-align: center;*/
-  transition: 0.3s; 
+  /*   text-align: center;*/
+  transition: 0.3s;
+}
+
+.center{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
+}
+
+.searchIcon {
+  position: relative;
+  left: -95px;
+  top: -7px;
+  cursor:pointer;
+  color: rgba(255,255,255,0.9);
+
+/*   position: absolute;
+top: 48%;
+left: 28%; */
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: rgb(225,225,225);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+ color: rgb(225,225,225);
+ opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+ color: rgb(225,225,225);
+ opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: rgb(225,225,225);
 }
 
 .card.searchBy input:focus{
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(0,0,0,0.3);
 }
 
 #searchByFilms{
@@ -258,15 +296,6 @@ section#main{
  background-size: cover;
 }
 
-.searchIcon {
-  position: relative;
-  left: 15px;
-  top: -3px;
-  cursor:pointer;
-  width: 0;
-  color: rgba(255,255,255,0.9);
-}
-
 .desire a{
   text-decoration: none;
 }
@@ -274,6 +303,7 @@ section#main{
 .card.urban, .card.nature, .card.escape{
   padding: 35px;
   cursor: pointer;
+  margin-top: 30px;
 }
 
 .card.urban{

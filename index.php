@@ -65,18 +65,34 @@
 				<div class="row">
 					<div class="col-md-6 col-xs-12">
 						<div id="searchByFilms" class="card searchBy">
-							<form  action="oeuvres.php" method="get">
-								<i class="searchIcon fa fa-search" aria-hidden="true"></i>
-								<input type="search" placeholder="Rechercher une série ou un film" name="searchFilm">
-							</form>
+							<div class="center">
+								<div class="row">
+									<div class="col-md-1 col-sm-1 col-xs-1">
+										<i class="searchIcon fa fa-search" aria-hidden="true"></i>
+									</div>
+									<div class="col-md-5 col-sm-5 col-xs-5">
+										<form class="" action="oeuvres.php" method="get">
+											<input type="search" placeholder="Rechercher une oeuvre" name="searchFilm">
+										</form>	
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-6 col-xs-12">
 						<div id="searchByLocation" class="card searchBy">
-							<form  action="lieux.php" method="get">
-								<i class="searchIcon fa fa-search" aria-hidden="true"></i>
-								<input type="search" placeholder="Rechercher un lieu" name="searchLocation">
-							</form>
+							<div class="center">
+								<div class="row">
+									<div class="col-md-1 col-sm-1 col-xs-1">
+										<i class="searchIcon fa fa-search" aria-hidden="true"></i>
+									</div>
+									<div class="col-md-5 col-sm-5 col-xs-5">
+										<form class="" action="lieux.php" method="get">
+											<input type="search" placeholder="Rechercher un lieu" name="searchLocation">
+										</form>	
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -110,7 +126,7 @@
 				</div>
 			</div>
 		</section>
-	<?php include 'footer.php' ?>
+		<?php include 'footer.php' ?>
 	</body>
 	<?php include 'allScripts.php' ?>
 	</html>

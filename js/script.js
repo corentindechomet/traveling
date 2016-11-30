@@ -4,13 +4,13 @@ $(document).ready(function(){
 
 	$('#preloaderContainer').delay(200).fadeOut("1000");
 
-	$('.navbar-right').click(function(){
+/*	$('.navbar-right').click(function(){
 		$('#preloaderContainer').show();
 	});
 
 	$('.navbar-header').click(function(){
 		$('#preloaderContainer').show();
-	});
+	});*/
 
 	$('#searchByFilms').click(function() {
 		$("input[name='searchFilm']").focus();
