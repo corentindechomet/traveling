@@ -2,9 +2,7 @@ $(document).ready(function(){
 	var sceneCpt = 0;
 	var sceneMax = 0;
 
-	$(window).ready(function(){
-		$('#preloaderContainer').delay(500).fadeOut("1000");
-	});
+	$('#preloaderContainer').delay(200).fadeOut("1000");
 
 	$('.navbar-right').click(function(){
 		$('#preloaderContainer').show();
@@ -30,7 +28,7 @@ $(document).ready(function(){
 	var scene = new ScrollMagic.Scene({
 		offset: 400
 	})
-	.setTween("nav", 0.2, {backgroundColor: "#282828", fontSize: "50px"})
+	.setTween("nav", 0.2, {backgroundColor: "#282828"})
 	.addTo(controller);
 
 	/* font size */
@@ -39,7 +37,7 @@ $(document).ready(function(){
 	var scene = new ScrollMagic.Scene({
 		offset: 400
 	})
-	.setTween(".navbar-brand, .navbar-default .navbar-nav>li>a", 0.2, {fontSize: "25px"})
+	.setTween(".navbar-brand, .navbar-default .navbar-nav>li>a", 0.2, {fontSize: "22px"})
 	.addTo(controller2);
 
 
