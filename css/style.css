@@ -181,13 +181,13 @@ header .logo{
 
 /* Main */
 section#main{
- padding-top: 50px;
+ padding-top: 30px;
  background-color: rgb(245,245,245);
  line-height: 1.5;
 }
 
 #main{
-  padding: 50px 0 50px 0;
+  padding: 30px 0 30px 0;
   background-color: rgb(245,245,245); 
 }
 
@@ -245,12 +245,12 @@ section#main{
   position: absolute;
   top: 50%;
   transform: translateY(-50%) translateX(-50%);
-  border: 1px solid white;
+  border: 1px solid rgba(255,255,255,0.5);
   padding: 5px 10px 0px 35px;
   font-size: 14px;
-  background: none;
+  background: rgba(0,0,0,0.1);
   width: 280px;
-  /*   text-align: center;*/
+  height: 50px;
   transition: 0.3s;
 }
 
@@ -267,7 +267,7 @@ section#main{
   top: -7px;
   cursor:pointer;
   color: rgba(255,255,255,0.9);
-
+  z-index: 1000;
 /*   position: absolute;
 top: 48%;
 left: 28%; */
@@ -290,6 +290,7 @@ left: 28%; */
 
 .card.searchBy input:focus{
   background-color: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,1);
 }
 
 #searchByFilms{
@@ -355,6 +356,7 @@ span.escapeText{
 }
 
 .randomFilm{
+  margin-bottom: 0;
   height: 400px;
   padding-top: 150px;
   cursor: pointer;
