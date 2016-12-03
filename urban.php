@@ -14,26 +14,7 @@
 		<img src="imgs/loader.gif"/>
 	</div>
 	
-	<div class="overlay">
-		<div id="myNavTop" class="topPart">
-			<div class="container-fluid">
-				<div class="row topPartContent">
-				</div>
-				<i class="fa fa-arrow-circle-up up carousel-control" href='#carousel-vertical' role='button' data-slide='prev' aria-hidden="true"></i>
-				<i class="fa fa-arrow-circle-down down carousel-control" href='#carousel-vertical' role='button' data-slide='next' aria-hidden="true"></i>
-			</div>
-		</div>
-		<div id="myNavBottom" class="bottomPart">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12 mapReceiver">
-						<div id="map"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
+	<?php include 'overlay.php' ?>
 	<?php include 'menu.php' ?>
 
 	<header class="header">
@@ -71,27 +52,21 @@
 				}
 
 				for($i=0;$i<count($tabP);$i++){ ?>
-					<div class="col-md-offset-0 col-md-4 col-sm-offset-3 col-sm-6 col-xs-offset-0 col-xs-12 video">
-						<div class="card overlay lieu" target-url="<?php echo $tabP[$i]->idLieu?>">
-							<video class="thevideo" loop preload="yes">
-								<source src="<?php echo $tabP[$i]->urlvideo ?>" type="video/mp4">
-								</video>
-								<div class="card-text subtitle pays"><?php echo $tabP[$i]->pays ?></div>
-								<div class="card-text list-title"><?php echo $tabP[$i]->nomLieu ?></div>
-								<div class="card-text subtitle genre"><?php echo $tabP[$i]->type ?></div>
+				<div class="col-md-offset-0 col-md-4 col-sm-offset-3 col-sm-6 col-xs-offset-0 col-xs-12 video">
+					<div class="card overlay lieu" target-url="<?php echo $tabP[$i]->idLieu?>">
+						<video class="thevideo" loop preload="yes">
+							<source src="<?php echo $tabP[$i]->urlvideo ?>" type="video/mp4">
+							</video>
+							<div class="card-text subtitle pays"><?php echo $tabP[$i]->pays ?></div>
+							<div class="card-text list-title"><?php echo $tabP[$i]->nomLieu ?></div>
+							<div class="card-text subtitle genre"><?php echo $tabP[$i]->type ?></div>
 						</div>
 					</div>								
-						<?php }?>
-					</div>
+					<?php }?>
 				</div>
-			</section>
-		</body>
-		<script src="js/jquery-3.1.1.min.js"></script>
-		<script src="js/smoothState.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyludd9u3BMWppTxeU0NUzvxUdRGI42I0"></script>
-		<script src="js/script.js"></script>
-		<script>	
-
-		</script>
-		</html>
+			</div>
+		</section>
+		<?php include 'footer.php' ?>
+	</body>
+	<?php include 'allScripts.php' ?>
+	</html>

@@ -327,6 +327,7 @@ left: 28%; */
 }
 
 .transparent{
+  padding-bottom: 10px;
   text-align: center;
   background-color: rgba(255,255,255,0.7);
 }
@@ -446,6 +447,16 @@ a.closebtn{
   padding: 30px;
 }
 
+.contentContainer .fa.fa-eye, .contentContainer .fa-eye-slash{
+  padding-top: 25px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.contentContainer .fa.fa-eye:hover{
+  color: rgba(255,255,255,0.7);
+}
+
 .imgScene{
   width: 100%;
   object-fit: cover;
@@ -480,6 +491,8 @@ a.closebtn{
 .descriptionBloc.text{
   padding: 25px 0 25px 0;
   font-family: "Poppins";
+  text-align: left;
+  line-height: 1.5em;
 }
 
 .fa.carousel-control{

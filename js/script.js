@@ -2,9 +2,12 @@ $(document).ready(function(){
 	var sceneCpt = 0;
 	var sceneMax = 0;
 
-	$('#preloaderContainer').delay(200).fadeOut("1000");
+	/* PRELOADER */
+	$(window).bind("load", function() {
+		$('#preloaderContainer').fadeOut("1000");
+	});
 
-/*	$('.navbar-right').click(function(){
+	/*	$('.navbar-right').click(function(){
 		$('#preloaderContainer').show();
 	});
 
@@ -20,12 +23,13 @@ $(document).ready(function(){
 		$("input[name='searchLocation']").focus();
 	});
 
-
+	/* REPONSIVE */
 	var transparentwidth = $('.transparent').width();
 	if(transparentwidth < 240)
 		$('.outlineText').css("font-size", "58px");
 	else
 		$('.outlineText').css("font-size", "75px");
+
 
 	/* Effets scrollmagic */
 
@@ -78,9 +82,8 @@ $(document).ready(function(){
 
 	// Requête AJAX films
 	$(document).on("click", ".card.overlay.oeuvre", function (e) {
-		if($(this).attr("target-type") == "random"){
+		if($(this).attr("target-type") == "random")
 			var url = "travelingAPI.php?call=randomOeuvre";
-		}
 		else{
 			var id = $(this).attr("target-url");
 			var url = "travelingAPI.php?call=oeuvre&id="+id;
@@ -93,7 +96,7 @@ $(document).ready(function(){
 			dataType: "json",                
 			success: function(response){
 				var sceneMax = response.length;
-				$(".topPartContent").html("<div class='col-md-6 hidden-sm hidden-xs filmImg' onclick='closeOverlay()'><a href='javascript:void(0)' class='closebtn' onclick='closeOverlay()''>X</a><div class='imageOeuvre'><h1>"+response[0].titreOeuvre+"</h1></div></div><div class='col-md-6 col-sm-12 cold-xs-12 sceneDescription'><div class='dynamicContent'><div class='contentContainer'><div class='row'><div class='col-md-2 col-sm-2 col-xs-2'><i class='fa fa-arrow-left changeScene' aria-hidden='true' target-type='previous' target-url='"+response[sceneCpt].idOeuvre+"'></i></div><div class='col-md-8 col-sm-8 col-xs-8'><h3 class='nomScene'>"+response[0].nomScene+"</h3></div><div class='col-md-2 col-sm-2 col-xs-2'><i class='fa fa-arrow-right changeScene' aria-hidden='true' target-type='next' target-url='"+response[sceneCpt].idOeuvre+"'></i></div></div><div id='carousel-vertical' class='carousel vertical slide'><div class='carousel-inner' role='listbox'><div class='item active'><div class='row'><div class='col-md-8 col-md-offset-2'><div class='descriptionBloc text'><p>"+response[0].description+"</p></div><a href='javascript:void(0)' onclick='closeOverlay()''><button class='closebtnMobile'>Cliquez pour revenir</button></a></div></div></div><div class='item'><div class='row'><div class='col-md-8 col-md-offset-2'><div class='descriptionBloc text'><p>"+response[0].description+"</p></div></div></div></div></div></div></div></div>"); 
+				$(".topPartContent").html("<div class='col-md-6 hidden-sm hidden-xs filmImg' onclick='closeOverlay()'><a href='javascript:void(0)' class='closebtn' onclick='closeOverlay()''>X</a><div class='imageOeuvre'><h1>"+response[0].titreOeuvre+"</h1></div></div><div class='col-md-6 col-sm-12 cold-xs-12 sceneDescription'><div class='dynamicContent'><div class='contentContainer'><div class='row'><div class='col-md-2 col-sm-2 col-xs-2'><i class='fa fa-arrow-left changeScene' aria-hidden='true' target-type='previous' target-url='"+response[sceneCpt].idOeuvre+"'></i></div><div class='col-md-8 col-sm-8 col-xs-8'><h3 class='nomScene'>"+response[0].nomScene+"</h3></div><div class='col-md-2 col-sm-2 col-xs-2'><i class='fa fa-arrow-right changeScene' aria-hidden='true' target-type='next' target-url='"+response[sceneCpt].idOeuvre+"'></i></div></div><div class='row'><div class='col-md-10 col-md-offset-1'><div class='descriptionBloc text'><p>"+response[0].description+"</p></div></div><div class='col-md-1'><i class='fa fa-eye-slash opacityEye' data-state='0' aria-hidden='true'></i></div></div></div></div>"); 
 				$('.imageOeuvre').css("background-image", "url('" + response[0].urlimg + "')");
 				init(response[0].Lat, response[0].Lng, sceneMax);
 				$(".dynamicContent").css("background-image", "url('"+ response[0].urlImgScene  +"')");
@@ -106,6 +109,29 @@ $(document).ready(function(){
 						$(".imageOeuvre h1").html(response[0].titreOeuvre);
 					});
 				}, 2500);
+				/* EYE CLICK */
+				$('.opacityEye').click(function() {
+					if($(this).hasClass('fa-eye-slash')){
+						$(".fa.fa-eye").css('color', 'rgba(255,255,255,0.7)');
+						$(".changeScene").css('color', 'rgba(255,255,255,0.2)');
+						$(".nomScene").css({
+							'color': 'rgba(255,255,255,0.2)',
+							'border': '1px solid rgba(255,255,255,0.2)'
+						});
+						$(".text").css('color', 'rgba(255,255,255,0.2)');
+						$(this).attr("class", "fa fa-eye opacityEye");
+					}
+					else {
+						$(".fa.fa-eye").css('color', 'rgba(255,255,255,1)');
+						$(".changeScene").css('color', 'rgba(255,255,255,1)');
+						$(".nomScene").css({
+							'color': 'rgba(255,255,255,1)',
+							'border': '1px solid rgba(255,255,255,1)'
+						});
+						$(".text").css('color', 'rgba(255,255,255,1)');
+						$(this).attr("class", "fa fa-eye-slash opacityEye");
+					}
+				});
 			}
 		});
 		openOverlay();
@@ -158,7 +184,7 @@ $(document).ready(function(){
 		var marker = new google.maps.Marker({
 			position: myLatLng,
 			map: map,
-			title: 'Hello World!'
+			title: ''
 		});
 
 		$(document).on("click", ".changeScene", function (e) {
