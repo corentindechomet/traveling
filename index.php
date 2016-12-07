@@ -49,7 +49,7 @@
 	<section id="main">
 		<div class="container-fluid">
 			<div class="row greySection">
-				<div class="container">
+				<div class="container firstSection">
 					<div class="row">
 						<div class="col-md-6 col-sm-12 col-xs-12">
 							<h2 data-content="Dernier film ajouté"  class="sectionTitle glitchyText">Dernier film ajouté</h2>

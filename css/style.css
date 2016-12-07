@@ -17,7 +17,6 @@
 
 body{
   font-family: "Canter";
-  background: url(../imgs/noiseBackground.png) center repeat;
   /* line-height: 0; */
 }
 
@@ -55,7 +54,7 @@ h2 span{
 }
 
 .whiteSection{
-  background: url(../imgs/noiseBackground.jpg) center repeat;
+  background: url(../imgs/noiseBackground.png) center repeat;
   padding: 40px 0 50px 0;
 }
 
@@ -71,6 +70,17 @@ h2 span{
   margin-top: 30px;
 }
 
+/* ScrollMagic animation */
+.firstSection{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.2s ease-out;
+}
+
+.firstSection.fade-in{
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Navbar */
 .navbar-default {
@@ -658,14 +668,6 @@ input[name="form"]:hover{
 }
 
 /* Glitchy animation */
-.greySection .glitchyText{
-  color: #FFF;
-}
-
-.whiteSection .glitchyText{
-  color: #000;
-}
-
 .glitchyText {
   position: relative;
   display: inline-block;

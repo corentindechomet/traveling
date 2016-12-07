@@ -32,6 +32,9 @@ $(document).ready(function(){
 
 
 	/* Effets scrollmagic */
+	// Apparition fade in du contenu
+
+
 
 	/* menu background */
 	var controller = new ScrollMagic.Controller();
@@ -42,6 +45,11 @@ $(document).ready(function(){
 	.setTween("nav", 0.2, {backgroundColor: "#282828"})
 	.addTo(controller);
 
+	var ourScene = new ScrollMagic.Scene({
+		triggerElement: '#main'
+	})
+	.setClassToggle('.firstSection', 'fade-in')
+	.addTo(controller);
 	/* font size */
 	var controller2 = new ScrollMagic.Controller();
 
@@ -79,6 +87,8 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+
 
 	// Requête AJAX films
 	$(document).on("click", ".card.overlay.oeuvre", function (e) {
