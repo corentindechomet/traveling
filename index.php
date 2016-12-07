@@ -52,7 +52,7 @@
 				<div class="container firstSection">
 					<div class="row">
 						<div class="col-md-6 col-sm-12 col-xs-12">
-							<h2 data-content="Dernier film ajouté"  class="sectionTitle">Dernier film ajouté</h2>
+							<h2 data-content="Dernier film ajouté" class="sectionTitle">Dernier film ajouté</h2>
 						</div>
 					</div>
 					<div class="row">					
@@ -146,7 +146,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="card overlay oeuvre randomFilm" target-type="random" target-url="<?php echo $tabP[0]->idOeuvre; ?>">
-									<h2>UN FILM AU HASARD</h2>
+									<h2><i class="fa fa-question-circle-o" aria-hidden="true"></i></h2>
 								</div>
 							</div>
 						</div>

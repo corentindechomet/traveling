@@ -35,7 +35,7 @@
 		</div>
 	</header>
 	
-	<section id="main">
+	<section id="main" class="listOfCards">
 		<div class="container">
 			<div class="row">
 				<?php
