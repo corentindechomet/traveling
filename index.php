@@ -52,7 +52,7 @@
 				<div class="container firstSection">
 					<div class="row">
 						<div class="col-md-6 col-sm-12 col-xs-12">
-							<h2 data-content="Dernier film ajouté"  class="sectionTitle glitchyText">Dernier film ajouté</h2>
+							<h2 data-content="Dernier film ajouté"  class="sectionTitle">Dernier film ajouté</h2>
 						</div>
 					</div>
 					<div class="row">					
@@ -74,7 +74,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-6">
-								<h2 data-content="Découvrez, explorez..."  class="sectionTitle glitchyText">Découvrez, explorez...</h2>
+								<h2 data-content="Découvrez, explorez..."  class="sectionTitle">Découvrez, explorez...</h2>
 							</div>
 						</div>
 						<div class="row">
@@ -140,7 +140,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-6 col-sm-12 col-xs-12">
-								<h2 data-content="UN FILM AU HASARD"  class="sectionTitle glitchyText">UN FILM AU HASARD</h2>
+								<h2 data-content="UN FILM AU HASARD"  class="sectionTitle">UN FILM AU HASARD</h2>
 							</div>
 						</div>
 						<div class="row">

@@ -690,37 +690,39 @@ input[name="form"]:hover{
   color: #00ffff;
   z-index: -1;
   /* A supprimer si on veut pas le décalage au début */
-  -webkit-transform: translate(-2px, 2px);
-  transform: translate(-2px, 2px);
+  -webkit-transform: translate(-1px, 1px);
+  transform: translate(-1px, 1px);
 }
 
-.glitchyText:hover:before {
+.glitchyText:before {
   -webkit-animation: glitchy 0.5s ease 0.5s infinite;
   animation: glitchy 0.5s ease 0.5s infinite;
 }
-.glitchyText:hover:after {
+
+.glitchyText:after {
   -webkit-animation: glitchy 0.5s ease infinite reverse;
   animation: glitchy 0.5s ease infinite reverse;
 }
+
 @-webkit-keyframes glitchy {
   0% {
-    -webkit-transform: translate(-2px, 2px);
-    transform: translate(-2px, 2px);
+    -webkit-transform: translate(-1px, 1px);
+    transform: translate(-1px, 1px);
   }
   25% {
-    -webkit-transform: translate(-2px, -2px);
-    transform: translate(-2px, -2px);
+    -webkit-transform: translate(-1px, -1px);
+    transform: translate(-1px, -1px);
   }
   50% {
-    -webkit-transform: translate(2px, 2px);
-    transform: translate(2px, 2px);
+    -webkit-transform: translate(1px, 1px);
+    transform: translate(1px, 1px);
   }
   75% {
-    -webkit-transform: translate(2px, -2px);
-    transform: translate(2px, -2px);
+    -webkit-transform: translate(1px, -1px);
+    transform: translate(1px, -1px);
   }
   100% {
-    -webkit-transform: translate(-2px, 2px);
-    transform: translate(-2px, 2px);
+    -webkit-transform: translate(-1px, 1px);
+    transform: translate(-1px, 1px);
   }
 }
