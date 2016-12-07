@@ -30,6 +30,13 @@ $(document).ready(function(){
 	else
 		$('.outlineText').css("font-size", "75px");
 
+	$('.greySection').hover(
+		function(){$(this).find(".sectionTitle").toggleClass('glitchyText');}
+	)
+
+	$('.whiteSection').hover(
+		function(){$(this).find(".sectionTitle").toggleClass('glitchyText');}
+	)
 
 	/* Effets scrollmagic */
 
