@@ -32,15 +32,13 @@ $(document).ready(function(){
 
 	$('.greySection').hover(
 		function(){$(this).find(".sectionTitle").toggleClass('glitchyText');}
-	)
+		)
 
 	$('.whiteSection').hover(
 		function(){$(this).find(".sectionTitle").toggleClass('glitchyText');}
-	)
+		)
 
 	/* Effets scrollmagic */
-	// Apparition fade in du contenu
-
 
 
 	/* menu background */
@@ -52,11 +50,6 @@ $(document).ready(function(){
 	.setTween("nav", 0.2, {backgroundColor: "#282828"})
 	.addTo(controller);
 
-	var ourScene = new ScrollMagic.Scene({
-		triggerElement: '#main'
-	})
-	.setClassToggle('.firstSection', 'fade-in')
-	.addTo(controller);
 	/* font size */
 	var controller2 = new ScrollMagic.Controller();
 
@@ -66,6 +59,28 @@ $(document).ready(function(){
 	.setTween(".navbar-brand, .navbar-default .navbar-nav>li>a", 0.2, {fontSize: "22px"})
 	.addTo(controller2);
 
+
+	// Apparition fade in du contenu
+	var fade1Scene = new ScrollMagic.Scene({
+		triggerElement: '#main',
+      	offset:-250,
+	})
+	.setClassToggle('.firstSection', 'fadeInFromLeft')
+	.addTo(controller);
+
+	var fade2Scene = new ScrollMagic.Scene({
+		triggerElement: '.secondSection',
+      	offset:-350,
+	})
+	.setClassToggle('.secondSection', 'fadeInFromRight')
+	.addTo(controller);
+
+	var fade3Scene = new ScrollMagic.Scene({
+		triggerElement: '.thirdSection',
+      	offset:-350,
+	})
+	.setClassToggle('.thirdSection', 'fadeInFromLeft')
+	.addTo(controller);
 
 	/* Smooth scrolling */
 	var controller = new ScrollMagic.Controller({

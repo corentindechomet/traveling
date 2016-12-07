@@ -71,7 +71,7 @@
 					</div>
 				</div>
 				<div class="row whiteSection">
-					<div class="container">
+					<div class="container secondSection">
 						<div class="row">
 							<div class="col-md-6">
 								<h2 data-content="Découvrez, explorez..."  class="sectionTitle">Découvrez, explorez...</h2>
@@ -79,7 +79,7 @@
 						</div>
 						<div class="row">
 							<div class="col-md-6 col-xs-12">
-								<div id="searchByFilms" class="card searchBy">
+								<div id="searchByFilms" class="card appear searchBy">
 									<div class="center">
 										<div class="row">
 											<div class="col-md-1 col-sm-1 col-xs-1">
@@ -95,7 +95,7 @@
 								</div>
 							</div>
 							<div class="col-md-6 col-xs-12">
-								<div id="searchByLocation" class="card searchBy">
+								<div id="searchByLocation" class="card appear searchBy">
 									<div class="center">
 										<div class="row">
 											<div class="col-md-1 col-sm-1 col-xs-1">
@@ -114,21 +114,21 @@
 						<div class="row desire">
 							<div class="col-md-4">
 								<a href="urban.php">
-									<div class="card urban">
+									<div class="card appear urban">
 										<h3>EXPLOREZ <h3 class="transparent"><span class="outlineText urbanText">LA VILLE</span></h3></h3>
 									</div>
 								</a>
 							</div>
 							<div class="col-md-4">
 								<a href="nature.php">
-									<div class="card nature">
+									<div class="card appear nature">
 										<h3>EXPLOREZ <h3 class="transparent"><span class="outlineText natureText">LA NATURE</span></h3></h3>
 									</div>
 								</a>
 							</div>
 							<div class="col-md-4">
 								<a href="amoureux.php">
-									<div class="card escape">
+									<div class="card appear escape">
 										<h3>EXPLOREZ<h3 class="transparent"><span class="outlineText escapeText">EN AMOUREUX</span></h3></h3>
 									</div>
 								</a>
@@ -137,7 +137,7 @@
 					</div>	
 				</div>	
 				<div class="row greySection">
-					<div class="container">
+					<div class="container thirdSection">
 						<div class="row">
 							<div class="col-md-6 col-sm-12 col-xs-12">
 								<h2 data-content="UN FILM AU HASARD"  class="sectionTitle">UN FILM AU HASARD</h2>

@@ -71,15 +71,26 @@ h2 span{
 }
 
 /* ScrollMagic animation */
-.firstSection{
+.firstSection, .thirdSection{
   opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.2s ease-out;
+  transform: translateX(-50px);
+  transition: all 0.3s ease-out;
 }
 
-.firstSection.fade-in{
+.firstSection.fadeInFromLeft, .thirdSection.fadeInFromLeft{
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
+}
+
+.secondSection{
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.3s ease-out;
+}
+
+.secondSection.fadeInFromRight{
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Navbar */
