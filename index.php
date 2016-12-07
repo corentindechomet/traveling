@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 	<div id="preloaderContainer">
@@ -48,81 +47,108 @@
 	</header>
 
 	<section id="main">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<?php
-					include('connection.php');
-					$requeteP = 'SELECT * FROM oeuvres ORDER BY idOeuvre DESC LIMIT 1';
-					$resultatP = $connection->query($requeteP);
-					$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
-					?>
-					<div class="card overlay oeuvre lastFilmAdded" target-url="<?php echo $tabP[0]->idOeuvre; ?>" style="background: url('<?php echo $tabP[0]->urlimg; ?>') top;">
-						<h2><span>DERNIER FILM</span></br><?php echo $tabP[0]->titreOeuvre; ?><h2>			
+		<div class="container-fluid">
+			<div class="row greySection">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-sm-12 col-xs-12">
+							<h2 data-content="Dernier film ajouté"  class="sectionTitle glitchyText">Dernier film ajouté</h2>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 col-xs-12">
-						<div id="searchByFilms" class="card searchBy">
-							<div class="center">
-								<div class="row">
-									<div class="col-md-1 col-sm-1 col-xs-1">
-										<i class="searchIcon fa fa-search" aria-hidden="true"></i>
-									</div>
-									<div class="col-md-5 col-sm-5 col-xs-5">
-										<form class="" action="oeuvres.php" method="get">
-											<input type="search" placeholder="Rechercher une oeuvre" name="searchFilm">
-										</form>	
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-xs-12">
-						<div id="searchByLocation" class="card searchBy">
-							<div class="center">
-								<div class="row">
-									<div class="col-md-1 col-sm-1 col-xs-1">
-										<i class="searchIcon fa fa-search" aria-hidden="true"></i>
-									</div>
-									<div class="col-md-5 col-sm-5 col-xs-5">
-										<form class="" action="lieux.php" method="get">
-											<input type="search" placeholder="Rechercher un lieu" name="searchLocation">
-										</form>	
-									</div>
+					<div class="row">					
+						<div class="col-md-12">
+							<?php
+							include('connection.php');
+							$requeteP = 'SELECT * FROM oeuvres ORDER BY idOeuvre DESC LIMIT 1';
+							$resultatP = $connection->query($requeteP);
+							$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
+							?>
+							<div class="card overlay oeuvre lastFilmAdded" target-url="<?php echo $tabP[0]->idOeuvre; ?>" style="background: url('<?php echo $tabP[0]->urlimg; ?>') center;">
+								<h2><?php echo $tabP[0]->titreOeuvre; ?><h2>			
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row desire">
-					<div class="col-md-4">
-						<a href="urban.php">
-							<div class="card urban">
-								<h3>EXPLOREZ <h3 class="transparent"><span class="outlineText urbanText">LA VILLE</span></h3></h3>
+				<div class="row whiteSection">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<h2 data-content="Découvrez, explorez..."  class="sectionTitle glitchyText">Découvrez, explorez...</h2>
 							</div>
-						</a>
-					</div>
-					<div class="col-md-4">
-						<a href="nature.php">
-							<div class="card nature">
-								<h3>EXPLOREZ <h3 class="transparent"><span class="outlineText natureText">LA NATURE</span></h3></h3>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-xs-12">
+								<div id="searchByFilms" class="card searchBy">
+									<div class="center">
+										<div class="row">
+											<div class="col-md-1 col-sm-1 col-xs-1">
+												<i class="searchIcon fa fa-search" aria-hidden="true"></i>
+											</div>
+											<div class="col-md-5 col-sm-5 col-xs-5">
+												<form class="" action="oeuvres.php" method="get">
+													<input type="search" placeholder="Rechercher une oeuvre" name="searchFilm">
+												</form>	
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-						</a>
-					</div>
-					<div class="col-md-4">
-						<a href="amoureux.php">
-							<div class="card escape">
-								<h3>EXPLOREZ<h3 class="transparent"><span class="outlineText escapeText">EN AMOUREUX</span></h3></h3>
+							<div class="col-md-6 col-xs-12">
+								<div id="searchByLocation" class="card searchBy">
+									<div class="center">
+										<div class="row">
+											<div class="col-md-1 col-sm-1 col-xs-1">
+												<i class="searchIcon fa fa-search" aria-hidden="true"></i>
+											</div>
+											<div class="col-md-5 col-sm-5 col-xs-5">
+												<form class="" action="lieux.php" method="get">
+													<input type="search" placeholder="Rechercher un lieu" name="searchLocation">
+												</form>	
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-						</a>
-					</div>
-				</div>		
-				<div class="row">
-					<div class="col-md-12">
-						<div class="card overlay oeuvre randomFilm" target-type="random" target-url="<?php echo $tabP[0]->idOeuvre; ?>">
-							<h2>UN FILM AU HASARD</h2>
+						</div>
+						<div class="row desire">
+							<div class="col-md-4">
+								<a href="urban.php">
+									<div class="card urban">
+										<h3>EXPLOREZ <h3 class="transparent"><span class="outlineText urbanText">LA VILLE</span></h3></h3>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-4">
+								<a href="nature.php">
+									<div class="card nature">
+										<h3>EXPLOREZ <h3 class="transparent"><span class="outlineText natureText">LA NATURE</span></h3></h3>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-4">
+								<a href="amoureux.php">
+									<div class="card escape">
+										<h3>EXPLOREZ<h3 class="transparent"><span class="outlineText escapeText">EN AMOUREUX</span></h3></h3>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>	
+				</div>	
+				<div class="row greySection">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-sm-12 col-xs-12">
+								<h2 data-content="UN FILM AU HASARD"  class="sectionTitle glitchyText">UN FILM AU HASARD</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card overlay oeuvre randomFilm" target-type="random" target-url="<?php echo $tabP[0]->idOeuvre; ?>">
+									<h2>UN FILM AU HASARD</h2>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

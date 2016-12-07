@@ -17,6 +17,7 @@
 
 body{
   font-family: "Canter";
+  background: url(../imgs/noiseBackground.png) center repeat;
   /* line-height: 0; */
 }
 
@@ -24,6 +25,16 @@ h2{
   margin: 0;
   font-size: 75px;
   text-transform: uppercase;
+  color: white;
+}
+
+h2.sectionTitle{
+  border-bottom: 1px solid white;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  font-size: 40px;
+  letter-spacing: 10px;
+  display: inline-block;
 }
 
 h3{
@@ -37,6 +48,29 @@ h2 span{
   font-family: "Poppins";
   text-align: justify;
 }
+
+.greySection{
+  background: url(../imgs/noiseBackgroundGrey.jpg) center repeat;
+  padding: 40px 0 50px 0;
+}
+
+.whiteSection{
+  background: url(../imgs/noiseBackground.jpg) center repeat;
+  padding: 40px 0 50px 0;
+}
+
+.whiteSection h2{
+  color: #303030;
+}
+
+.whiteSection h2.sectionTitle{
+  border-bottom: 1px solid #303030;
+}
+
+.whiteSection .desire{
+  margin-top: 30px;
+}
+
 
 /* Navbar */
 .navbar-default {
@@ -181,19 +215,13 @@ header .logo{
 
 /* Main */
 section#main{
- padding-top: 30px;
- background-color: rgb(245,245,245);
- line-height: 1.5;
-}
-
-#main{
-  padding: 30px 0 30px 0;
-  background-color: rgb(245,245,245); 
+/*  background-color: rgb(245,245,245);
+*/ line-height: 1.5;
+margin-top: -4px;
 }
 
 /* Cards */
 .card{
-  margin-bottom: 30px;
   background-color: rgba(0,0,0,1);
   text-align: center;
   color: white;
@@ -221,14 +249,14 @@ section#main{
   /**/
 }
 
-#main .card.searchBy:hover{
-  filter: alpha(opacity=100);
-  opacity: 1;
+
+.card.lastFilmAdded{
+  height: 50vh;
   cursor: pointer;
 }
 
-.card.lastFilmAdded{
-  cursor: pointer;
+.card.lastFilmAdded h2{
+  line-height: 50vh;
 }
 
 .card.searchBy{
@@ -310,7 +338,6 @@ left: 28%; */
 .card.urban, .card.nature, .card.escape{
   padding: 35px;
   cursor: pointer;
-  margin-top: 30px;
 }
 
 .card.urban{
@@ -627,5 +654,71 @@ input[name="form"]:hover{
 @media(min-width: 640px){
   .closebtnMobile{
     display: none;
+  }
+}
+
+/* Glitchy animation */
+.greySection .glitchyText{
+  color: #FFF;
+}
+
+.whiteSection .glitchyText{
+  color: #000;
+}
+
+.glitchyText {
+  position: relative;
+  display: inline-block;
+  font-size: 45px;
+  text-decoration: none;
+  z-index: 1;
+}
+.glitchyText:before,
+.glitchyText:after {
+  content: attr(data-content);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #ff00ff;
+  z-index: -2;
+}
+.glitchyText:before {
+  color: #00ffff;
+  z-index: -1;
+  /* A supprimer si on veut pas le décalage au début */
+  -webkit-transform: translate(-2px, 2px);
+  transform: translate(-2px, 2px);
+}
+
+.glitchyText:hover:before {
+  -webkit-animation: glitchy 0.5s ease 0.5s infinite;
+  animation: glitchy 0.5s ease 0.5s infinite;
+}
+.glitchyText:hover:after {
+  -webkit-animation: glitchy 0.5s ease infinite reverse;
+  animation: glitchy 0.5s ease infinite reverse;
+}
+@-webkit-keyframes glitchy {
+  0% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  25% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  50% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  75% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
   }
 }
