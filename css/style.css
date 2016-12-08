@@ -66,9 +66,6 @@ h2 span{
   border-bottom: 1px solid #303030;
 }
 
-.whiteSection .desire{
-  margin-top: 30px;
-}
 
 /* ScrollMagic animation */
 .firstSection, .thirdSection{
@@ -296,12 +293,13 @@ section#main{
  text-align: center;
  font-size: 12px;
  margin: 0;
+ margin-bottom: 30px;
 }
 
 .card.searchBy input{
   position: absolute;
   top: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-70%) translateX(-50%);
   border: 1px solid rgba(255,255,255,0.5);
   padding: 5px 10px 0px 35px;
   font-size: 14px;
@@ -321,7 +319,7 @@ section#main{
 .searchIcon {
   position: relative;
   left: -95px;
-  top: -7px;
+  top: -16px;
   cursor:pointer;
   color: rgba(255,255,255,0.9);
   z-index: 1000;
@@ -348,6 +346,7 @@ left: 28%; */
 .card.searchBy input:focus{
   background-color: rgba(0,0,0,0.3);
   border: 1px solid rgba(255,255,255,1);
+  margin-bottom: 
 }
 
 #searchByFilms{
@@ -368,6 +367,11 @@ left: 28%; */
   padding: 35px;
   cursor: pointer;
 }
+
+.col-xs-12 .urban, .col-xs-12 .nature{
+  margin-bottom: 30px;
+}
+
 
 .card.urban{
   background: url(../imgs/urban.jpg) center;

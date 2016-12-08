@@ -112,21 +112,21 @@
 							</div>
 						</div>
 						<div class="row desire">
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-12 col-xs-12">
 								<a href="urban.php">
 									<div class="card appear urban">
 										<h3>EXPLOREZ <h3 class="transparent"><span class="outlineText urbanText">LA VILLE</span></h3></h3>
 									</div>
 								</a>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-12 col-xs-12">
 								<a href="nature.php">
 									<div class="card appear nature">
 										<h3>EXPLOREZ <h3 class="transparent"><span class="outlineText natureText">LA NATURE</span></h3></h3>
 									</div>
 								</a>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-12 col-xs-12">
 								<a href="amoureux.php">
 									<div class="card appear escape">
 										<h3>EXPLOREZ<h3 class="transparent"><span class="outlineText escapeText">EN AMOUREUX</span></h3></h3>
