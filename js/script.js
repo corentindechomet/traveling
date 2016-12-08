@@ -60,7 +60,7 @@ $(document).ready(function(){
 	.addTo(controller2);
 
 
-	// Apparition fade in du contenu
+	// Apparition fade-in du contenu
 	var fade1Scene = new ScrollMagic.Scene({
 		triggerElement: '#main',
       	offset:-250,

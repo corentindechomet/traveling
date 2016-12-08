@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 08 Décembre 2016 à 11:21
+-- Généré le :  Sam 03 Décembre 2016 à 18:20
 -- Version du serveur :  10.1.13-MariaDB
 -- Version de PHP :  5.6.23
 
@@ -118,7 +118,7 @@ INSERT INTO `scene` (`nomScene`, `Lat`, `Lng`, `description`, `urlImgScene`, `id
 ('Arbre du meurtre', '29.9714000', ' -90.7693650', 'Sans doute la scène la plus connue de True Detective. C''est ici qu''on retrouve le corps de Dora Lange accompagné de bois de cerf et de tatouages sataniques.', 'http://traveling.corentindechomet.fr/imgs/trueDetectiveTree.jpg', 3, 0),
 ('Bar Fox & Hound', '29.9593787', '-90.1864963', 'Si vous voulez boire un coup, vous pouvez vous arrêter au Fox & Hound. C''est le lieu où se sont rencontré Marty et Beth.', 'http://traveling.corentindechomet.fr/imgs/trueDetectiveFoxAndHound.jpeg', 3, 0),
 ('Car Wash', '35.1082845', '-106.5377531', 'Le fameux Car Wash de Breaking Bad. Après que Walter y ai travaillé un peu pour arrondir ses fin de mois, lui et Skyler en font l''acquisition. Ils y travaillent pour blanchir leur argent.\nEt bien vous pourrez réellement le voir, puisqu''il s''agit d''un vrai Car Wash au nom de "Octopus CarWash".\n9516 Snowheights Cir NE   (Menaul & Eubank)\nAlbuquerque ,  NM   87112  ', 'http://traveling.corentindechomet.fr/imgs/carwash.jpg', 1, 0),
-('École Tuttle', '29.975611', '-90.252989', 'Lors de cette scène, Rust interroge un un jardinier en plein travail. Il est loin de se douter du lien entre cette individu et son enquête. Cette école est aujourd''hui a l''abandon.', 'http://traveling.corentindechomet.fr/imgs/trueDetectiveSchool.jpg', 3, 0),
+('École Tuttle', '29.975611', '-90.252989', 'Lors de cette scène, Rust interroge un un jardinier en plein travail. Il est loin de se douter du lien entre cette individu et son enquête. Cette école est aujourd''hui a l''abandon.', 'http://traveling.corentindechomet.fr/imgs/trueDetectiveTree.jpg', 3, 0),
 ('La maison de Walter et Skyler White', '35.1261057', '-106.5387445', 'La fameuse maison de Walter et Skyler White. Elle ne paie pas de mine car toutes les maisons de ce quartier résidentiel se ressemblent. Mais la maison est habitée, donc pour le respect des gens, mieux vaut ne pas rester devant a observer. On se rappellera de certaines scènes connu qui se sont déroulé à cette endroit, même si elles sont innombrables. \nOn peut voir la maison au 3828 Piermont Dr NE.', 'http://traveling.corentindechomet.fr/imgs/walthouse.jpg', 1, 0),
 ('Les berges de Seine', '48.863210', '2.309862', 'Dans l''un des quartiers les plus historiques de Paris, Gil et Adriana errent le long de la Seine. L''athmosphère nocturne de cet endroit rend la scène encore plus romantique et le spectateur n''en devient que plus amoureux de Paris.', 'imgs/bergesDeSeine.jpg', 11, 1),
 ('Los Pollos Hermanos', '35.0146338', '-106.6885397', 'Los Pollos Hermanos existent vraiment !C’est une chaîne de fast food qui depuis 15 ans fait du tex mex. Sauf que la chaîne ne s''appelle pas Los Pollos Hermanos, mais en fait Twisters. Vous pourrez venir déguster de délicieuse Taco et Burrito tout en vous sentant plongé dans la série !\nRendez-vous au 4257 Isleta Blv SW pour voir l’original !', 'http://traveling.corentindechomet.fr/imgs/LosPollosHermanos.jpg', 1, 0),
