@@ -1,15 +1,9 @@
 <!doctype html>
 <html lang="fr">
-<head>
-	<meta charset="utf-8">
-	<title>Traveling</title>
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/flaticon.css">
-	<link rel="stylesheet" href="css/normalize_v5.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/list.css">
-</head>
+
+<?php include 'header.php' ?>
+<link rel="stylesheet" href="css/list.css">
+
 <body>
 
 

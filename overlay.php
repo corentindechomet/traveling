@@ -33,9 +33,9 @@
 										<p></p>
 									</div>
 								</div>
-								<div class='col-md-1 col-sm-6 col-xs-6'>
-									<i class='fa fa-eye-slash opacityEye' data-state='0' aria-hidden='true'></i>
-								</div>
+<!-- 								<div class='col-md-1 col-sm-6 col-xs-6'>
+	<i class='fa fa-eye-slash opacityEye' data-state='0' aria-hidden='true'></i>
+</div> -->
 							</div>
 							<div class="row">
 								<div class='col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4'>

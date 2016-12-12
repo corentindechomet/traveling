@@ -535,7 +535,7 @@ a.closebtn{
   overflow-y: hidden;
 }
 
-.sceneDescription .nomScene h3, a.mapLink h3{
+.sceneDescription .nomScene, a.mapLink h3{
   text-align: center;
   padding: 15px;
   border: 1px solid white;
