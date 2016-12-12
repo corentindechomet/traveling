@@ -176,16 +176,16 @@ a.closebtn{
 	text-align: center;
 }
 
-.sceneDescription .nomScene{
+/* .sceneDescription .nomScene{
 	text-align: center;
 	padding: 15px;
 	border: 1px solid white;
 	font-size: 25px;
 }
-
+ */
 .descriptionBloc{
-	height: 25vh;
-	margin-bottom: 100px;
+/* 	height: 25vh;
+margin-bottom: 100px; */
 }
 
 .descriptionBloc.text{

@@ -38,79 +38,6 @@ $(document).ready(function(){
 		function(){$(this).find(".sectionTitle").toggleClass('glitchyText');}
 		)
 
-	/* Effets scrollmagic */
-
-
-	/* menu background */
-	var controller = new ScrollMagic.Controller();
-
-	var scene = new ScrollMagic.Scene({
-		offset: 400
-	})
-	.setTween("nav", 0.2, {backgroundColor: "#282828"})
-	.addTo(controller);
-
-	/* font size */
-	var controller2 = new ScrollMagic.Controller();
-
-	var scene = new ScrollMagic.Scene({
-		offset: 400
-	})
-	.setTween(".navbar-brand, .navbar-default .navbar-nav>li>a", 0.2, {fontSize: "22px"})
-	.addTo(controller2);
-
-
-	// Apparition fade-in du contenu
-	var fade1Scene = new ScrollMagic.Scene({
-		triggerElement: '#main',
-      	offset:-250,
-	})
-	.setClassToggle('.firstSection', 'fadeInFromLeft')
-	.addTo(controller);
-
-	var fade2Scene = new ScrollMagic.Scene({
-		triggerElement: '.secondSection',
-      	offset:-350,
-	})
-	.setClassToggle('.secondSection', 'fadeInFromRight')
-	.addTo(controller);
-
-	var fade3Scene = new ScrollMagic.Scene({
-		triggerElement: '.thirdSection',
-      	offset:-350,
-	})
-	.setClassToggle('.thirdSection', 'fadeInFromLeft')
-	.addTo(controller);
-
-	/* Smooth scrolling */
-	var controller = new ScrollMagic.Controller({
-		globalSceneOptions: {
-			duration: $('section').height(),
-			triggerHook: .025,
-			reverse: true
-		}
-	});
-
-	// On retire la taille de la barre de navigation pour scroller à la limite de la section
-	var navHeight = $('nav').height();
-	controller.scrollTo(function (newpos) {
-		TweenMax.to(window, 0.5, {scrollTo: {y: newpos-navHeight}});
-	});
-
-	$(document).on("click", "a.arrow", function (e) {
-		var id = $(this).attr("href");
-		if ($(id).length > 0) {
-			e.preventDefault();
-
-			controller.scrollTo("#main");
-
-			if (window.history && window.history.pushState) {
-				history.pushState("", document.title, id);
-			}
-		}
-	});
-
-
 
 	// Requête AJAX films
 	$(document).on("click", ".card.overlay.oeuvre", function (e) {
@@ -128,14 +55,21 @@ $(document).ready(function(){
 			dataType: "json",                
 			success: function(response){
 				var sceneMax = response.length;
-				$(".topPartContent").html("<div class='col-md-6 hidden-sm hidden-xs filmImg' onclick='closeOverlay()'><a href='javascript:void(0)' class='closebtn' onclick='closeOverlay()''>X</a><div class='imageOeuvre'><h1>"+response[0].titreOeuvre+"</h1></div></div><div class='col-md-6 col-sm-12 cold-xs-12 sceneDescription'><div class='dynamicContent'><div class='contentContainer'><div class='row'><div class='col-md-2 col-sm-2 col-xs-2'><i class='fa fa-arrow-left changeScene' aria-hidden='true' target-type='previous' target-url='"+response[sceneCpt].idOeuvre+"'></i></div><div class='col-md-8 col-sm-8 col-xs-8'><h3 class='nomScene'>"+response[0].nomScene+"</h3></div><div class='col-md-2 col-sm-2 col-xs-2'><i class='fa fa-arrow-right changeScene' aria-hidden='true' target-type='next' target-url='"+response[sceneCpt].idOeuvre+"'></i></div></div><div class='row'><div class='col-md-10 col-md-offset-1'><div class='descriptionBloc text'><p>"+response[0].description+"</p></div></div><div class='col-md-1'><i class='fa fa-eye-slash opacityEye' data-state='0' aria-hidden='true'></i></div></div></div></div>"); 
+				$(".imageOeuvre h1").html(response[0].titreOeuvre);
+				$(".nomScene h3").html(response[0].nomScene);
+				$(".nomScene span").html(response[0].titreOeuvre);
+				$(".descriptionBloc.text").html(response[0].description);
+				$(".fa-arrow-left.changeSceneOeuvre").attr( "target-url", response[sceneCpt].idOeuvre);
+				$(".fa-arrow-right.changeSceneOeuvre").attr( "target-url", response[sceneCpt].idOeuvre);
+				$("a.mapLink").attr( "href", "http://maps.google.com/?q="+response[0].Lat+","+response[0].Lng+"");
+
 				$('.imageOeuvre').css("background-image", "url('" + response[0].urlimg + "')");
 				init(response[0].Lat, response[0].Lng, sceneMax);
 				$(".dynamicContent").css("background-image", "url('"+ response[0].urlImgScene  +"')");
 				setTimeout(function() {
 					$( "#myNavTop .filmImg" )
 					.mouseenter(function() {
-						$(".imageOeuvre h1").html("Click to go back");
+						$(".imageOeuvre h1").html("Cliquez pour revenir");
 					})
 					.mouseleave(function() {
 						$(".imageOeuvre h1").html(response[0].titreOeuvre);
@@ -145,7 +79,7 @@ $(document).ready(function(){
 				$('.opacityEye').click(function() {
 					if($(this).hasClass('fa-eye-slash')){
 						$(".fa.fa-eye").css('color', 'rgba(255,255,255,0.7)');
-						$(".changeScene").css('color', 'rgba(255,255,255,0.2)');
+						$(".changeSceneOeuvre").css('color', 'rgba(255,255,255,0.2)');
 						$(".nomScene").css({
 							'color': 'rgba(255,255,255,0.2)',
 							'border': '1px solid rgba(255,255,255,0.2)'
@@ -155,7 +89,7 @@ $(document).ready(function(){
 					}
 					else {
 						$(".fa.fa-eye").css('color', 'rgba(255,255,255,1)');
-						$(".changeScene").css('color', 'rgba(255,255,255,1)');
+						$(".changeSceneOeuvre").css('color', 'rgba(255,255,255,1)');
 						$(".nomScene").css({
 							'color': 'rgba(255,255,255,1)',
 							'border': '1px solid rgba(255,255,255,1)'
@@ -179,14 +113,24 @@ $(document).ready(function(){
 			dataType: "json",                
 			success: function(response){
 				var sceneMax = response.length;
-				$(".topPartContent").html("<div class='col-md-6 hidden-sm hidden-xs filmImg' onclick='closeOverlay()'><a href='javascript:void(0)' class='closebtn' onclick='closeOverlay()''>X</a><div class='imageOeuvre'><h1>"+response[0].nomLieu+"</h1></div></div><div class='col-md-6 col-sm-12 cold-xs-12 sceneDescription'><div class='dynamicContent'><div class='contentContainer'><div class='row'><div class='col-md-2 col-sm-2 col-xs-2'><i class='fa fa-arrow-left changeScene' aria-hidden='true' target-type='previous' target-url='"+response[sceneCpt].idLieu+"'></i></div><div class='col-md-8 col-sm-8 col-xs-8'><h3 class='nomScene'>"+response[0].nomScene+"</h3></div><div class='col-md-2 col-sm-2 col-xs-2'><i class='fa fa-arrow-right changeScene' aria-hidden='true' target-type='next' target-url='"+response[sceneCpt].idLieu+"'></i></div></div></div></div>"); 
+				/* On change la classe des i pour bien rediriger sur les lieux */
+				$("i.changeSceneOeuvre").toggleClass('changeSceneOeuvre changeSceneLieu');
+
+				$(".imageOeuvre h1").html(response[0].nomLieu);
+				$(".nomScene h3").html(response[sceneCpt].nomScene);
+				$(".nomScene span").html(response[0].titreOeuvre);
+				$(".descriptionBloc.text").html(response[sceneCpt].description);
+				$(".fa-arrow-left.changeSceneLieu").attr( "target-url", response[sceneCpt].idLieu);
+				$(".fa-arrow-right.changeSceneLieu").attr( "target-url", response[sceneCpt].idLieu);
+				$("a.mapLink").attr( "href", "http://maps.google.com/?q="+response[0].Lat+","+response[0].Lng+"");
+
 				$('.imageOeuvre').css("background-image", "url('" + response[0].urlImgLieu + "')");
 				init(response[0].Lat, response[0].Lng, sceneMax);
 				$(".dynamicContent").css("background-image", "url('"+ response[0].urlImgScene  +"')");
 				setTimeout(function() {
 					$( "#myNavTop .filmImg" )
 					.mouseenter(function() {
-						$(".imageOeuvre h1").html("Click to go back");
+						$(".imageOeuvre h1").html("Clickez pour revenir");
 					})
 					.mouseleave(function() {
 						$(".imageOeuvre h1").html(response[0].nomLieu);
@@ -219,8 +163,42 @@ $(document).ready(function(){
 			title: ''
 		});
 
-		$(document).on("click", ".changeScene", function (e) {
+		$(document).on("click", ".changeSceneOeuvre", function (e) {
 
+			var type = $(this).attr("target-type");
+			if(type == 'previous')
+				sceneCpt--;
+			else if(type == 'next')
+				sceneCpt++;
+
+			if (sceneCpt > sceneMax-1)
+				sceneCpt = 0;
+			else if (sceneCpt < 0)
+				sceneCpt = sceneMax-1;
+			var id = $(this).attr("target-url");
+			console.log(sceneCpt);
+			$.ajax({  
+				type: "GET",
+				url: "travelingAPI.php?call=oeuvre&id="+id,             
+				dataType: "json",                
+				success: function(response){             
+					marker.setPosition(new google.maps.LatLng(response[sceneCpt].Lat, response[sceneCpt].Lng));
+					map.panTo(marker.getPosition());
+
+					google.maps.event.addDomListener(window, 'load', init);
+					$(".nomScene h3").html(response[sceneCpt].nomScene);
+					$(".nomScene span").html(response[0].titreOeuvre);
+					$(".descriptionBloc.text").html(response[sceneCpt].description);
+					$(".fa-arrow-left.changeSceneOeuvre").attr( "target-url", response[sceneCpt].idOeuvre);
+					$(".fa-arrow-right.changeSceneOeuvre").attr( "target-url", response[sceneCpt].idOeuvre);
+					$("a.mapLink").attr( "href", "http://maps.google.com/?q="+response[sceneCpt].Lat+","+response[sceneCpt].Lng+"");
+
+					$(".dynamicContent").css("background-image", "url('"+ response[sceneCpt].urlImgScene  +"')");
+				}
+			});
+		});
+
+		$(document).on("click", ".changeSceneLieu", function (e) {
 			var type = $(this).attr("target-type");
 			if(type == 'previous')
 				sceneCpt -= 1;
@@ -234,15 +212,20 @@ $(document).ready(function(){
 			var id = $(this).attr("target-url");
 			$.ajax({  
 				type: "GET",
-				url: "travelingAPI.php?call=oeuvre&id="+id,             
+				url: "travelingAPI.php?call=lieu&id="+id,             
 				dataType: "json",                
-				success: function(response){             
+				success: function(response){
 					marker.setPosition(new google.maps.LatLng(response[sceneCpt].Lat, response[sceneCpt].Lng));
 					map.panTo(marker.getPosition());
-
 					google.maps.event.addDomListener(window, 'load', init);
 
-					$(".dynamicContent").html("<div class='contentContainer'><div class='row'><div class='col-md-2 col-sm-2 col-xs-2'><i class='fa fa-arrow-left changeScene' aria-hidden='true' target-type='previous' target-url='"+response[sceneCpt].idOeuvre+"'></i></div><div class='col-md-8 col-sm-8 col-xs-8'><h3 class='nomScene'>"+response[sceneCpt].nomScene+"</h3></div><div class='col-md-2 col-sm-2 col-xs-2'><i class='fa fa-arrow-right changeScene' aria-hidden='true' target-type='next' target-url='"+response[sceneCpt].idOeuvre+"'></i></div></div><div id='carousel-vertical' class='carousel vertical slide'><div class='carousel-inner' role='listbox'><div class='item active'><div class='row'><div class='col-md-8 col-md-offset-2'><div class='descriptionBloc text'><p>"+response[sceneCpt].description+"</p></div></div></div></div><div class='item'><div class='row'><div class='col-md-8 col-md-offset-2'><div class='descriptionBloc text'><p>"+response[sceneCpt].description+"</p></div></div></div></div></div></div></div>");
+					$(".imageOeuvre h1").html(response[0].nomLieu);
+					$(".nomScene h3").html(response[sceneCpt].nomScene);
+					$(".nomScene span").html(response[0].titreOeuvre);
+					$(".descriptionBloc.text").html(response[sceneCpt].description);
+					$(".fa-arrow-left.changeSceneOeuvre").attr( "target-url", response[sceneCpt].idLieu);
+					$(".fa-arrow-right.changeSceneOeuvre").attr( "target-url", response[sceneCpt].idLieu);
+					$("a.mapLink").attr( "href", "http://maps.google.com/?q="+response[sceneCpt].Lat+","+response[sceneCpt].Lng+"");
 
 					$(".dynamicContent").css("background-image", "url('"+ response[sceneCpt].urlImgScene  +"')");
 				}

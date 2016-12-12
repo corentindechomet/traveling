@@ -510,7 +510,6 @@ a.closebtn{
 .contentContainer .fa.fa-eye, .contentContainer .fa-eye-slash{
   padding-top: 25px;
   font-size: 1.2em;
-  cursor: pointer;
 }
 
 .contentContainer .fa.fa-eye:hover{
@@ -523,7 +522,7 @@ a.closebtn{
   margin-top: 30px;
 }
 
-.changeScene{
+.changeSceneOeuvre, .changeSceneLieu{
   margin-top: 20px;
   cursor: pointer;
 }
@@ -536,16 +535,38 @@ a.closebtn{
   overflow-y: hidden;
 }
 
-.sceneDescription .nomScene{
+.sceneDescription .nomScene h3, a.mapLink h3{
   text-align: center;
   padding: 15px;
   border: 1px solid white;
   font-size: 25px;
 }
 
+a.mapLink h3{
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-transition: background-color 200ms ease;
+  -moz-transition: background-color 200ms ease;
+  -o-transition: background-color 200ms ease;
+  -ms-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+
+a.mapLink h3:hover{
+  background-color: white;
+  color: #303030;
+  border: 1px solid white;
+  -webkit-transition: background-color 200ms ease;
+  -moz-transition: background-color 200ms ease;
+  -o-transition: background-color 200ms ease;
+  -ms-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+
 .descriptionBloc{
-  height: 25vh;
-  margin-bottom: 100px;
+/*   height: 25vh;
+margin-bottom: 100px; */
 }
 
 .descriptionBloc.text{
@@ -653,9 +674,9 @@ input[name="form"]:hover{
 #footer{
   margin-top: 0;
   padding: 20px;
-  height: 75px;
+  min-height: 75px;
   width: 100%;
-  background-color: #303030;
+  background-color: rgb(40, 40, 40);
   line-height: 1.5;
   color: rgb(235,235,235);
   font-size: 20px;
