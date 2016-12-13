@@ -154,9 +154,9 @@ a.closebtn{
 	font-size: 75px;
 }
 
-.contentContainer {
+/* .contentContainer {
 	padding: 30px;
-}
+} */
 
 .imgScene{
 	width: 100%;
@@ -186,10 +186,6 @@ a.closebtn{
 .descriptionBloc{
 /* 	height: 25vh;
 margin-bottom: 100px; */
-}
-
-.descriptionBloc.text{
-	padding: 25px 0 25px 0;
 }
 
 .fa.carousel-control{

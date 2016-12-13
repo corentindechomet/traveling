@@ -144,12 +144,15 @@ h2 span{
 }
 
 .topPart a {
-  padding: 8px;
   text-decoration: none;
   font-size: 36px;
   color: #818181;
   display: block; 
   transition: 0.3s; 
+}
+
+.topPart .container-fluid, .topPartContent, .sceneDescription, .dynamicContent, .filmImg, .imageOeuvre{
+  height: 100%;
 }
 
 /* Header */
@@ -274,7 +277,6 @@ section#main{
   cursor: pointer;
   /**/
 }
-
 
 .card.lastFilmAdded{
   height: 50vh;
@@ -469,7 +471,6 @@ a.closebtn{
 }
 
 .imageOeuvre{
-  height: 50vh;
   color: white;
   text-align: center;
   padding: 100px 0 0 0;
@@ -479,12 +480,10 @@ a.closebtn{
 }
 
 .dynamicContent{
-  height: 50vh;
   color: white;
   text-align: center;
-  padding: 25px;
+  padding: 0px;
   background-position: top;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -504,7 +503,7 @@ a.closebtn{
 }
 
 .contentContainer {
-  padding: 30px;
+  padding: 15px;
 }
 
 .contentContainer .fa.fa-eye, .contentContainer .fa-eye-slash{
@@ -539,6 +538,10 @@ a.closebtn{
   text-align: center;
   padding: 15px;
   border: 1px solid white;
+  font-size: 18px;
+}
+
+.sceneDescription .nomScene h3{
   font-size: 25px;
 }
 
@@ -570,7 +573,7 @@ margin-bottom: 100px; */
 }
 
 .descriptionBloc.text{
-  padding: 25px 0 25px 0;
+  padding: 25px 0 15px 0;
   font-family: "Poppins";
   text-align: left;
   line-height: 1.5em;

@@ -32,11 +32,11 @@ $(document).ready(function(){
 
 	$('.greySection').hover(
 		function(){$(this).find(".sectionTitle").toggleClass('glitchyText');}
-		)
+		);
 
 	$('.whiteSection').hover(
 		function(){$(this).find(".sectionTitle").toggleClass('glitchyText');}
-		)
+		);
 
 
 	// Requête AJAX films
@@ -247,13 +247,34 @@ function hideVideo(e) {
 function openOverlay(){
 	$("body").css("overflow-y", "hidden");
 	$(".navbar").css("display", "none");
-	document.getElementById("myNavTop").style.height = "50%";
-	document.getElementById("myNavBottom").style.height = "50%";
+	$(".topPart").attr( "target-state", "1");
+	if ($( window ).width() < 800) {
+		document.getElementById("myNavTop").style.height = "70%";
+		document.getElementById("myNavBottom").style.height = "30%";
+	}
+	else{
+		document.getElementById("myNavTop").style.height = "50%";
+		document.getElementById("myNavBottom").style.height = "50%";
+	}
 }
+
+$( window ).resize(function() {
+	var open = $(".topPart").attr("target-state");
+	console.log(open);
+	if (($( window ).width() < 800) && open == 1 ) {
+		document.getElementById("myNavTop").style.height = "70%";
+		document.getElementById("myNavBottom").style.height = "30%";
+	}
+	else if(($( window ).width() > 800) && open == 1){
+		document.getElementById("myNavTop").style.height = "50%";
+		document.getElementById("myNavBottom").style.height = "50%";
+	}
+});
 
 function closeOverlay(){
 	$("body").css("overflow-y", "visible");
 	document.getElementById("myNavTop").style.height = "0%";
 	document.getElementById("myNavBottom").style.height = "0%";
 	$(".navbar").css("display", "inline-block");
+	$(".topPart").attr( "target-state", "0");
 }

@@ -1,6 +1,6 @@
 <div class="overlay">
 
-	<div id="myNavTop" class="topPart">
+	<div id="myNavTop" class="topPart" target-state="0">
 		<div class="container-fluid">
 			<div class="row topPartContent">
 				<div class='col-md-6 hidden-sm hidden-xs filmImg' onclick='closeOverlay()'>
