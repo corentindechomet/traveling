@@ -311,6 +311,8 @@ section#main{
   transition: 0.3s;
 }
 
+.searchtitle{color:#333;}
+
 .center{
   position: absolute;
   top: 50%;

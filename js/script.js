@@ -61,7 +61,7 @@ $(document).ready(function(){
 				$(".descriptionBloc.text").html(response[0].description);
 				$(".fa-arrow-left.changeSceneOeuvre").attr( "target-url", response[sceneCpt].idOeuvre);
 				$(".fa-arrow-right.changeSceneOeuvre").attr( "target-url", response[sceneCpt].idOeuvre);
-				$("a.mapLink").attr( "href", "http://maps.google.com/?q="+response[0].Lat+","+response[0].Lng+"");
+				$("a.mapLink").attr( "href", "http://maps.google.com/maps/dir//"+response[0].Lat+","+response[0].Lng+"");
 
 				$('.imageOeuvre').css("background-image", "url('" + response[0].urlimg + "')");
 				init(response[0].Lat, response[0].Lng, sceneMax);
@@ -191,7 +191,7 @@ $(document).ready(function(){
 					$(".descriptionBloc.text").html(response[sceneCpt].description);
 					$(".fa-arrow-left.changeSceneOeuvre").attr( "target-url", response[sceneCpt].idOeuvre);
 					$(".fa-arrow-right.changeSceneOeuvre").attr( "target-url", response[sceneCpt].idOeuvre);
-					$("a.mapLink").attr( "href", "http://maps.google.com/?q="+response[sceneCpt].Lat+","+response[sceneCpt].Lng+"");
+					$("a.mapLink").attr( "href", "http://maps.google.com/maps/dir//"+response[sceneCpt].Lat+","+response[sceneCpt].Lng+"");
 
 					$(".dynamicContent").css("background-image", "url('"+ response[sceneCpt].urlImgScene  +"')");
 				}
@@ -225,7 +225,7 @@ $(document).ready(function(){
 					$(".descriptionBloc.text").html(response[sceneCpt].description);
 					$(".fa-arrow-left.changeSceneOeuvre").attr( "target-url", response[sceneCpt].idLieu);
 					$(".fa-arrow-right.changeSceneOeuvre").attr( "target-url", response[sceneCpt].idLieu);
-					$("a.mapLink").attr( "href", "http://maps.google.com/?q="+response[sceneCpt].Lat+","+response[sceneCpt].Lng+"");
+					$("a.mapLink").attr( "href", "http://maps.google.com/maps/dir//"+response[sceneCpt].Lat+","+response[sceneCpt].Lng+"");
 
 					$(".dynamicContent").css("background-image", "url('"+ response[sceneCpt].urlImgScene  +"')");
 				}

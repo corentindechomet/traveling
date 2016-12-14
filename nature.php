@@ -16,7 +16,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<h1>urban</h1>
+					<h1>nature</h1>
 				</div>
 			</div>
 			<div class="row">
@@ -42,7 +42,7 @@
 				$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
 
 				if(isset($_GET['search'])){
-					echo "<h2>".count($tabP)." résulat(s) pour votre recherche : ".$_GET['search']."</h2>";
+					echo "<h2 class='searchtitle'>".count($tabP)." résulat(s) pour votre recherche : ".$_GET['search']."</h2>";
 					echo "<hr />";
 				}
 

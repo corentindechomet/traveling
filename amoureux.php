@@ -42,7 +42,7 @@
 				$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
 
 				if(isset($_GET['search'])){
-					echo "<h2>".count($tabP)." résulat(s) pour votre recherche : ".$_GET['search']."</h2>";
+					echo "<h2 class='searchtitle'>".count($tabP)." résulat(s) pour votre recherche : ".$_GET['search']."</h2>";
 					echo "<hr />";
 				}
 

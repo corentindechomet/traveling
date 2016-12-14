@@ -23,7 +23,7 @@
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4">
 					<form method="get">
-						<i class='fa fa-search' aria-hidden='true'></i><input class="search-header" name="search" title="Rechercher une oeuvre" type="text" placeholder="Rechercher un lieu"></input>
+						<i class='fa fa-search' aria-hidden='true'></i><input class="search-header" name="searchLocation" title="Rechercher un lieu" type="text" placeholder="Rechercher un lieu"></input>
 					</form>
 				</div>
 			</div>
@@ -43,7 +43,7 @@
 				$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
 
 				if(isset($_GET['searchLocation'])){
-					echo "<h2>".count($tabP)." résulat(s) pour votre recherche : ".$_GET['searchLocation']."</h2>";
+					echo "<h2 class='searchtitle'>".count($tabP)." résulat(s) pour votre recherche : ".$_GET['searchLocation']."</h2>";
 					echo "<hr />";
 				}
 
