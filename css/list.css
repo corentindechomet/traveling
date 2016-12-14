@@ -139,7 +139,6 @@ a.closebtn{
 	height: 50vh;
 	color: white;
 	text-align: center;
-	padding: 100px 0 0 0;
 	background-position: top;
 }
 
@@ -149,11 +148,11 @@ a.closebtn{
 	cursor: pointer;
 }
 
-.imageOeuvre h1{
+/* .imageOeuvre h1{
 	margin: 0;
 	font-size: 75px;
 }
-
+ */
 /* .contentContainer {
 	padding: 30px;
 } */

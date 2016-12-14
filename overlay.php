@@ -13,7 +13,6 @@
 					<div class='dynamicContent'>
 						<div class='contentContainer'>
 							<div class='row'>
-								<a href='javascript:void(0)' class='closebtn hidden-md hidden-lg' onclick='closeOverlay()''>X</a>
 								<div class='col-md-2 col-sm-2 col-xs-2'>
 									<i class='fa fa-arrow-left changeSceneOeuvre' aria-hidden='true' target-type='previous' target-url=""></i>
 								</div>
@@ -33,18 +32,15 @@
 										<p></p>
 									</div>
 								</div>
-<!-- 								<div class='col-md-1 col-sm-6 col-xs-6'>
-	<i class='fa fa-eye-slash opacityEye' data-state='0' aria-hidden='true'></i>
-</div> -->
 							</div>
 							<div class="row">
-								<div class='col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4'>
+								<div class='col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3'>
 									<a class='mapLink' href="" target="_blank">
-										<div >
-											<span class='hidden-md hidden-lg'></span>
-											<h3>Je m'y rends !</h3>
-										</div>
+										<h3>Je m'y rends !<i class="fa fa-location-arrow" aria-hidden="true"></i></h3>
 									</a>
+									<div class='back hidden-md hidden-lg' onclick='closeOverlay()''>
+										<h3>Retour</h3>
+									</div>
 								</div>
 							</div>
 						</div>

@@ -58,6 +58,7 @@
 				}
 
 				for($i=0;$i<count($tabP);$i++){ ?>
+				<a href="#">
 				<div class="col-md-offset-0 col-md-4 col-sm-6 col-xs-6 video">
 					<div class="card shadow overlay oeuvre" target-url="<?php echo $tabP[$i]->idOeuvre?>">
 						<video class="thevideo" loop preload="yes">
@@ -83,7 +84,8 @@
 								?>
 							</div>
 						</div>
-					</div>								
+					</div>	
+					</a>							
 					<?php }?>
 				</div>
 			</div>

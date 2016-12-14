@@ -466,14 +466,13 @@ a.closebtn{
 }
 
 .topPartContent{
- line-height: 1;
- overflow-x: hidden;
+  line-height: 1;
+  overflow-x: hidden;
 }
 
 .imageOeuvre{
   color: white;
   text-align: center;
-  padding: 100px 0 0 0;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -498,12 +497,13 @@ a.closebtn{
 }
 
 .imageOeuvre h1{
+  line-height: 45vh;
   margin: 0;
   font-size: 75px;
 }
 
 .contentContainer {
-  padding: 15px;
+  padding: 20px;
 }
 
 .contentContainer .fa.fa-eye, .contentContainer .fa-eye-slash{
@@ -534,7 +534,7 @@ a.closebtn{
   overflow-y: hidden;
 }
 
-.sceneDescription .nomScene, a.mapLink h3{
+.sceneDescription .nomScene, a.mapLink h3, .back h3{
   text-align: center;
   padding: 15px;
   border: 1px solid white;
@@ -546,6 +546,38 @@ a.closebtn{
 }
 
 a.mapLink h3{
+  color: #404040;
+  cursor: pointer;
+  background-color: white;
+  margin-bottom: 15px;
+  -webkit-transition: background-color 200ms ease;
+  -moz-transition: background-color 200ms ease;
+  -o-transition: background-color 200ms ease;
+  -ms-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+
+a.mapLink h3:hover{
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  -webkit-transition: background-color 200ms ease;
+  -moz-transition: background-color 200ms ease;
+  -o-transition: background-color 200ms ease;
+  -ms-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+
+.fa-location-arrow{
+  color: #404040;
+  margin-left: 15px;
+}
+
+a.mapLink h3:hover .fa-location-arrow{
+  color: white;
+}
+
+.back h3{
   color: white;
   cursor: pointer;
   background-color: transparent;
@@ -556,7 +588,7 @@ a.mapLink h3{
   transition: background-color 200ms ease;
 }
 
-a.mapLink h3:hover{
+.back h3:hover{
   background-color: white;
   color: #303030;
   border: 1px solid white;
