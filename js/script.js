@@ -262,14 +262,13 @@ function openOverlay(){
 
 $( window ).resize(function() {
 	var open = $(".topPart").attr("target-state");
-	console.log(open);
-	if (($( window ).width() < 800) && open == 1 ) {
+	if (($( window ).width() < 992) && open == 1 ) {
 		$(".changeSceneOeuvre").css("font-size", "3em");
 		$(".changeSceneLieu").css("font-size", "3em");
 		document.getElementById("myNavTop").style.height = "70%";
 		document.getElementById("myNavBottom").style.height = "30%";
 	}
-	else if(($( window ).width() > 800) && open == 1){
+	else if(($( window ).width() > 992) && open == 1){
 		$(".changeSceneOeuvre").css("font-size", "1em");
 		$(".changeSceneLieu").css("font-size", "1em");
 		document.getElementById("myNavTop").style.height = "50%";
