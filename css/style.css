@@ -226,12 +226,6 @@ header .logo{
   transition: top 0.2s ease;
 }
 
-@media(max-height: 700px){
-  .svgWrapper{
-   margin-top: 100px;
- }
-}
-
 .svgWrapper:hover{
   top: -20px;
   stroke: #000;
@@ -802,12 +796,6 @@ input[name="form"]:hover{
   transform: translateX(-50%) translateY(-50%);
 }
 
-@media(min-width: 640px){
-  .closebtnMobile{
-    display: none;
-  }
-}
-
 /* Glitchy animation */
 .glitchyText {
   position: relative;
@@ -865,5 +853,26 @@ input[name="form"]:hover{
   100% {
     -webkit-transform: translate(-1px, 1px);
     transform: translate(-1px, 1px);
+  }
+}
+
+@media(max-height: 700px){
+  .svgWrapper{
+   margin-top: 100px;
+ }
+}
+
+@media(min-width: 640px){
+  .closebtnMobile{
+    display: none;
+  }
+}
+
+@media(max-width: 400px){
+  .navbar>.container .navbar-brand {
+    margin-left: 10px;
+  }
+  .navbar-header.pull-right a {
+    padding: 15px 5px;
   }
 }
