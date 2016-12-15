@@ -9,11 +9,27 @@
 	</div>
 	<?php include 'overlay.php' ?>
 
-	<video id="video" autoplay loop>
-		<source src="imgs/filmAccueil.mp4" type="video/mp4"/>
-	</video>
+	<div class="homeDisplay">
+		<video id="video" autoplay loop>
+			<source src="imgs/filmAccueil.mp4" type="video/mp4"/>
+		</video>
+	</div>
 
-	<?php include 'menu.php' ?>
+	<!-- Navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar navbar-fixed-top">
+				<div class="navbar-header pull-left">
+					<a class="navbar-brand active" href="./">TRAVELING</a>
+				</div>
+				<div class="navbar-header pull-right">
+					<a href="oeuvres.php">Oeuvres</a>
+					<a href="lieux.php">Lieux</a>
+					<a href="contact.php">Contact</a>
+				</div>
+			</div>
+		</div>
+	</nav>
 
 	<header id="home">
 		<div class="container">

@@ -30,7 +30,9 @@ header h1 {
 
 	font-family: "Poppins", Sans-Serif;
 	font-size: 15px;
-}
+    font-family: "canter";
+    text-transform: uppercase;
+    letter-spacing: 3px;}
 
 .fa-search{
 	position: absolute;

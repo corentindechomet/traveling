@@ -21,7 +21,21 @@
 	</svg>
 	<?php include 'overlay.php' ?>
 	
-	<?php include 'menu.php' ?>
+	<!-- Navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar navbar-fixed-top">
+				<div class="navbar-header pull-left">
+					<a class="navbar-brand active" href="./">TRAVELING</a>
+				</div>
+				<div class="navbar-header pull-right">
+					<a class="active" href="oeuvres.php">Oeuvres</a>
+					<a href="lieux.php">Lieux</a>
+					<a href="contact.php">Contact</a>
+				</div>
+			</div>
+		</div>
+	</nav>
 
 	<header class="header">
 		<div class="container">

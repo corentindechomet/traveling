@@ -18,6 +18,7 @@
 body{
   font-family: "Canter";
   /* line-height: 0; */
+  overflow-x: hidden;
 }
 
 h2{
@@ -50,12 +51,12 @@ h2 span{
 
 .greySection{
   background: url(../imgs/noiseBackgroundGrey.jpg) center repeat;
-  padding: 40px 0 50px 0;
+  padding: 40px 0 40px 0;
 }
 
 .whiteSection{
   background: url(../imgs/noiseBackground.png) center repeat;
-  padding: 40px 0 50px 0;
+  padding: 40px 0 10px 0;
 }
 
 .whiteSection h2{
@@ -92,13 +93,45 @@ h2 span{
 
 /* Navbar */
 .navbar-default {
- background-color: transparent;
- border: none;
+  background-color: transparent;
+  border: none;
 }
 
-.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand{
- color: white;
- font-size: 20px;
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand, .navbar a{
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.navbar-header.pull-right a{
+  padding: 15px 15px;
+  line-height: 20px;
+}
+
+.navbar-header.pull-right a:hover{
+  color: #B1B1B1;
+}
+
+.navbar-header.pull-right{
+  margin: 15px 15px 0 0;
+}
+
+.navbar>.container .navbar-brand{
+  margin-left: 50px;
+  font-size: 20px;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+  color: #E0E0E0;
+}
+
+.navbar-header.pull-right a.active{
+  color: #404040;
+}
+
+.backgroundNav .navbar-header.pull-right a.active{
+  background-color: #E4E4E4;
 }
 
 /* Overlay */
@@ -175,6 +208,12 @@ header .logo{
  height: 100vh;
  object-fit: cover;
 }
+
+.homeDisplay{
+  height: 100vh;
+  background: url(../imgs/bg1.jpg) top repeat;
+}
+
 .svgWrapper{
   text-align: center;
   margin-top: 175px;
@@ -237,7 +276,7 @@ header .logo{
 /* Main */
 section#main{
   line-height: 1.5;
-  margin-top: -4px;
+  margin-top: -7px;
 }
 
 /* Cards */
@@ -278,6 +317,14 @@ section#main{
   /**/
 }
 
+.card.appear.searchBy:hover input{
+  background-color: rgba(0,0,0,0.7);
+}
+
+.card.appear.searchBy:focus{
+  background-color: rgba(0,0,0,0.7);
+}
+
 .card.lastFilmAdded{
   height: 50vh;
   cursor: pointer;
@@ -304,11 +351,14 @@ section#main{
   transform: translateY(-70%) translateX(-50%);
   border: 1px solid rgba(255,255,255,0.5);
   padding: 5px 10px 0px 35px;
-  font-size: 14px;
-  background: rgba(0,0,0,0.1);
+  font-size: 16px;
+  background: rgba(0,0,0,0.4);
   width: 280px;
   height: 50px;
   transition: 0.3s;
+  font-family: "canter";
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .searchtitle{color:#333;}
@@ -323,7 +373,7 @@ section#main{
 .searchIcon {
   position: relative;
   left: -95px;
-  top: -16px;
+  top: -15px;
   cursor:pointer;
   color: rgba(255,255,255,0.9);
   z-index: 1000;
@@ -348,9 +398,12 @@ left: 28%; */
 }
 
 .card.searchBy input:focus{
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.7);
   border: 1px solid rgba(255,255,255,1);
-  margin-bottom: 
+}
+
+.card.searchBy > input:focus{
+  background-color: red;
 }
 
 #searchByFilms{
@@ -472,6 +525,12 @@ a.closebtn{
   overflow-x: hidden;
 }
 
+
+
+#myNavTop, .topPartContent, .sceneDescription, .contentContainer{
+  overflow-y: hidden;
+}
+
 .imageOeuvre{
   color: white;
   text-align: center;
@@ -499,9 +558,10 @@ a.closebtn{
 }
 
 .imageOeuvre h1{
+  text-transform: uppercase;
   line-height: 45vh;
   margin: 0;
-  font-size: 75px;
+  font-size: 50px;
 }
 
 .contentContainer {

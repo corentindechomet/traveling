@@ -3,13 +3,13 @@
 	<div id="myNavTop" class="topPart" target-state="0">
 		<div class="container-fluid">
 			<div class="row topPartContent">
-				<div class='col-md-6 hidden-sm hidden-xs filmImg' onclick='closeOverlay()'>
+				<div class='col-md-4 hidden-sm hidden-xs filmImg' onclick='closeOverlay()'>
 					<a href='javascript:void(0)' class='closebtn' onclick='closeOverlay()''>X</a>
 					<div class='imageOeuvre'>
 						<h1></h1>
 					</div>
 				</div>
-				<div class='col-md-6 col-sm-12 cold-xs-12 sceneDescription'>
+				<div class='col-md-8 col-sm-12 cold-xs-12 sceneDescription'>
 					<div class='dynamicContent'>
 						<div class='contentContainer'>
 							<div class='row'>

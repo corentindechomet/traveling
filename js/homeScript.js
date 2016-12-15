@@ -1,25 +1,7 @@
 $(document).ready(function(){
 	/* Effets scrollmagic */
 
-
-	/* menu background */
 	var controller = new ScrollMagic.Controller();
-
-	var scene = new ScrollMagic.Scene({
-		offset: 400
-	})
-	.setTween("nav", 0.2, {backgroundColor: "#282828"})
-	.addTo(controller);
-
-	/* font size */
-	var controller2 = new ScrollMagic.Controller();
-
-	var scene = new ScrollMagic.Scene({
-		offset: 400
-	})
-	.setTween(".navbar-brand, .navbar-default .navbar-nav>li>a", 0.2, {fontSize: "22px"})
-	.addTo(controller2);
-
 
 	// Apparition fade-in du contenu
 	var fade1Scene = new ScrollMagic.Scene({
@@ -55,7 +37,7 @@ $(document).ready(function(){
 	// On retire la taille de la barre de navigation pour scroller à la limite de la section
 	var navHeight = $('nav').height();
 	controller.scrollTo(function (newpos) {
-		TweenMax.to(window, 0.5, {scrollTo: {y: newpos-navHeight}});
+		TweenMax.to(window, 0.5, {scrollTo: {y: newpos-(navHeight-7)}});
 	});
 
 	$(document).on("click", "a.arrow", function (e) {

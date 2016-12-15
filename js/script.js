@@ -4,9 +4,13 @@ $(document).ready(function(){
 
 	/* PRELOADER */
 	$(window).bind("load", function() {
-		$('#preloaderContainer').fadeOut("1000");
+		$('#preloaderContainer').delay(500).fadeOut("200");
 	});
 
+	/* Gestion affichage vidéo ou image accueil -- voir suite à la fin du fichier*/
+	if (($( window ).width() < 1087)) {
+		$("#video").hide();
+	}
 	/*	$('.navbar-right').click(function(){
 		$('#preloaderContainer').show();
 	});
@@ -14,6 +18,29 @@ $(document).ready(function(){
 	$('.navbar-header').click(function(){
 		$('#preloaderContainer').show();
 	});*/
+
+	/* Effets scrollmagic */
+
+
+	/* menu background */
+	var controller = new ScrollMagic.Controller();
+
+	var scene = new ScrollMagic.Scene({
+		offset: 400
+	})
+	.setTween("nav", 0.2, {backgroundColor: "#282828"})
+	.setClassToggle('nav', 'backgroundNav')
+	.addTo(controller);
+
+	/* font size */
+	var controller2 = new ScrollMagic.Controller();
+
+	var scene = new ScrollMagic.Scene({
+		offset: 400
+	})
+	.setTween(".navbar-brand, .navbar-default .navbar-nav>li>a", 0.2, {fontSize: "22px"})
+	.addTo(controller2);
+
 
 	$('#searchByFilms').click(function() {
 		$("input[name='searchFilm']").focus();
@@ -69,7 +96,7 @@ $(document).ready(function(){
 				setTimeout(function() {
 					$( "#myNavTop .filmImg" )
 					.mouseenter(function() {
-						$(".imageOeuvre h1").html("Cliquez pour revenir");
+						$(".imageOeuvre h1").html("Retour");
 					})
 					.mouseleave(function() {
 						$(".imageOeuvre h1").html(response[0].titreOeuvre);
@@ -258,7 +285,7 @@ function openOverlay(){
 		document.getElementById("myNavTop").style.height = "50%";
 		document.getElementById("myNavBottom").style.height = "50%";
 	}
-}
+};
 
 $( window ).resize(function() {
 	var open = $(".topPart").attr("target-state");
@@ -283,3 +310,14 @@ function closeOverlay(){
 	$(".navbar").css("display", "inline-block");
 	$(".topPart").attr( "target-state", "0");
 }
+
+/* Gestion affichage vidéo ou image accueil */
+$( window ).resize(function() {
+	if (($( window ).width() < 1087)) {
+		$(".homeDisplay").show();
+		$("#video").hide();
+	}
+	else if(($( window ).width() > 1087)){
+		$("#video").show();
+	}
+});
