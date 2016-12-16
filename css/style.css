@@ -591,15 +591,15 @@ a.closebtn{
   overflow-y: hidden;
 }
 
+.sceneDescription .nomScene h3{
+  font-size: 25px;
+}
+
 .sceneDescription .nomScene, a.mapLink h3, .back h3{
   text-align: center;
   padding: 15px;
   border: 1px solid white;
   font-size: 18px;
-}
-
-.sceneDescription .nomScene h3{
-  font-size: 25px;
 }
 
 a.mapLink h3{
@@ -828,6 +828,44 @@ h2.subtitle {
 #footer p{
   text-align: right;
 }
+
+a.contribButton{
+  text-decoration: none;
+}
+
+a.contribButton h3{
+  text-align: center;
+  padding: 15px;
+  border: 1px solid white;
+  font-size: 18px;
+}
+
+a.contribButton h3{
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 15px;
+  -webkit-transition: background-color 200ms ease;
+  -moz-transition: background-color 200ms ease;
+  -o-transition: background-color 200ms ease;
+  -ms-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+
+a.contribButton h3:hover{
+  color: #404040;
+
+  background-color: white;
+
+
+  border: 1px solid white;
+  -webkit-transition: background-color 200ms ease;
+  -moz-transition: background-color 200ms ease;
+  -o-transition: background-color 200ms ease;
+  -ms-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+
 
 /*Loader*/
 
