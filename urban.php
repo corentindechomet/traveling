@@ -49,9 +49,9 @@
 				<?php
 				include('connection.php');
 				if(isset($_GET['search']))
-					$requeteP = "SELECT * FROM lieu WHERE categorie LIKE 'ville' AND nomLieu LIKE '%".$_GET['search']."%' ";
+					$requeteP = "SELECT * FROM lieu WHERE categorie LIKE '%ville%' AND nomLieu LIKE '%".$_GET['search']."%' ";
 				else
-					$requeteP = 'SELECT * FROM lieu WHERE categorie LIKE "ville"';
+					$requeteP = 'SELECT * FROM lieu WHERE categorie LIKE "%ville%"';
 				$resultatP = $connection->query($requeteP);
 				$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
 
@@ -59,7 +59,7 @@
 					echo "<h2 class='searchtitle'>".count($tabP)." résulat(s) pour votre recherche : ".$_GET['search']."</h2>";
 					echo "<hr />";
 				}
-
+				if(count($tabP)>0){
 				for($i=0;$i<count($tabP);$i++){ ?>
 				<div class="col-md-offset-0 col-md-4 col-sm-6 col-xs-6 video">
 					<div class="card overlay lieu" target-url="<?php echo $tabP[$i]->idLieu?>">
@@ -71,7 +71,13 @@
 							<div class="card-text subtitle genre"><?php echo $tabP[$i]->type ?></div>
 						</div>
 					</div>								
-					<?php }?>
+					<?php }
+				}else{ ?>
+					<div class="Nosearchresult">
+						<p >Désolé ! Votre recherche n'a retourné aucun résultat si vous pensez qu'il s'agit d'un manque, n'hésitez pas à nous <a href="contact.php">contacter</a> !</p>
+						<img src="imgs/goslingcta.gif" />
+					</div>
+				<?php }?>
 				</div>
 			</div>
 		</section>

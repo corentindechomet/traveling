@@ -79,7 +79,7 @@
 				}else{ ?>
 					<div class="Nosearchresult">
 						<p >Désolé ! Votre recherche n'a retourné aucun résultat si vous pensez qu'il s'agit d'un manque, n'hésitez pas à nous <a href="contact.php">contacter</a> !</p>
-						<img src="imgs/abbesses.jpg" />
+						<img src="imgs/goslingcta.gif" />
 					</div>
 				<?php }?>
 				</div>
