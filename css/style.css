@@ -276,7 +276,7 @@ section#main.accueil{
 /* Cards */
 .listOfCards{
   background: url(../imgs/noiseBackground.png) center repeat;
-  padding-top: 25px;
+  padding: 25px 0px;
 }
 
 .listOfCards .card{
