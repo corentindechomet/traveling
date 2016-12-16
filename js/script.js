@@ -67,11 +67,6 @@ $(document).ready(function(){
 
 
 	/* RESPONSIVE */
-	var transparentwidth = $('.transparent').width();
-	if(transparentwidth < 240)
-		$('.outlineText').css("font-size", "58px");
-	else
-		$('.outlineText').css("font-size", "75px");
 
 	$('.greySection').hover(
 		function(){$(this).find(".sectionTitle").toggleClass('glitchyText');}

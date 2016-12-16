@@ -987,4 +987,5 @@ a.contribButton h3:hover{
   .navbar-header.pull-right a {
     padding: 15px 5px;
   }
+  span.outlineText.escapeText{font-size: 60px;}
 }
