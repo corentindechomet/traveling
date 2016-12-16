@@ -25,13 +25,13 @@
 				<div class="navbar-header pull-right">
 					<a href="oeuvres.php">Oeuvres</a>
 					<a href="lieux.php">Lieux</a>
-					<a href="contact.php">Contact</a>
+					<a href="contact.php">Contribuer</a>
 				</div>
 			</div>
 		</div>
 	</nav>
 
-	<header id="home">
+	<header id="home" class="accueil">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">

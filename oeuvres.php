@@ -31,7 +31,7 @@
 				<div class="navbar-header pull-right">
 					<a class="active" href="oeuvres.php">Oeuvres</a>
 					<a href="lieux.php">Lieux</a>
-					<a href="contact.php">Contact</a>
+					<a href="contact.php">Contribuer</a>
 				</div>
 			</div>
 		</div>
@@ -45,9 +45,10 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 col-md-offset-4">
+				<div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
 					<form method="get">
-						<i class='fa fa-search' aria-hidden='true'></i><input class="search-header" name="searchFilm" title="Rechercher une oeuvre" type="text" placeholder="Rechercher une oeuvre"></input>
+						<i class='fa fa-search chercherOeuvre' aria-hidden='true'></i>
+						<input class="search-header" name="searchFilm" title="Rechercher une oeuvre" type="text" placeholder="Rechercher une oeuvre"></input>
 					</form>
 				</div>
 			</div>
@@ -90,11 +91,11 @@
 										//echo 'série';
 
 								else if($type == 2)
-									echo 'documentaire';
+									echo "<i class='fa fa-film' aria-hidden='true'></i><span class='subtitleGenre'>documentaire</span>";
 								else
 									echo 'erreur type';
 
-								echo $tabP[$i]->genre;
+								echo "<span class='subtitleGenre'>".$tabP[$i]->genre."</span>";
 								?>
 							</div>
 						</div>

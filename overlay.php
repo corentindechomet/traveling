@@ -34,13 +34,15 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class='col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3'>
-									<a class='mapLink' href="" target="_blank">
-										<h3>Je m'y rends !<i class="fa fa-location-arrow" aria-hidden="true"></i></h3>
-									</a>
+								<div class='col-md-6 col-sm-6 col-xs-6'>
 									<div class='back hidden-md hidden-lg' onclick='closeOverlay()''>
 										<h3>Retour</h3>
 									</div>
+								</div>
+								<div class='col-md-6 col-sm-6 col-xs-6'>
+									<a class='mapLink' href="" target="_blank">
+										<h3>Je m'y rends !<i class="fa fa-location-arrow" aria-hidden="true"></i></h3>
+									</a>
 								</div>
 							</div>
 						</div>
