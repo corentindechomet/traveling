@@ -21,6 +21,7 @@ $(document).ready(function(){
 	/* Gestion affichage vidéo ou image accueil -- voir suite à la fin du fichier*/
 	if (($( window ).width() < 1087)) {
 		$("#video").hide();
+		$(".thevideo").hide();
 	}
 	/*	$('.navbar-right').click(function(){
 		$('#preloaderContainer').show();
@@ -94,8 +95,8 @@ $(document).ready(function(){
 			var id = $(this).attr("target-url");
 			var url = "travelingAPI.php?call=oeuvre&id="+id;
 		}
-		var sceneCpt = 0;
-		var sceneMax = 0;
+		sceneCpt = 0;
+		sceneMax = 0;
 		$.ajax({  
 			type: "GET",
 			url: url,             
@@ -106,8 +107,8 @@ $(document).ready(function(){
 				$(".nomScene h3").html(response[0].nomScene);
 				$(".nomScene span").html(response[0].titreOeuvre);
 				$(".descriptionBloc.text").html(response[0].description);
-				$(".fa-arrow-left.changeSceneOeuvre").attr( "target-url", response[sceneCpt].idOeuvre);
-				$(".fa-arrow-right.changeSceneOeuvre").attr( "target-url", response[sceneCpt].idOeuvre);
+				$(".fa-arrow-left.changeSceneOeuvre").attr( "target-url", response[0].idOeuvre);
+				$(".fa-arrow-right.changeSceneOeuvre").attr( "target-url", response[0].idOeuvre);
 				$("a.mapLink").attr( "href", "http://maps.google.com/maps/dir//"+response[0].Lat+","+response[0].Lng+"");
 
 				$('.imageOeuvre').css("background-image", "url('" + response[0].urlimg + "')");
@@ -122,29 +123,6 @@ $(document).ready(function(){
 						$(".imageOeuvre h1").html(response[0].titreOeuvre);
 					});
 				}, 2500);
-				/* EYE CLICK */
-				$('.opacityEye').click(function() {
-					if($(this).hasClass('fa-eye-slash')){
-						$(".fa.fa-eye").css('color', 'rgba(255,255,255,0.7)');
-						$(".changeSceneOeuvre").css('color', 'rgba(255,255,255,0.2)');
-						$(".nomScene").css({
-							'color': 'rgba(255,255,255,0.2)',
-							'border': '1px solid rgba(255,255,255,0.2)'
-						});
-						$(".text").css('color', 'rgba(255,255,255,0.2)');
-						$(this).attr("class", "fa fa-eye opacityEye");
-					}
-					else {
-						$(".fa.fa-eye").css('color', 'rgba(255,255,255,1)');
-						$(".changeSceneOeuvre").css('color', 'rgba(255,255,255,1)');
-						$(".nomScene").css({
-							'color': 'rgba(255,255,255,1)',
-							'border': '1px solid rgba(255,255,255,1)'
-						});
-						$(".text").css('color', 'rgba(255,255,255,1)');
-						$(this).attr("class", "fa fa-eye-slash opacityEye");
-					}
-				});
 			}
 		});
 		openOverlay();
@@ -152,8 +130,8 @@ $(document).ready(function(){
 
 	$(document).on("click", ".card.overlay.lieu", function (e) {
 		var id = $(this).attr("target-url");
-		var sceneCpt = 0;
-		var sceneMax = 0;
+		sceneCpt = 0;
+		sceneMax = 0;
 		$.ajax({  
 			type: "GET",
 			url: "travelingAPI.php?call=lieu&id="+id,             
@@ -164,11 +142,11 @@ $(document).ready(function(){
 				$("i.changeSceneOeuvre").toggleClass('changeSceneOeuvre changeSceneLieu');
 
 				$(".imageOeuvre h1").html(response[0].nomLieu);
-				$(".nomScene h3").html(response[sceneCpt].nomScene);
+				$(".nomScene h3").html(response[0].nomScene);
 				$(".nomScene span").html(response[0].titreOeuvre);
-				$(".descriptionBloc.text").html(response[sceneCpt].description);
-				$(".fa-arrow-left.changeSceneLieu").attr( "target-url", response[sceneCpt].idLieu);
-				$(".fa-arrow-right.changeSceneLieu").attr( "target-url", response[sceneCpt].idLieu);
+				$(".descriptionBloc.text").html(response[0].description);
+				$(".fa-arrow-left.changeSceneLieu").attr( "target-url", response[0].idLieu);
+				$(".fa-arrow-right.changeSceneLieu").attr( "target-url", response[0].idLieu);
 				$("a.mapLink").attr( "href", "http://maps.google.com/?q="+response[0].Lat+","+response[0].Lng+"");
 
 				$('.imageOeuvre').css("background-image", "url('" + response[0].urlImgLieu + "')");
@@ -223,7 +201,7 @@ $(document).ready(function(){
 			else if (sceneCpt < 0)
 				sceneCpt = sceneMax-1;
 			var id = $(this).attr("target-url");
-			console.log(sceneCpt);
+			//console.log(sceneCpt);
 			$.ajax({  
 				type: "GET",
 				url: "travelingAPI.php?call=oeuvre&id="+id,             
@@ -329,6 +307,7 @@ function closeOverlay(){
 	document.getElementById("myNavBottom").style.height = "0%";
 	$(".navbar").css("display", "inline-block");
 	$(".topPart").attr( "target-state", "0");
+	sceneCpt = 0;
 }
 
 /* Gestion affichage vidéo ou image accueil */
@@ -336,8 +315,10 @@ $( window ).resize(function() {
 	if (($( window ).width() < 1087)) {
 		$(".homeDisplay").show();
 		$("#video").hide();
+		$(".thevideo").hide();
 	}
 	else if(($( window ).width() > 1087)){
 		$("#video").show();
+		$(".thevideo").show();
 	}
 });
