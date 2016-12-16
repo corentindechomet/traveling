@@ -65,6 +65,12 @@ h2{font-size:24px;}
 
 .card .thevideo{height: 450px;}
 
+.videoReceiver{
+    height: 100%;
+    width: 100%;
+    background-size: cover !important;
+}
+
 .card .card-text{
 	width: 100%;
 	position: absolute;
@@ -246,10 +252,10 @@ margin-bottom: 100px; */
 		font-size: 150px;
 	}
 	.card{
-		height: 200px;
+		height: 225px;
 	}
 	.card .thevideo {
-		height: 200px;
+		height: 225px;
 	}
 	.card .pays, .card .lieu{
 		letter-spacing: 3px;

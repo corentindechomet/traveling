@@ -39,7 +39,7 @@
 										<h3>Retour</h3>
 									</div>
 								</div>
-								<div class='col-md-6 col-sm-6 col-xs-6'>
+								<div class='col-md-4 col-md-offset-4 col-sm-6 col-xs-6'>
 									<a class='mapLink' href="" target="_blank">
 										<h3>Je m'y rends !<i class="fa fa-location-arrow" aria-hidden="true"></i></h3>
 									</a>
