@@ -71,7 +71,7 @@
 					echo "<h2 class='searchtitle'>".count($tabP)." résulat(s) pour votre recherche : ".$_GET['searchFilm']."</h2>";
 					echo "<hr />";
 				}
-
+				if(count($tabP)>0){
 				for($i=0;$i<count($tabP);$i++){ ?>
 				<a href="#">
 					<div class="col-md-offset-0 col-md-4 col-sm-6 col-xs-6 video">
@@ -103,7 +103,13 @@
 							</div>
 						</div>	
 					</a>							
-					<?php }?>
+				<?php }
+				}else{ ?>
+					<div class="Nosearchresult">
+						<p >Désolé ! Votre recherche n'a retourné aucun résultat si vous pensez qu'il s'agit d'un manque, n'hésitez pas à nous <a href="contact.php">contacter</a> !</p>
+						<img src="imgs/goslingcta.gif" />
+					</div>
+				<?php }?>
 				</div>
 			</div>
 		</section>
