@@ -43,7 +43,7 @@
 				<div class="navbar-header pull-right">
 					<a href="oeuvres.php">Oeuvres</a>
 					<a href="lieux.php">Lieux</a>
-					<a class="active"  href="contact.php">Contact</a>
+					<a class="active"  href="contact.php">Contribuer</a>
 				</div>
 			</div>
 		</div>
@@ -52,27 +52,60 @@
 	<header class="header">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<h1>contact</h1>
+				<div class="col-md-10 col-md-offset-1">
+					<h1>contribuer</h1>
 				</div>
 			</div>
 		</div>
 	</header>
 	
-	<section id="main">
+	<section id="main" class="contact">
+		<div class="contribExplanation">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<h2>Des idées de film ou série à présenter ? </h2>
+						<h2 class="subtitle">Nos équipes s'occuperont d'ajouter le contenu sur Traveling !</h2>	
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="container">
 			<div class="row contact-form">
-				<h2>Des questions ? Des idées de film ou série à présenter ? Contactez-nous !</h2>
 				<form>
-					<div class="col-md-offset-3 col-md-6">
+					<div class="col-md-offset-3 col-md-3">
 						<input placeholder="Nom" name="nom" value="" type="text">
 					</div>
-					<div class="col-md-offset-3 col-md-6">
-						<input placeholder="Email" name="prenom" value="" type="text">
+					<div class="col-md-3">
+						<input placeholder="Prenom" name="prenom" value="" type="text">
 					</div>
 					<div class="col-md-offset-3 col-md-6">
-						<input placeholder="Sujet" name="sujet" value="" type="text">
+						<input placeholder="Email" name="Email" value="" type="text">
 					</div>
+
+					<div class="col-md-6 col-md-offset-3">
+						<select name="select">
+							<option value="value1" selected>Type de proposition</option> 
+							<option value="value1">film</option> 
+							<option value="value2">série</option>
+							<option value="value3">lieu</option>
+						</select>
+					</div>
+
+					<div class="col-md-6 col-md-offset-3">
+						<div class="selectReceiver" style="display: none">
+							<select name="select">
+								<option value="value1">Action</option> 
+								<option value="value2">Drame</option>
+								<option value="value3">Policier</option>
+								<option value="value3">Fantastique</option>
+								<option value="value3">Documentaire</option>
+								<option value="value3">Comédie</option>
+								<option value="value3">Road trip</option>
+							</select>
+						</div>
+					</div>
+
 					<div class="col-md-offset-3 col-md-6">
 						<textarea placeholder="Message" name="message"></textarea>
 					</div>

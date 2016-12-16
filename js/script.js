@@ -2,6 +2,17 @@ $(document).ready(function(){
 	var sceneCpt = 0;
 	var sceneMax = 0;
 
+	/* Contact select option */
+	$('select').change(function() {
+		console.log($(this).val());
+		if($(this).val() == "value1")
+			$('.selectReceiver').show();
+		if($(this).val() == "value2")
+			$('.selectReceiver').show();	
+		if($(this).val() == "value3")
+			$('.selectReceiver').hide();
+	})
+
 	/* PRELOADER */
 	$(window).bind("load", function() {
 		$('#preloaderContainer').delay(500).fadeOut("200");
@@ -50,7 +61,16 @@ $(document).ready(function(){
 		$("input[name='searchLocation']").focus();
 	});
 
-	/* REPONSIVE */
+	$('.chercherOeuvre').click(function() {
+		$("input[name='searchFilm']").focus();
+	});
+
+	$('.chercherLieu').click(function() {
+		$("input[name='searchLocation']").focus();
+	});
+
+
+	/* RESPONSIVE */
 	var transparentwidth = $('.transparent').width();
 	if(transparentwidth < 240)
 		$('.outlineText').css("font-size", "58px");

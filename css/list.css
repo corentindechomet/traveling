@@ -23,7 +23,7 @@ header h1 {
 /**********************************************/
 input.search-header{
 	border: 1px solid rgba(255,255,255,0.5);
-	padding: 5px 10px 0px 35px;
+	padding: 0px 10px 0px 35px;
 	font-size: 16px;
 	background: rgba(0,0,0,0.4);
 	width: 100%;
@@ -35,14 +35,15 @@ input.search-header{
 }
 
 input.search-header:focus {
-    background-color: rgba(0,0,0,0.7);
-    border: 1px solid rgba(255,255,255,1);
+	background-color: rgba(0,0,0,0.7);
+	border: 1px solid rgba(255,255,255,1);
 }
 
 .fa-search{
 	position: absolute;
-	top: 14px;
+	top: 13px;
 	left:25px;
+	cursor: pointer;
 }
 
 h2{font-size:24px;}
@@ -99,7 +100,7 @@ h2{font-size:24px;}
 	top: 20px;
 	font-weight: 100;
 	letter-spacing: 14px;
-	margin-left: 14px;
+	margin-left: 8px;
 }
 
 .card .type{bottom: 80px;}
@@ -241,7 +242,29 @@ margin-bottom: 100px; */
 }
 
 @media(max-width: 600px){
-  header h1 {
-    font-size: 150px;
-  }
+	header h1 {
+		font-size: 150px;
+	}
+	.card{
+		height: 200px;
+	}
+	.card .thevideo {
+		height: 200px;
+	}
+	.card .pays, .card .lieu{
+		letter-spacing: 3px;
+		margin-left: 2px;
+	}
+	.card .list-title {
+		font-size: 25px;
+		line-height: 30px;
+		margin-top: 15px;
+	}
+	.subtitleGenre{
+		display: none;
+	}
+	.card .genre i {
+		margin-right: 0px;
+	}
 }
+

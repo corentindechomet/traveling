@@ -21,7 +21,7 @@
 				<div class="navbar-header pull-right">
 					<a href="oeuvres.php">Oeuvres</a>
 					<a class="active" href="lieux.php">Lieux</a>
-					<a href="contact.php">Contact</a>
+					<a href="contact.php">Contribuer</a>
 				</div>
 			</div>
 		</div>
@@ -35,9 +35,10 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 col-md-offset-4">
+				<div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
 					<form method="get">
-						<i class='fa fa-search' aria-hidden='true'></i><input class="search-header" name="searchLocation" title="Rechercher un lieu" type="text" placeholder="Rechercher un lieu"></input>
+						<i class='fa fa-search chercherLieu' aria-hidden='true'></i>
+						<input class="search-header" name="searchLocation" title="Rechercher un lieu" type="text" placeholder="Rechercher un lieu"></input>
 					</form>
 				</div>
 			</div>
