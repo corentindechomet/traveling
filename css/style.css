@@ -467,6 +467,10 @@ span.escapeText{
   -webkit-background-clip: text;
 }
 
+@media screen(max-width: 400px){
+  span.escapeText{font-size: 20px;}
+}
+
 .randomFilm{
   margin-bottom: 0;
   height: 400px;

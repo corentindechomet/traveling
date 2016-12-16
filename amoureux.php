@@ -35,9 +35,9 @@
 				<?php
 				include('connection.php');
 				if(isset($_GET['search']))
-					$requeteP = "SELECT * FROM lieu WHERE categorie LIKE 'amoureux' AND nomLieu LIKE '%".$_GET['search']."%' ";
+					$requeteP = "SELECT * FROM lieu WHERE categorie LIKE '%amoureux%' AND nomLieu LIKE '%".$_GET['search']."%' ";
 				else
-					$requeteP = 'SELECT * FROM lieu WHERE categorie LIKE "amoureux"';
+					$requeteP = 'SELECT * FROM lieu WHERE categorie LIKE "%amoureux%"';
 				$resultatP = $connection->query($requeteP);
 				$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
 
