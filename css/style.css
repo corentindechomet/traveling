@@ -487,7 +487,7 @@ span.escapeText{
 }
 
 @media screen(max-width: 400px){
-  span.outLineText{font-size: 20px;}
+  span.outlineText{font-size: 20px;}
 }
 
 .randomFilm{
