@@ -61,21 +61,27 @@
 					echo "<h2 class='searchtitle'>".count($tabP)." résulat(s) pour votre recherche : ".$_GET['searchLocation']."</h2>";
 					echo "<hr />";
 				}
-
-				for($i=0;$i<count($tabP);$i++){ ?>
-				<div class="col-md-offset-0 col-md-4 col-sm-6 col-xs-6 video">
-					<div class="card shadow overlay lieu" target-url="<?php echo $tabP[$i]->idLieu?>">
-						<div class="videoReceiver" style="background: url(<?php echo $tabP[$i]->videoFrame; ?>) center no-repeat">
-							<video class="thevideo" loop preload="yes">
-								<source src="<?php echo $tabP[$i]->urlvideo ?>" type="video/mp4">
-								</video>
+				if(count($tabP)>0){
+					for($i=0;$i<count($tabP);$i++){ ?>
+					<div class="col-md-offset-0 col-md-4 col-sm-6 col-xs-6 video">
+						<div class="card shadow overlay lieu" target-url="<?php echo $tabP[$i]->idLieu?>">
+							<div class="videoReceiver" style="background: url(<?php echo $tabP[$i]->videoFrame; ?>) center no-repeat">
+								<video class="thevideo" loop preload="yes">
+									<source src="<?php echo $tabP[$i]->urlvideo ?>" type="video/mp4">
+									</video>
+								</div>
+								<div class="card-text subtitle pays"><?php echo $tabP[$i]->pays ?></div>
+								<div class="card-text list-title"><?php echo $tabP[$i]->nomLieu ?></div>
+								<div class="card-text subtitle genre"><?php echo $tabP[$i]->type ?></div>
 							</div>
-							<div class="card-text subtitle pays"><?php echo $tabP[$i]->pays ?></div>
-							<div class="card-text list-title"><?php echo $tabP[$i]->nomLieu ?></div>
-							<div class="card-text subtitle genre"><?php echo $tabP[$i]->type ?></div>
-						</div>
-					</div>								
-					<?php }?>
+						</div>								
+						<?php }?>
+				}else{ ?>
+					<div class="Nosearchresult">
+						<p >Désolé ! Votre recherche n'a retourné aucun résultat si vous pensez qu'il s'agit d'un manque, n'hésitez pas à nous <a href="contact.php">contacter</a> !</p>
+						<img src="imgs/abbesses.jpg" />
+					</div>
+				<?php }?>
 				</div>
 			</div>
 		</section>

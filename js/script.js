@@ -13,11 +13,6 @@ $(document).ready(function(){
 			$('.selectReceiver').hide();
 	})
 
-	/* PRELOADER */
-	$(window).bind("load", function() {
-		$('#preloaderContainer').delay(500).fadeOut("200");
-	});
-
 	/* Gestion affichage vidéo ou image accueil -- voir suite à la fin du fichier*/
 	if (($( window ).width() < 1087)) {
 		$("#video").hide();
@@ -321,4 +316,9 @@ $( window ).resize(function() {
 		$("#video").show();
 		$(".thevideo").show();
 	}
+});
+
+/* PRELOADER */
+$(window).bind("load", function() {
+	$('#preloaderContainer').delay(500).fadeOut("200");
 });
