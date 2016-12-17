@@ -178,20 +178,19 @@ $(document).ready(function(){
 			title: ''
 		});
 
-		$(document).on("click", ".changeSceneOeuvre", function (e) {
-
+		$('.changeSceneOeuvre').unbind("click").click(function(e) {
 			var type = $(this).attr("target-type");
 			if(type == 'previous')
-				sceneCpt--;
+				sceneCpt=sceneCpt-1;
 			else if(type == 'next')
-				sceneCpt++;
+				sceneCpt=sceneCpt+1;
 
 			if (sceneCpt > sceneMax-1)
 				sceneCpt = 0;
 			else if (sceneCpt < 0)
 				sceneCpt = sceneMax-1;
 			var id = $(this).attr("target-url");
-			//console.log(sceneCpt);
+			//alert(sceneCpt);
 			$.ajax({  
 				type: "GET",
 				url: "travelingAPI.php?call=oeuvre&id="+id,             
@@ -213,7 +212,7 @@ $(document).ready(function(){
 			});
 		});
 
-		$(document).on("click", ".changeSceneLieu", function (e) {
+		$('.changeSceneLieu').unbind("click").click(function(e) {
 			var type = $(this).attr("target-type");
 			if(type == 'previous')
 				sceneCpt -= 1;
