@@ -72,44 +72,51 @@
 					echo "<hr />";
 				}
 				if(count($tabP)>0){
-				for($i=0;$i<count($tabP);$i++){ ?>
-				<a href="#">
-					<div class="col-md-offset-0 col-md-4 col-sm-6 col-xs-6 video">
-						<div class="card shadow overlay oeuvre" target-url="<?php echo $tabP[$i]->idOeuvre?>">
-							<div class="videoReceiver" style="background: url(<?php echo $tabP[$i]->videoFrame; ?>) center no-repeat">
-								<video class="thevideo" loop preload="yes">									
-									<source class="videoToHide" src="<?php echo $tabP[$i]->urlvideo; ?>" type="video/mp4">
-									</video>
-								</div>
-								<div class="card-text subtitle lieu"><?php echo $tabP[$i]->lieu; ?></div>
-								<div class="card-text list-title"><?php echo $tabP[$i]->titreOeuvre; ?></div>
-								<div class="card-text subtitle genre"><?php 
-									$type = $tabP[$i]->type;
-									if($type == 0)
-										echo '<i class="fa fa-film" aria-hidden="true"></i>';
+					for($i=0;$i<count($tabP);$i++){ ?>
+					<a href="#">
+						<div class="col-md-offset-0 col-md-4 col-sm-6 col-xs-6 video">
+							<div class="card shadow overlay oeuvre" target-url="<?php echo $tabP[$i]->idOeuvre?>">
+								<div class="videoReceiver" style="background: url(<?php echo $tabP[$i]->videoFrame; ?>) center no-repeat">
+									<video class="thevideo" loop preload="yes">									
+										<source class="videoToHide" src="<?php echo $tabP[$i]->urlvideo; ?>" type="video/mp4">
+										</video>
+									</div>
+									<div class="card-text subtitle lieu"><?php echo $tabP[$i]->lieu; ?></div>
+									<div class="card-text list-title"><?php echo $tabP[$i]->titreOeuvre; ?></div>
+									<div class="card-text subtitle genre"><?php 
+										$type = $tabP[$i]->type;
+										if($type == 0)
+											echo '<i class="fa fa-film" aria-hidden="true"></i>';
 										//echo 'film'; 
-									else if($type == 1)
-										echo '<i class="glyph-icon flaticon-technology"></i>';
+										else if($type == 1)
+											echo '<i class="glyph-icon flaticon-technology"></i>';
 										//echo 'série';
 
-									else if($type == 2)
-										echo "<i class='fa fa-film' aria-hidden='true'></i><span class='subtitleGenre'>documentaire</span>";
-									else
-										echo 'erreur type';
+										else if($type == 2)
+											echo "<i class='fa fa-film' aria-hidden='true'></i><span class='subtitleGenre'>documentaire</span>";
+										else
+											echo 'erreur type';
 
-									echo "<span class='subtitleGenre'>".$tabP[$i]->genre."</span>";
-									?>
+										echo "<span class='subtitleGenre'>".$tabP[$i]->genre."</span>";
+										?>
+									</div>
 								</div>
-							</div>
-						</div>	
-					</a>							
-				<?php }
-				}else{ ?>
+							</div>	
+						</a>							
+						<?php }
+					}else{ ?>
 					<div class="Nosearchresult">
-						<p >Désolé ! Votre recherche n'a retourné aucun résultat si vous pensez qu'il s'agit d'un manque, n'hésitez pas à nous <a href="contact.php">contacter</a> !</p>
-						<img src="imgs/goslingcta.gif" />
+						<p >Désolé ! Votre recherche n'a retourné aucun résultat si vous pensez qu'il s'agit d'un manque, n'hésitez pas</p>
+						<div class="col-md-4 col-md-offset-4">
+							<a class='contribButton2' href="./contact.php" target="_blank">
+								<h3>Contribuez !</h3>
+							</a>	
+						</div>
+						<div class="col-md-12">
+							<img src="imgs/goslingcta.gif" />
+						</div>
 					</div>
-				<?php }?>
+					<?php }?>
 				</div>
 			</div>
 		</section>

@@ -74,8 +74,15 @@
 					<?php }
 				}else{ ?>
 					<div class="Nosearchresult">
-						<p >Désolé ! Votre recherche n'a retourné aucun résultat si vous pensez qu'il s'agit d'un manque, n'hésitez pas à nous <a href="contact.php">contacter</a> !</p>
-						<img src="imgs/goslingcta.gif" />
+						<p >Désolé ! Votre recherche n'a retourné aucun résultat si vous pensez qu'il s'agit d'un manque, n'hésitez pas</p>
+						<div class="col-md-4 col-md-offset-4">
+							<a class='contribButton2' href="./contact.php" target="_blank">
+								<h3>Contribuez !</h3>
+							</a>	
+						</div>
+						<div class="col-md-12">
+							<img src="imgs/goslingcta.gif" />
+						</div>
 					</div>
 				<?php }?>
 				</div>
