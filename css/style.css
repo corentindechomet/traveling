@@ -769,7 +769,7 @@ h2.subtitle {
   font-size:36px;
 }
 
-.contact-form input[name="nom"], .contact-form input[name="prenom"], .contact-form input[name="Email"], .contact-form input[name="nom"], .contact-form input[name="form"], .contact-form textarea, .contact-form  select{
+.contact-form input[name="nom"], .contact-form input[name="prenom"], .contact-form input[name="Email"], .contact-form input[name="sceneTitle"], .contact-form input[name="nom"], .contact-form input[name="form"], .contact-form textarea, .contact-form  select{
   border: 1px solid rgba(255,255,255,0.5);
   color: white;
   padding: 0px 10px 0px 20px;
@@ -833,6 +833,45 @@ h2.subtitle {
   -o-transition: background-color 500ms ease;
   -ms-transition: background-color 500ms ease;
   transition: background-color 500ms ease;
+}
+
+.addScene, .deleteScene{
+  cursor: pointer;
+  border: 1px solid #303030;
+  background-color: transparent;
+  height:30px;
+  text-align: center;
+  line-height: 25px;
+  margin-bottom: 20px;
+  -webkit-transition: background-color 500ms ease;
+  -moz-transition: background-color 500ms ease;
+  -o-transition: background-color 500ms ease;
+  -ms-transition: background-color 500ms ease;
+  transition: background-color 500ms ease;
+}
+
+.deleteScene{
+  display: none;
+}
+
+.addScene:hover, .deleteScene:hover{
+  background-color: #303030;
+  color: white;
+  border: 1px solid #303030;
+  -webkit-transition: background-color 500ms ease;
+  -moz-transition: background-color 500ms ease;
+  -o-transition: background-color 500ms ease;
+  -ms-transition: background-color 500ms ease;
+  transition: background-color 500ms ease;
+}
+
+.scene2, .scene3{
+  display: none;
+}
+
+.sceneName{
+  text-align: center;
+  font-size: 25px;
 }
 
 /* Footer */

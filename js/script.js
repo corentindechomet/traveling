@@ -1,17 +1,38 @@
 $(document).ready(function(){
 	var sceneCpt = 0;
 	var sceneMax = 0;
+	var contribSceneCpt = 1;
 
 	/* Contact select option */
-	$('select').change(function() {
+	$('select[name="select1"]').change(function() {
 		console.log($(this).val());
-		if($(this).val() == "value1")
+		if($(this).val() == "film")
 			$('.selectReceiver').show();
-		if($(this).val() == "value2")
+		if($(this).val() == "serie")
 			$('.selectReceiver').show();	
-		if($(this).val() == "value3")
+		if($(this).val() == "lieu")
 			$('.selectReceiver').hide();
 	})
+
+	$('.addScene').click(function(){
+		if (contribSceneCpt < 3)
+			contribSceneCpt++;
+		$('.scene'+contribSceneCpt).show();
+		$(".deleteScene").show();
+		if (contribSceneCpt == 3)
+			$(".addScene").hide();
+	});
+
+	$('.deleteScene').click(function(){
+		if (contribSceneCpt > 1) {
+			$('.scene'+contribSceneCpt).hide();
+			contribSceneCpt--;
+		}
+		if (contribSceneCpt == 1)
+			$(".deleteScene").hide();
+		if (contribSceneCpt < 3)
+			$(".addScene").show();
+	});
 
 	/* Gestion affichage vidéo ou image accueil -- voir suite à la fin du fichier*/
 	if (($( window ).width() < 1087)) {

@@ -84,11 +84,11 @@
 					</div>
 
 					<div class="col-md-6 col-md-offset-3">
-						<select name="select">
+						<select name="select1">
 							<option value="value1" selected>Type de proposition</option> 
-							<option value="value1">film</option> 
-							<option value="value2">série</option>
-							<option value="value3">lieu</option>
+							<option value="film">film</option> 
+							<option value="serie">série</option>
+							<option value="lieu">lieu</option>
 						</select>
 					</div>
 
@@ -98,16 +98,62 @@
 								<option value="value1">Action</option> 
 								<option value="value2">Drame</option>
 								<option value="value3">Policier</option>
-								<option value="value3">Fantastique</option>
-								<option value="value3">Documentaire</option>
-								<option value="value3">Comédie</option>
-								<option value="value3">Road trip</option>
+								<option value="value4">Fantastique</option>
+								<option value="value5">Documentaire</option>
+								<option value="value6">Comédie</option>
+								<option value="value7">Road trip</option>
 							</select>
 						</div>
 					</div>
-
-					<div class="col-md-offset-3 col-md-6">
-						<textarea placeholder="Message" name="message"></textarea>
+					<div class="scene1">
+						<div class="col-md-6 col-md-offset-3 sceneName">
+							Scène 1
+						</div>
+						<div class="col-md-6 col-md-offset-3">
+							<input placeholder="Titre de la scène" name="sceneTitle" value="" type="text">
+						</div>
+						<div class="col-md-6 col-md-offset-3">
+							<input type="file" name="fichier"/>
+						</div>
+						<div class="col-md-6 col-md-offset-3">
+							<textarea placeholder="Description" name="Description"></textarea>
+						</div>						
+					</div>
+					<div class="scene2">	
+						<div class="col-md-6 col-md-offset-3 sceneName">
+						Scène 2
+						</div>					
+						<div class="col-md-6 col-md-offset-3">
+							<input placeholder="Titre de la scène" name="sceneTitle" value="" type="text">
+						</div>
+						<div class="col-md-6 col-md-offset-3">
+							<input type="file" name="fichier"/>
+						</div>
+						<div class="col-md-6 col-md-offset-3">
+							<textarea placeholder="Description" name="Description"></textarea>
+						</div>		
+					</div>
+					<div class="scene3">
+						<div class="col-md-6 col-md-offset-3 sceneName">
+							Scène 3
+						</div>
+						<div class="col-md-6 col-md-offset-3">
+							<input placeholder="Titre de la scène" name="sceneTitle" value="" type="text">
+						</div>
+						<div class="col-md-6 col-md-offset-3">
+							<input type="file" name="fichier"/>
+						</div>
+						<div class="col-md-6 col-md-offset-3">
+							<textarea placeholder="Description" name="Description"></textarea>
+						</div>		
+					</div>
+					<div class="col-md-6 col-md-offset-3">
+						<div class="deleteScene">
+							-
+						</div>
+						<div class="addScene">
+							+
+						</div>
 					</div>
 					<div class="col-md-offset-3 col-md-2">
 						<input placeholder="Sujet" name="form" value="Envoyer" type="submit">
