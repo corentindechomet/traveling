@@ -166,7 +166,7 @@ $(document).ready(function(){
 				setTimeout(function() {
 					$( "#myNavTop .filmImg" )
 					.mouseenter(function() {
-						$(".imageOeuvre h1").html("Clickez pour revenir");
+						$(".imageOeuvre h1").html("Retour");
 					})
 					.mouseleave(function() {
 						$(".imageOeuvre h1").html(response[0].nomLieu);
