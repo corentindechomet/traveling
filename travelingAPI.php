@@ -28,7 +28,7 @@ switch ($call) {
 
 	case 'randomOeuvre':
 
-	$requeteP = 'SELECT * FROM oeuvres ORDER BY RAND()' ;
+	$requeteP = 'SELECT * FROM oeuvres, scene WHERE oeuvres.idOeuvre = scene.idOeuvre ORDER BY RAND()' ;
 
 	$resultatP = $connection->query($requeteP);
 	$tabP = $resultatP->fetchAll(PDO::FETCH_OBJ);
