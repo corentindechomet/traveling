@@ -5,7 +5,6 @@ $(document).ready(function(){
 
 	/* Contact select option */
 	$('select[name="select1"]').change(function() {
-		console.log($(this).val());
 		if($(this).val() == "film")
 			$('.selectReceiver').show();
 		if($(this).val() == "serie")
@@ -99,18 +98,35 @@ $(document).ready(function(){
 
 
 	// Requête AJAX films
+	// init randomOeuvre
+	var url = "travelingAPI.php?call=randomOeuvre";
+	$.ajax({  
+		type: "GET",
+		url: url,             
+		dataType: "json",                
+		success: function(response){
+			$(".randomFilm").attr( "target-url", response[0].idOeuvre);
+		}
+	});
+
 	$(document).on("click", ".card.overlay.oeuvre", function (e) {
-		if($(this).attr("target-type") == "random")
+		if($(this).attr("target-type") == "random"){
 			var url = "travelingAPI.php?call=randomOeuvre";
-		else{
-			var id = $(this).attr("target-url");
-			var url = "travelingAPI.php?call=oeuvre&id="+id;
+			$.ajax({  
+				type: "GET",
+				url: url,             
+				dataType: "json",                
+				success: function(response){
+					$(".randomFilm").attr( "target-url", response[0].idOeuvre);
+				}
+			});
 		}
 		sceneCpt = 0;
 		sceneMax = 0;
+		var id = $(this).attr("target-url");
 		$.ajax({  
 			type: "GET",
-			url: url,             
+			url: "travelingAPI.php?call=oeuvre&id="+id,             
 			dataType: "json",                
 			success: function(response){
 				var sceneMax = response.length;
@@ -125,15 +141,14 @@ $(document).ready(function(){
 				$('.imageOeuvre').css("background-image", "url('" + response[0].urlimg + "')");
 				init(response[0].Lat, response[0].Lng, sceneMax);
 				$(".dynamicContent").css("background-image", "url('"+ response[0].urlImgScene  +"')");
-				setTimeout(function() {
-					$( "#myNavTop .filmImg" )
-					.mouseenter(function() {
-						$(".imageOeuvre h1").html("Retour");
-					})
-					.mouseleave(function() {
-						$(".imageOeuvre h1").html(response[0].titreOeuvre);
-					});
-				}, 2500);
+
+				$( "#myNavTop .filmImg" )
+				.mouseenter(function() {
+					$(".imageOeuvre h1").html("Retour");
+				})
+				.mouseleave(function() {
+					$(".imageOeuvre h1").html(response[0].titreOeuvre);
+				});
 			}
 		});
 		openOverlay();
@@ -163,15 +178,13 @@ $(document).ready(function(){
 				$('.imageOeuvre').css("background-image", "url('" + response[0].urlImgLieu + "')");
 				init(response[0].Lat, response[0].Lng, sceneMax);
 				$(".dynamicContent").css("background-image", "url('"+ response[0].urlImgScene  +"')");
-				setTimeout(function() {
-					$( "#myNavTop .filmImg" )
-					.mouseenter(function() {
-						$(".imageOeuvre h1").html("Retour");
-					})
-					.mouseleave(function() {
-						$(".imageOeuvre h1").html(response[0].nomLieu);
-					});
-				}, 2500);
+				$( "#myNavTop .filmImg" )
+				.mouseenter(function() {
+					$(".imageOeuvre h1").html("Retour");
+				})
+				.mouseleave(function() {
+					$(".imageOeuvre h1").html(response[0].nomLieu);
+				});
 			}
 		});
 		openOverlay();

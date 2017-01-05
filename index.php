@@ -155,7 +155,7 @@
 						</div>
 						<div class="row">
 							<div class="col-md-12">
-								<div class="card overlay oeuvre randomFilm" target-type="random" target-url="<?php echo $tabP[0]->idOeuvre; ?>">
+								<div class="card overlay oeuvre randomFilm" target-type="random" target-url="">
 									<h2><i class="fa fa-question-circle-o" aria-hidden="true"></i></h2>
 								</div>
 							</div>
