@@ -1040,12 +1040,15 @@ a.contribButton2 h3:hover{
   }
 }
 
-@media(max-width: 400px){
+@media(max-width: 425px){
   .navbar>.container .navbar-brand {
     margin-left: 10px;
   }
   .navbar-header.pull-right a {
     padding: 15px 5px;
   }
-  span.outlineText.escapeText{font-size: 60px;}
+}
+
+@media(max-width: 425px){
+  span.outlineText{font-size: 50px;}
 }
